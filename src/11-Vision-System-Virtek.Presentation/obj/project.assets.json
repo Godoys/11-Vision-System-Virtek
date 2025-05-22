@@ -2,6 +2,36 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "MediatR/12.5.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR.Contracts": "[2.0.1, 3.0.0)",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MediatR.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MediatR.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Contracts/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -36,10 +66,129 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "RabbitMQ.Client/7.1.2": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "8.0.0",
+          "System.Threading.RateLimiting": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Threading.RateLimiting/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Threading.RateLimiting.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Threading.RateLimiting.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "11-Vision-Software-Virtek.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/11-Vision-Software-Virtek.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/11-Vision-Software-Virtek.Domain.dll": {}
+        }
+      },
+      "11-Vision-System-Virtek.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "11-Vision-Software-Virtek.Domain": "1.0.0",
+          "MediatR": "12.5.0"
+        },
+        "compile": {
+          "bin/placeholder/11-Vision-System-Virtek.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/11-Vision-System-Virtek.Application.dll": {}
+        }
+      },
+      "11-Vision-System-Virtek.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "11-Vision-Software-Virtek.Domain": "1.0.0",
+          "11-Vision-System-Virtek.Application": "1.0.0",
+          "RabbitMQ.Client": "7.1.2"
+        },
+        "compile": {
+          "bin/placeholder/11-Vision-System-Virtek.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/11-Vision-System-Virtek.Infrastructure.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "MediatR/12.5.0": {
+      "sha512": "vqm2H8/nqL5NAJHPhsG1JOPwfkmbVrPyh4svdoRzu+uZh6Ex7PRoHBGsLYC0/RWCEJFqD1ohHNpteQvql9OktA==",
+      "type": "package",
+      "path": "mediatr/12.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "gradient_128x128.png",
+        "lib/net6.0/MediatR.dll",
+        "lib/net6.0/MediatR.xml",
+        "lib/netstandard2.0/MediatR.dll",
+        "lib/netstandard2.0/MediatR.xml",
+        "mediatr.12.5.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Contracts/2.0.1": {
+      "sha512": "FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "type": "package",
+      "path": "mediatr.contracts/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.2.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
+      ]
+    },
     "Microsoft.Extensions.DependencyInjection/9.0.5": {
       "sha512": "N1Mn0T/tUBPoLL+Fzsp+VCEtneUhhxc1//Dx3BeuQ8AX+XrMlYCfnp2zgpEXnTCB7053CLdiqVWPZ7mEX6MPjg==",
       "type": "package",
@@ -99,10 +248,102 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "RabbitMQ.Client/7.1.2": {
+      "sha512": "y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
+      "type": "package",
+      "path": "rabbitmq.client/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/RabbitMQ.Client.dll",
+        "lib/net8.0/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.7.1.2.nupkg.sha512",
+        "rabbitmq.client.nuspec"
+      ]
+    },
+    "System.IO.Pipelines/8.0.0": {
+      "sha512": "FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
+      "type": "package",
+      "path": "system.io.pipelines/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Pipelines.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "lib/net462/System.IO.Pipelines.dll",
+        "lib/net462/System.IO.Pipelines.xml",
+        "lib/net6.0/System.IO.Pipelines.dll",
+        "lib/net6.0/System.IO.Pipelines.xml",
+        "lib/net7.0/System.IO.Pipelines.dll",
+        "lib/net7.0/System.IO.Pipelines.xml",
+        "lib/net8.0/System.IO.Pipelines.dll",
+        "lib/net8.0/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.8.0.0.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Threading.RateLimiting/8.0.0": {
+      "sha512": "7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
+      "type": "package",
+      "path": "system.threading.ratelimiting/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Threading.RateLimiting.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Threading.RateLimiting.targets",
+        "lib/net462/System.Threading.RateLimiting.dll",
+        "lib/net462/System.Threading.RateLimiting.xml",
+        "lib/net6.0/System.Threading.RateLimiting.dll",
+        "lib/net6.0/System.Threading.RateLimiting.xml",
+        "lib/net7.0/System.Threading.RateLimiting.dll",
+        "lib/net7.0/System.Threading.RateLimiting.xml",
+        "lib/net8.0/System.Threading.RateLimiting.dll",
+        "lib/net8.0/System.Threading.RateLimiting.xml",
+        "lib/netstandard2.0/System.Threading.RateLimiting.dll",
+        "lib/netstandard2.0/System.Threading.RateLimiting.xml",
+        "system.threading.ratelimiting.8.0.0.nupkg.sha512",
+        "system.threading.ratelimiting.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "11-Vision-Software-Virtek.Domain/1.0.0": {
+      "type": "project",
+      "path": "../11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj",
+      "msbuildProject": "../11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
+    },
+    "11-Vision-System-Virtek.Application/1.0.0": {
+      "type": "project",
+      "path": "../11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj",
+      "msbuildProject": "../11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj"
+    },
+    "11-Vision-System-Virtek.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj",
+      "msbuildProject": "../11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "11-Vision-System-Virtek.Application >= 1.0.0",
+      "11-Vision-System-Virtek.Infrastructure >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 9.0.5"
     ]
   },
@@ -137,7 +378,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj": {
+              "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj"
+            },
+            "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

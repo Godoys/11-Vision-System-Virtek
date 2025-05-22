@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Nmld26ODMqY=",
+  "dgSpecHash": "y5PZUAfPXxo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Guilherme\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
+    "C:\\Users\\Guilherme\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
