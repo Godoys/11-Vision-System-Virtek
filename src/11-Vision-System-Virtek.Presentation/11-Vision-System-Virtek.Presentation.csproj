@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\11-Vision-System-Virtek.Application\11-Vision-System-Virtek.Application.csproj" />
+  </ItemGroup>
+
 </Project>
