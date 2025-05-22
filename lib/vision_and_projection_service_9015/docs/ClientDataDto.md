@@ -1,0 +1,13 @@
+# VisionAndProjectionService.Swagger.Model.ClientDataDto
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ClientInfo** | [**ClientInfoDto**](ClientInfoDto.md) |  | [optional] 
+**Status** | **string** |  | [optional] 
+**CurrentWorkOrder** | **string** |  | [optional] 
+**CurrentPartSerial** | **string** |  | [optional] 
+**ConfigurationProfileName** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
