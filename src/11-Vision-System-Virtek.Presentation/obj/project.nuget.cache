@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FwLsXbyDIEo=",
+  "dgSpecHash": "wRnm2B/fDr8=",
   "success": true,
   "projectFilePath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Presentation\\11-Vision-System-Virtek.Presentation.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.5\\microsoft.extensions.dependencyinjection.9.0.5.nupkg.sha512",
+    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
