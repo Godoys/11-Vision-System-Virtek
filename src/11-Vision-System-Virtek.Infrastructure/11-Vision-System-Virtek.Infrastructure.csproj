@@ -16,4 +16,22 @@
     <ProjectReference Include="..\11-Vision-Software-Virtek.Domain\11-Vision-Software-Virtek.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Cognex.InSight">
+      <HintPath>..\..\lib\Cognex\In-Sight\6.5.21.1\Cognex.InSight.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.InSight.Controls.Display">
+      <HintPath>..\..\lib\Cognex\In-Sight\6.5.21.1\Cognex.InSight.Controls.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionAndProjectionService.Swagger">
+      <HintPath>..\..\lib\vision_and_projection_service_9015\bin\VisionAndProjectionService.Swagger.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkorderService.Swagger">
+      <HintPath>..\..\lib\workorder_service_9020\bin\WorkorderService.Swagger.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkorderTrackerService.Swagger">
+      <HintPath>..\..\lib\workorder_tracker_service_9030\bin\WorkorderTrackerService.Swagger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
