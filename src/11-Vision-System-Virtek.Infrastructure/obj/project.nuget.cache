@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "32SJL69+wps=",
+  "dgSpecHash": "Nmld26ODMqY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\12-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Guilherme\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
+    "C:\\Users\\Guilherme\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\Guilherme\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
