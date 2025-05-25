@@ -16,9 +16,6 @@ namespace _11_Vision_Software_Virtek.Domain.Interfaces
         /// <summary>
         /// Connects to a Camera using its IP address
         /// </summary>
-        /// <param name="address">Camera's IP address</param>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
         /// <param name="forceConnect">True, will break an existing connection and connect; False, will prohibit a connection if one already exists</param>
         /// <param name="asynchronous">True, will return without waiting for the connection to be complete; False, will wait for connection to complete</param>
         public void Connect(bool forceConnect, bool asynchronous);
