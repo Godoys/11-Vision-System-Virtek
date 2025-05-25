@@ -1,6 +1,6 @@
 namespace _11_Vision_Software_Virtek.Domain.Enums
 {
-    enum CameraState
+    public enum CameraState
     {
         Online,
         Offline,
