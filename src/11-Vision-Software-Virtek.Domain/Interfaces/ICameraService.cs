@@ -10,8 +10,8 @@ namespace _11_Vision_Software_Virtek.Domain.Interfaces
     /// <param name="Camera">Camera configuration and address</param>
     interface ICameraService
     {
-        ImageData Image { get; set; }
-        CameraData Camera { get; set; }
+        public ImageData Image { get; set; }
+        public CameraData Camera { get; set; }
 
         /// <summary>
         /// Connects to a Camera using its IP address
