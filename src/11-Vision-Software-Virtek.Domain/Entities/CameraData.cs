@@ -3,6 +3,13 @@ using _11_Vision_Software_Virtek.Domain.Enums;
 
 namespace _11_Vision_Software_Virtek.Domain.Entities
 {
+    /// <summary>
+    /// Information of the camera being utilized.
+    /// </summary>
+    /// <param name="Username">Gets the username to log on the sensor</param>
+    /// <param name="Password">Gets the password to log on the sensor</param>
+    /// <param name="Address">Gets the IP address of the sensor</param>
+    /// <param name="State">Gets the state of the sensor</param>
     public class CameraData
     {
         public string Username { get; set; }
