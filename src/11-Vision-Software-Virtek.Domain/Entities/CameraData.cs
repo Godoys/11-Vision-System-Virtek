@@ -3,7 +3,7 @@ using _11_Vision_Software_Virtek.Domain.Enums;
 
 namespace _11_Vision_Software_Virtek.Domain.Entities
 {
-    class CameraData
+    public class CameraData
     {
         public string Username { get; set; }
         public string Password { get; set; }
