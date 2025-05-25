@@ -8,7 +8,7 @@ namespace _11_Vision_Software_Virtek.Domain.Interfaces
     /// </summary>
     /// <param name="Image">Captured image data</param>
     /// <param name="Camera">Camera configuration and address</param>
-    interface ICameraService
+    public interface ICameraService
     {
         public ImageData Image { get; set; }
         public CameraData Camera { get; set; }
