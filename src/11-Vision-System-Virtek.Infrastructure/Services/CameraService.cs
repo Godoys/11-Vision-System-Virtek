@@ -12,31 +12,31 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
     public class CameraService : ICameraService
     {
         public ImageData Image { get; set; }
-        public CameraData Camera { get; set; }
+        public CameraData CameraInfo { get; set; }
+        public CvsInSight Sensor { get; set; }
 
         public CameraService(ImageData image, CameraData camera)
         {
             this.Image = image;
-            this.Camera = camera;
+            this.CameraInfo = camera;
+            this.Sensor = new CvsInSight();
         }
 
         public void Connect(bool forceConnect, bool asynchronous)
         {
-            string username = Camera.Username;
-            string password = Camera.Password;
-            IPAddress address = Camera.Address;
-
-            CvsInSight insight = new CvsInSight();
+            string username = CameraInfo.Username;
+            string password = CameraInfo.Password;
+            IPAddress address = CameraInfo.Address;
             
             Console.WriteLine("[*] Connecting to In-Sight sensor " + address + "...");
 
             try
             {
-                insight.Connect(address, username, password, forceConnect, asynchronous);
+                Sensor.Connect(address, username, password, forceConnect, asynchronous);
 
                 // Determine the state of the sensor
 
-                switch (Camera.State)
+                switch (CameraInfo.State)
                 {
                     case CameraState.Offline:
                         Console.WriteLine("[!] In-Sight sensor offline.");
