@@ -26,6 +26,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             string username = Camera.Username;
             string password = Camera.Password;
             IPAddress address = Camera.Address;
+            CameraState state = Camera.State;
             
             Console.WriteLine("[*] Connecting to In-Sight sensor " + address + "...");
 
@@ -35,7 +36,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
 
                 // Determine the state of the sensor
 
-                switch (Camera.State)
+                switch (state)
                 {
                     case CameraState.Offline:
                         Console.WriteLine("[!] In-Sight sensor offline.");
