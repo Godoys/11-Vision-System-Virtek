@@ -20,6 +20,11 @@ namespace _11_Vision_Software_Virtek.Domain.Interfaces
         /// <param name="forceConnect">True, will break an existing connection and connect; False, will prohibit a connection if one already exists</param>
         /// <param name="asynchronous">True, will return without waiting for the connection to be complete; False, will wait for connection to complete</param>
         public void Connect(bool forceConnect, bool asynchronous);
+
+        /// <summary>
+        /// Triggers the Camera to capture a image.
+        /// </summary>
+        public void CaptureImage();
     }
 }
 
