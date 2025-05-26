@@ -12,13 +12,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
     public class CameraService : ICameraService
     {
         public CameraData Camera { get; set; }
-        private CvsInSight Sensor { get; set; }
         private CvsResultSet SensorResult { get; set; }
 
         public CameraService(CameraData camera)
         {
             this.Camera = camera;
-            this.Sensor = new CvsInSight();
+            this.Camera.Camera = new CvsInSight();
         }
 
         public void Connect(bool forceConnect, bool asynchronous)
@@ -27,12 +26,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             string password = Camera.Password;
             IPAddress address = Camera.Address;
             CameraState state = Camera.State;
+            CvsInSight sensor = Camera.Camera;
             
             Console.WriteLine("[*] Connecting to In-Sight sensor " + address + "...");
 
             try
             {
-                Sensor.Connect(address, username, password, forceConnect, asynchronous);
+                sensor.Connect(address, username, password, forceConnect, asynchronous);
 
                 // Determine the state of the sensor
 
@@ -86,9 +86,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
 
         public void CaptureImage()
         {
+            CvsInSight sensor = Camera.Camera;
+            
             Console.WriteLine("[!] Captureing image...");
             
-            Sensor.ManualAcquire();
+            sensor.ManualAcquire();
         }
 
         public CvsStatusLevel GetStatus()
