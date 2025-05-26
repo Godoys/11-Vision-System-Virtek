@@ -91,6 +91,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             
             Sensor.ManualAcquire();
         }
+
+        public CvsStatusLevel GetStatus()
+        {
+            return SensorResult.StatusLevel;
+        }
     }
 }
 
