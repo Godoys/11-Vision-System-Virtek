@@ -19,7 +19,7 @@ namespace _11_Vision_Software_Virtek.Domain.Interfaces
         public void Connect(bool forceConnect, bool asynchronous);
 
         /// <summary>
-        /// Triggers the Camera to capture a image.
+        /// Triggers the Camera to capture an image.
         /// </summary>
         public void CaptureImage();
     }
