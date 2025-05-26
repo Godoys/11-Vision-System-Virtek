@@ -10,7 +10,6 @@ namespace _11_Vision_Software_Virtek.Domain.Interfaces
     /// <param name="Camera">Gets the object that holds the data of the camera for connection</param>
     public interface ICameraService
     {
-        public ImageData Image { get; set; }
         public CameraData CameraInfo { get; set; }
         
 
