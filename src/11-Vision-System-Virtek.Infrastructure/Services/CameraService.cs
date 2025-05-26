@@ -14,6 +14,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public ImageData Image { get; set; }
         public CameraData CameraInfo { get; set; }
         private CvsInSight Sensor { get; set; }
+        private CvsResultSet SensorResult { get; set; }
 
         public CameraService(ImageData image, CameraData camera)
         {
