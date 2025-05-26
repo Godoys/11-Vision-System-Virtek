@@ -83,6 +83,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 Console.WriteLine("[!] An Error occured: " + ex.Message);
             }
         }
+
+        public void CaptureImage()
+        {
+            Console.WriteLine("[!] Captureing image...");
+            
+            Sensor.ManualAcquire();
+        }
     }
 }
 
