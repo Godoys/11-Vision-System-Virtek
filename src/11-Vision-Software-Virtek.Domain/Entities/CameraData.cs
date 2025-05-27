@@ -19,12 +19,11 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public IPAddress Address { get; set; }
         public CameraState State { get; set; }
 
-        public CameraData(string username, string password, IPAddress address, CameraState state)
+        public CameraData(string username, string password, IPAddress address)
         {
             this.Username = username;
             this.Password = password;
             this.Address = address;
-            this.State = state;
         }
     }
 }
