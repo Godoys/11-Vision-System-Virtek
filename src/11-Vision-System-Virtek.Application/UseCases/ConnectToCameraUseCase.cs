@@ -13,7 +13,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             _cameraService = cameraService ?? throw new ArgumentNullException(nameof(cameraService));
         }
 
-        public async Task<CameraState> ConnectToCamera(CameraData camera)
+        public async Task<CameraState> ExecuteAsync(CameraData camera)
         {
             if (camera == null)
             {
