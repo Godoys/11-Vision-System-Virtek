@@ -20,7 +20,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             this.Camera.Camera = new CvsInSight();
         }
 
-        public void Connect(bool forceConnect, bool asynchronous)
+        public CameraState Connect(bool forceConnect, bool asynchronous)
         {
             string username = Camera.Username;
             string password = Camera.Password;
@@ -48,16 +48,20 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                         Console.WriteLine("[!] In-Sight sensor disconnected.");
                         break;
                 }
+
+                return CameraState.Connected;
             }
             catch (CvsInSightLockedException)
             {
                 // The sensor has been software-locked, preventing connection.
                 Console.WriteLine("[!] In-Sight locked.");
+                return CameraState.Disconnected;
             }
             catch (CvsSensorAlreadyConnectedException)
             {
                 // The sensor is already connected to a computer.
                 Console.WriteLine("[!] Sensor already connected.");
+                return CameraState.Disconnected;
             }
             catch (CvsInvalidLogonException ex)
             {
@@ -71,16 +75,20 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 {
                     Console.WriteLine("[!] Invalid password.");
                 }
+                
+                return CameraState.Disconnected;
             }
             catch (CvsNetworkException ex)
             {
                 // Unable to successfully connect to a sensor.
                 Console.WriteLine("[!] A network error occurred while trying to establish a connection: " + ex.Message);
+                return CameraState.Disconnected;
             }
             catch (Exception ex)
             {
                 // Consume any other exception that occur.
                 Console.WriteLine("[!] An Error occured: " + ex.Message);
+                return CameraState.Disconnected;
             }
         }
 

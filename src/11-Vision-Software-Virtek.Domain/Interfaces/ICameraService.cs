@@ -1,5 +1,6 @@
 using System.Net;
 using _11_Vision_System_Virtek.Domain.Entities;
+using _11_Vision_System_Virtek.Domain.Enums;
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
@@ -16,7 +17,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="forceConnect">True, will break an existing connection and connect; False, will prohibit a connection if one already exists</param>
         /// <param name="asynchronous">True, will return without waiting for the connection to be complete; False, will wait for connection to complete</param>
-        public void Connect(bool forceConnect, bool asynchronous);
+        public CameraState Connect(bool forceConnect, bool asynchronous);
 
         /// <summary>
         /// Triggers the Camera to capture an image.
