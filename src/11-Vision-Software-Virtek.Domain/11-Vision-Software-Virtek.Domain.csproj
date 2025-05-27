@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>_11_Vision_Software_Virtek.Domain</RootNamespace>
+    <RootNamespace>_11_Vision_System_Virtek.Domain</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>11-Vision-System-Virtek.Domain</AssemblyName>
   </PropertyGroup>
 
 </Project>

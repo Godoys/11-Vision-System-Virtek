@@ -97,21 +97,11 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "11-Vision-Software-Virtek.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/11-Vision-Software-Virtek.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/11-Vision-Software-Virtek.Domain.dll": {}
-        }
-      },
       "11-Vision-System-Virtek.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "11-Vision-Software-Virtek.Domain": "1.0.0",
+          "11-Vision-System-Virtek.Domain": "1.0.0",
           "MediatR": "12.5.0"
         },
         "compile": {
@@ -119,6 +109,16 @@
         },
         "runtime": {
           "bin/placeholder/11-Vision-System-Virtek.Application.dll": {}
+        }
+      },
+      "11-Vision-System-Virtek.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/11-Vision-System-Virtek.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/11-Vision-System-Virtek.Domain.dll": {}
         }
       }
     }
@@ -262,38 +262,38 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "11-Vision-Software-Virtek.Domain/1.0.0": {
-      "type": "project",
-      "path": "../11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj",
-      "msbuildProject": "../11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
-    },
     "11-Vision-System-Virtek.Application/1.0.0": {
       "type": "project",
       "path": "../11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj",
       "msbuildProject": "../11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj"
+    },
+    "11-Vision-System-Virtek.Domain/1.0.0": {
+      "type": "project",
+      "path": "../11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj",
+      "msbuildProject": "../11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "11-Vision-Software-Virtek.Domain >= 1.0.0",
       "11-Vision-System-Virtek.Application >= 1.0.0",
+      "11-Vision-System-Virtek.Domain >= 1.0.0",
       "RabbitMQ.Client >= 7.1.2"
     ]
   },
   "packageFolders": {
-    "/home/godoy/.nuget/packages/": {}
+    "C:\\Users\\Guilherme\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj",
       "projectName": "11-Vision-System-Virtek.Infrastructure",
-      "projectPath": "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj",
-      "packagesPath": "/home/godoy/.nuget/packages/",
-      "outputPath": "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/obj/",
+      "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/godoy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -305,11 +305,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj": {
-              "projectPath": "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
+            "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj": {
+              "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj"
             },
-            "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj": {
-              "projectPath": "/home/godoy/Documents/[01] Computer Science/[01] Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj"
+            "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj": {
+              "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj"
             }
           }
         }
@@ -324,7 +324,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -351,7 +351,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

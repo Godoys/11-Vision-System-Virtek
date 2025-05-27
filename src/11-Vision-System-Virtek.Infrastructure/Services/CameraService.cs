@@ -1,7 +1,7 @@
 using System.Net;
-using _11_Vision_Software_Virtek.Domain.Interfaces;
-using _11_Vision_Software_Virtek.Domain.Entities;
-using _11_Vision_Software_Virtek.Domain.Enums;
+using _11_Vision_System_Virtek.Domain.Interfaces;
+using _11_Vision_System_Virtek.Domain.Entities;
+using _11_Vision_System_Virtek.Domain.Enums;
 using Cognex.InSight;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services

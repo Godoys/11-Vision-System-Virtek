@@ -1,7 +1,7 @@
 using System.Net;
-using _11_Vision_Software_Virtek.Domain.Entities;
+using _11_Vision_System_Virtek.Domain.Entities;
 
-namespace _11_Vision_Software_Virtek.Domain.Interfaces
+namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
     /// <summary>
     /// Interface of a Camera and the Vision System.
