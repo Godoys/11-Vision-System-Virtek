@@ -11,9 +11,10 @@ namespace _11_Vision_System_Virtek.Domain.Entities
     /// <param name="Password">Gets the password to log on the sensor</param>
     /// <param name="Address">Gets the IP address of the sensor</param>
     /// <param name="State">Gets the state of the sensor</param>
+    
     public class CameraData
     {
-        public dynamic Camera;
+        public dynamic Camera { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public IPAddress Address { get; set; }
@@ -24,6 +25,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
             this.Username = username;
             this.Password = password;
             this.Address = address;
+            this.State = CameraState.Offline;
         }
     }
 }

@@ -226,6 +226,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj": {
+                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj"
+              },
               "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj": {
                 "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj"
               },

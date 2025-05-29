@@ -7,7 +7,8 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
     /// <summary>
     /// Interface of a Camera and the Vision System.
     /// </summary>
-    /// <param name="Camera">Gets the object that holds the data of the camera for connection</param>
+    /// <param name="Camera">Gets the camera object of an SDK</param>
+    
     public interface ICameraService
     {
         public CameraData Camera { get; set; }
@@ -17,12 +18,8 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="forceConnect">True, will break an existing connection and connect; False, will prohibit a connection if one already exists</param>
         /// <param name="asynchronous">True, will return without waiting for the connection to be complete; False, will wait for connection to complete</param>
-        public CameraState Connect(bool forceConnect, bool asynchronous);
-
-        /// <summary>
-        /// Triggers the Camera to capture an image.
-        /// </summary>
-        public void CaptureImage();
+        
+        public void Connect(bool forceConnect, bool asynchronous);
     }
 }
 

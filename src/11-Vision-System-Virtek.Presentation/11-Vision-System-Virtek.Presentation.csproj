@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\11-Vision-Software-Virtek.Domain\11-Vision-Software-Virtek.Domain.csproj" />
     <ProjectReference Include="..\11-Vision-System-Virtek.Application\11-Vision-System-Virtek.Application.csproj" />
-    <ProjectReference Include="..\11-Vision-System-Virtek.Infrastructure\11-Vision-System-Virtek.Domain.csproj" />
     <ProjectReference Include="..\11-Vision-System-Virtek.Infrastructure\11-Vision-System-Virtek.Infrastructure.csproj" />
   </ItemGroup>
-
+  
 </Project>
