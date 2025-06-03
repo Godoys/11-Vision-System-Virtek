@@ -1,65 +1,39 @@
 using System.Net;
-using _11_Vision_System_Virtek.Domain.Interfaces;
 using _11_Vision_System_Virtek.Domain.Entities;
 using _11_Vision_System_Virtek.Domain.Enums;
+using _11_Vision_System_Virtek.Domain.Interfaces;
 using Cognex.InSight;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
-    /// <summary>
-    /// Implementaion of ICameraService interface.
-    /// </summary>
-    
     public class CameraService : ICameraService
     {
-        public CameraData Camera { get; set; }
+        private readonly Camera _camera;
 
-        public CameraService(string username, string password, IPAddress address)
+        public CameraService(Camera camera)
         {
-            this.Camera = new CameraData(username, password, address);
-            try
-            {
-                this.Camera.Camera = new CvsInSight();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[!] Camera service error: " + e.Message);
-            }
-            
+            _camera = camera;
+            _camera.CameraObj = new CvsInSight();
         }
-
-        public void Connect(bool forceConnect, bool asynchronous)
+        
+        public void Connect(bool forceConnect = false, bool asynchronous = false)
         {
-            string username = Camera.Username;
-            string password = Camera.Password;
-            IPAddress address = Camera.Address;
-            CameraState state = Camera.State;
-            CvsInSight camera = Camera.Camera;
+            string username   = _camera.Username;
+            string password   = _camera.Password;
+            IPAddress address = _camera.Address;
+            CvsInSight camera = _camera.CameraObj;
             
             Console.WriteLine("[*] Connecting to In-Sight sensor " + address + "...");
 
             try
             {
+                // Use camera object Connect method to make a connection to a camera.
+
                 camera.Connect(address, username, password, forceConnect, asynchronous);
 
-                // Determine the state of the sensor
+                // Set camera state to connected
 
-                switch (state)
-                {
-                    case CameraState.Offline:
-                        Console.WriteLine("[!] In-Sight sensor offline.");
-                        break;
-                    case CameraState.Online:
-                        Console.WriteLine("[!] In-Sight sensor online.");
-                        break;
-                    case CameraState.Disconnected:
-                        Console.WriteLine("[!] In-Sight sensor disconnected.");
-                        break;
-                }
-                
-                // Setting camera state to online.
-                
-                Camera.State = CameraState.Online;
+                _camera.State = CameraState.Connected;
             }
             catch (CvsInSightLockedException)
             {
@@ -96,15 +70,5 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 Console.WriteLine("[!] An Error occured: " + ex.Message);
             }
         }
-
-        public void CaptureImage()
-        {
-            CvsInSight sensor = Camera.Camera;
-            
-            Console.WriteLine("[!] Capturing image...");
-            
-            sensor.ManualAcquire();
-        }
     }
 }
-

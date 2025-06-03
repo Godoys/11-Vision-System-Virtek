@@ -8,8 +8,10 @@ using _11_Vision_System_Virtek.Domain.Enums;
 
 IPAddress address = IPAddress.Parse("192.168.0.1");
 
-ICameraService cameraService = new CameraService("", "", address);
+Camera camera1 = new Camera("", "", address);
+
+ICameraService cameraService = new CameraService(camera1);
 
 ConnectToCameraUseCase service = new ConnectToCameraUseCase(cameraService);
 
-service.ConnectToCamera();
+service.Connect();
