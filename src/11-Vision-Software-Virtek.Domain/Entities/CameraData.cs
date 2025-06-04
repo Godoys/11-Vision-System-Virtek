@@ -14,7 +14,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public dynamic CameraObj { get; set; }
         
         // Holds the path to a Job.
-        public dynamic Job { get; set; }
+        public string Job { get; set; }
         public string Username { get; }
         public string Password { get; }
         public IPAddress Address { get; }
