@@ -10,12 +10,15 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
     public interface ICameraService
     {
         /// <summary>
-        /// Connects to a camera / vision system.
+        /// Uploads a job file to a camera.
         /// </summary>
-        /// <param name="forceConnect">When true, will break an existing connection and connect; False, will prohibit a connection if one already exists</param>
-        /// <param name="asynchronous">When true, will return without waiting for the connection to be complete; False, will wait for connection to complete</param>
-        public void Connect(bool forceConnect = false, bool asynchronous = false);
-        public void SetJob(string filePath);
-        public void UploadJob();
+        /// <param name="filePath">Constains the path to the job file in the computer.</param>
+        public void UploadJob(string filePath);
+
+        /// <summary>
+        /// Loads the uploaded job file in the camera, and set it as the using job file.
+        /// </summary>
+        /// <param name="fileName">Constains the name of the uploaded job file.</param>
+        public void LoadJob(string fileName);
     }
 }
