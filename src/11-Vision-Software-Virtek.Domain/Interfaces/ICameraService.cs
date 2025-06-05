@@ -13,7 +13,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// Uploads a job file to a camera.
         /// </summary>
         /// <param name="filePath">Constains the path to the job file in the computer.</param>
-        public void UploadJob(string filePath);
+        public void UploadJob(string filePath, string fileName);
 
         /// <summary>
         /// Loads the uploaded job file in the camera, and set it as the using job file.
