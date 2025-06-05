@@ -133,6 +133,39 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 Console.WriteLine("[!] " + ex.Message);
             }
         }
+
+        /// <summary>
+        /// Triggers the manual capturing of an image.
+        /// </summary>
+        public void TriggerImageCapture()
+        {
+            // Connects to the camesa using In-Sight.
+            CvsInSight camera = new CvsInSight();
+
+            try
+            {
+                // Triggers a manual acquisition of an image.
+                camera.ManualAcquire();
+
+                Console.WriteLine("[!] Image acquired manually.");
+            }
+            catch (CvsNotConnectedException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+            catch (CvsLiveAcquisitionException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+            catch (CvsNetworkException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+            catch (CvsInSightLockedException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+        }
         
         // --------------------------------
         //   Private Methods Declaration
