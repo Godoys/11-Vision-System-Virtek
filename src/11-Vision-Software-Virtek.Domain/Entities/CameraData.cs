@@ -10,11 +10,6 @@ namespace _11_Vision_System_Virtek.Domain.Entities
     
     public class Camera
     {
-        // Holds the object of a camera SDK.
-        public dynamic CameraObj { get; set; }
-        
-        // Holds the path to a Job.
-        public string JobPath { get; set; }
         public string Username { get; }
         public string Password { get; }
         public IPAddress Address { get; }
@@ -25,7 +20,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
             this.Username = username;
             this.Password = password;
             this.Address = address;
-            this.State = CameraState.Online;
+            this.State = CameraState.Offline;
         }
     }
 }
