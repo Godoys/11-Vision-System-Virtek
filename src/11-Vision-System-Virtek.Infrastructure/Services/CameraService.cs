@@ -235,6 +235,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             Camera.State = CameraState.Disconnected;
         }
 
+        /// <summary>
+        /// Gets the job ID based on the job file name.
+        /// </summary>
+        /// <param name="jobName">Job file name.</param>
+        /// <returns></returns>
         private string GetJobId(string jobName)
         {
             // Variable to hold the id value for return.
