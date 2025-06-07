@@ -15,6 +15,9 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public IPAddress Address { get; }
         public CameraState State { get; set; }
         
+        // Holds the most current result of a image analysis.
+        public dynamic Result { get; set; }
+        
         public Camera(string username, string password, IPAddress address)
         {
             this.Username = username;
