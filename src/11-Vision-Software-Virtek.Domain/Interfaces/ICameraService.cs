@@ -22,9 +22,8 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public void LoadJob(string fileName);
 
         /// <summary>
-        /// Triggers the manual capturing of an image.
+        /// Gets the result of the last image analysis.
         /// </summary>
-        /// <returns>A camera object, that will be used to access analysis results.</returns>
-        public dynamic TriggerImageCapture();
+        public void GetCurrentResult();
     }
 }
