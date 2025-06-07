@@ -134,46 +134,33 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             }
         }
 
-        /// <summary>
-        /// Triggers the manual capturing of an image.
-        /// </summary>
-        public dynamic TriggerImageCapture()
+        public void GetCurrentResult()
         {
-            // Connects to the camesa using In-Sight.
+            CvsResultSet resultSet = new CvsResultSet();
+            CvsStatusLevel resultStatus;
+            
             CvsInSight camera = new CvsInSight();
 
-            try
-            {
-                // Triggers a manual acquisition of an image.
-                camera.ManualAcquire();
+            Connect(camera, false, false);
+            
+            TriggerImageCapture(camera);
 
-                Console.WriteLine("[!] Image acquired manually.");
-                
-                // Returns camera object for further use.
-                return camera;
-            }
-            catch (CvsNotConnectedException ex)
+            resultStatus = camera.Results.StatusLevel;
+
+            switch (resultStatus)
             {
-                Console.WriteLine("[!]" + ex.Message);
-                return camera;
-            }
-            catch (CvsLiveAcquisitionException ex)
-            {
-                Console.WriteLine("[!]" + ex.Message);
-                return camera;
-            }
-            catch (CvsNetworkException ex)
-            {
-                Console.WriteLine("[!]" + ex.Message);
-                return camera;
-            }
-            catch (CvsInSightLockedException ex)
-            {
-                Console.WriteLine("[!]" + ex.Message);
-                return camera;
+                case CvsStatusLevel.Pass:
+                    Camera.Result = ResultState.Pass;
+                    break;
+                case CvsStatusLevel.Warn:
+                    Camera.Result = ResultState.Warn;
+                    break;
+                case CvsStatusLevel.Fail:
+                    Camera.Result = ResultState.Fail;
+                    break;
             }
         }
-        
+
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
@@ -304,6 +291,37 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             }
             
             return result;
+        }
+        
+        /// <summary>
+        /// Triggers the manual capturing of an image.
+        /// </summary>
+        private void TriggerImageCapture(dynamic camera)
+        {
+            try
+            {
+                // Triggers a manual acquisition of an image.
+                camera.ManualAcquire();
+
+                Console.WriteLine("[!] Image acquired manually.");
+                
+            }
+            catch (CvsNotConnectedException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+            catch (CvsLiveAcquisitionException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+            catch (CvsNetworkException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
+            catch (CvsInSightLockedException ex)
+            {
+                Console.WriteLine("[!]" + ex.Message);
+            }
         }
     }
 }
