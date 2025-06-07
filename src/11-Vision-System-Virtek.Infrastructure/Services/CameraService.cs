@@ -137,7 +137,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         /// <summary>
         /// Triggers the manual capturing of an image.
         /// </summary>
-        public void TriggerImageCapture()
+        public dynamic TriggerImageCapture()
         {
             // Connects to the camesa using In-Sight.
             CvsInSight camera = new CvsInSight();
@@ -148,22 +148,29 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 camera.ManualAcquire();
 
                 Console.WriteLine("[!] Image acquired manually.");
+                
+                // Returns camera object for further use.
+                return camera;
             }
             catch (CvsNotConnectedException ex)
             {
                 Console.WriteLine("[!]" + ex.Message);
+                return camera;
             }
             catch (CvsLiveAcquisitionException ex)
             {
                 Console.WriteLine("[!]" + ex.Message);
+                return camera;
             }
             catch (CvsNetworkException ex)
             {
                 Console.WriteLine("[!]" + ex.Message);
+                return camera;
             }
             catch (CvsInSightLockedException ex)
             {
                 Console.WriteLine("[!]" + ex.Message);
+                return camera;
             }
         }
         
@@ -177,7 +184,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         /// <param name="camera">Contains an object of type CvsInSight, CvsFtpClient, or CvsNativeModeClient.</param>
         /// <param name="forceConnect">When true, will break an existing connection; False, will prohibit a connection if one already exists.</param>
         /// <param name="asynchronous">When true, will return without waiting for the connection to be complete; False, will wait for the connection to complete.</param>
-        /// <returns></returns>
+        /// <returns>A camera object for further use.</returns>
         private dynamic Connect(dynamic camera, bool forceConnect = false, bool asynchronous = false)
         {
             string username   = Camera.Username;
