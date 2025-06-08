@@ -40,5 +40,10 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="newResult">Holds the value of the new state to be set.</param>
         public void UpdateResult(ResultState newResult);
+
+        /// <summary>
+        /// Connects to a camera.
+        /// </summary>
+        public void Connect();
     }
 }
