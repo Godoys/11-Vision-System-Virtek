@@ -44,6 +44,11 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <summary>
         /// Connects to a camera.
         /// </summary>
-        public Task<dynamic> Connect(string connectionType);
+        public Task Connect(CameraConnectionType connectionType);
+        
+        /// <summary>
+        /// Disconnects from a camera.
+        /// </summary>
+        public Task Disconnect(CameraConnectionType connectionType);
     }
 }
