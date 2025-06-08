@@ -1,5 +1,6 @@
 using System.Net;
 using _11_Vision_System_Virtek.Domain.Entities;
+using _11_Vision_System_Virtek.Domain.Enums;
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
@@ -10,20 +11,14 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
     public interface ICameraService
     {
         /// <summary>
-        /// Uploads a job file to a camera.
+        /// Uploads a Job file to a camera, then load it as the current job being used.
         /// </summary>
-        /// <param name="filePath">Constains the path to the job file in the computer.</param>
-        public void UploadJob(string filePath, string fileName);
-
+        /// <param name="filePath">System path to the Job file.</param>
+        public void LoadJobAsync(string filePath);
+        
         /// <summary>
-        /// Loads the uploaded job file in the camera, and set it as the using job file.
+        /// Gets the result status of the image analysis done by a camera and raises an event based on the result status.
         /// </summary>
-        /// <param name="fileName">Constains the name of the uploaded job file.</param>
-        public void LoadJob(string fileName);
-
-        /// <summary>
-        /// Gets the result of the last image analysis.
-        /// </summary>
-        public void GetCurrentResult();
+        public void GetImageResultAsync();
     }
 }
