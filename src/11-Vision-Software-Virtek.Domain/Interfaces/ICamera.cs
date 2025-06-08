@@ -50,5 +50,18 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// Disconnects from a camera.
         /// </summary>
         public Task Disconnect(CameraConnectionType connectionType);
+        
+        /// <summary>
+        /// Uploads a job file to a camera.
+        /// </summary>
+        /// <param name="jobPath">File path to a job file.</param>
+        /// <param name="jobName">File name of a job file</param>
+        public void UploadJob(string jobPath, string jobName);
+
+        /// <summary>
+        /// Sets the stored job file in camera as the one to be used in image analysis.
+        /// </summary>
+        /// <param name="jobName">File name of a job file</param>
+        public void LoadJob(string jobName);
     }
 }
