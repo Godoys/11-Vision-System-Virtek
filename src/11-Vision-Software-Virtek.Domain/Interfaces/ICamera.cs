@@ -44,6 +44,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <summary>
         /// Connects to a camera.
         /// </summary>
-        public void Connect();
+        public Task Connect();
     }
 }
