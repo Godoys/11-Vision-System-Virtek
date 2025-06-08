@@ -1,4 +1,5 @@
 using System.Net;
+using System.Text.RegularExpressions;
 using _11_Vision_System_Virtek.Domain.Enums;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using Cognex.InSight;
@@ -110,6 +111,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 default:
                     throw new NotSupportedException("[!] Unsupported connection type: " + connectionType);
             }
+            
+            // Set state to connected.
+            State = CameraState.Connected;
         }
 
         /// <summary>
@@ -134,9 +138,79 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     break;
             }
             
+            // Set state to disconnected.
+            State = CameraState.Disconnected;
+            
             Console.WriteLine("[*] Disconnected from sensor " + Address + "...");
         }
-        
+
+        public async Task UploadJob(string jobPath, string jobName)
+        {
+            Console.WriteLine("[*] Uploading job " + jobName + "to sensor " + Address + "...");
+
+            try
+            {
+                await Connect(CameraConnectionType.FTP);
+                
+                // Set state to connected.
+                State = CameraState.Connected;
+
+                // Checks if the JobName is accepted by the sensor system.
+
+                if (sensorFTP.IsValidFilename(jobName))
+                {
+                    await Task.Run(() =>
+                    {
+                        using (FileStream stream = new FileStream(jobPath, FileMode.Open))
+                        {
+                            sensorFTP.SendFileToInSight(stream, jobName);
+                        }
+                    });
+                }
+
+                await Disconnect(CameraConnectionType.FTP);
+                
+                // Set state to disconnected.
+                State = CameraState.Disconnected;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[!] " + ex.Message);
+            }
+            
+            Console.WriteLine("[*] " + jobName + " uploaded to sensor " + Address);
+        }
+
+        public async Task LoadJob(string jobName)
+        {
+            Console.WriteLine("[*] Setting " + jobName + " as default job in sensor " + Address + "...");
+
+            try
+            {
+                await Connect(CameraConnectionType.NM);
+                
+                // Set state to connected.
+                State = CameraState.Connected;
+
+                // Gets the jobId.
+                string jobId = GetJobId(jobName);
+
+                // Set JobFile as the active job being used by the camera.
+                sensorNativeMode.SendCommand("SJ" + jobId);
+                
+                await Disconnect(CameraConnectionType.NM);
+                
+                // Set state to disconnected.
+                State = CameraState.Disconnected;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[!] " + ex.Message);
+            }
+            
+            Console.WriteLine("[*] Job successfully loaded to sensor " + Address);
+        }
+
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
@@ -190,6 +264,37 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             {
                 Console.WriteLine("[!] " + ex.Message);
             }
+        }
+        
+        /// <summary>
+        /// Gets the job ID based on the job file name.
+        /// </summary>
+        /// <param name="jobName">Job file name.</param>
+        /// <returns></returns>
+        private string GetJobId(string jobName)
+        {
+            // Variable to hold the id value for return.
+            string result = string.Empty;
+            
+            // Regex to get the first alphabetic character on the JobName.
+            Regex rx = new Regex(@"a-zA-Z");
+            
+            // Collection of matches that hold the first alphabethic character.
+            MatchCollection matches = rx.Matches(jobName);
+            
+            // First alphabetic character found in JobName.
+            string firstAlphaCharacter = matches[0].Value;
+            
+            // Location of the first alphabetic character.
+            int charLocation = jobName.IndexOf(firstAlphaCharacter, StringComparison.Ordinal);
+            
+            // Gets the substring that represents the job ID.
+            if (charLocation > 0)
+            {
+                result = jobName.Substring(0, charLocation);
+            }
+            
+            return result;
         }
     }
 }
