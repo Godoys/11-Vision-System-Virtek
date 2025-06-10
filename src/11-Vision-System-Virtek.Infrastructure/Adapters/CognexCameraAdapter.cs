@@ -21,7 +21,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         public string Password { get; private set; }
         public IPAddress Address { get; private set; }
         public CameraState State { get; private set; }
-        public ResultState Result { get; private set; }
+        public ResultStatus Result { get; private set; }
         
         // --------------------------------
         //    Public Methods Declaration
@@ -33,7 +33,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Password = password;
             Address = address;
             State = CameraState.Offline;
-            Result = ResultState.None;
+            Result = ResultStatus.None;
             sensor = new CvsInSight();
             sensorFTP = new CvsFtpClient();
             sensorNativeMode = new CvsNativeModeClient();
@@ -84,7 +84,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// </summary>
         /// <param name="newResult">Holds the value of the new state to be set.</param>
 
-        public void UpdateResult(ResultState newResult)
+        public void UpdateResult(ResultStatus newResult)
         {
             Result = newResult;
         }
@@ -220,18 +220,55 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Console.WriteLine("[*] Job successfully loaded to sensor " + Address);
         }
 
+        /// <summary>
+        /// Triggers a camera to capture an image.
+        /// </summary>
         public async Task TriggerImageCapture()
         {
             Console.WriteLine("[*] Triggering image capture");
 
             try
             {
+                await Connect(CameraConnectionType.CM);
                 await Task.Run(() => { sensor.ManualAcquire(); });
             }
             catch (Exception ex)
             {
                 Console.WriteLine("[!] " + ex.Message);
             }
+            
+            await Disconnect(CameraConnectionType.CM);
+        }
+
+        /// <summary>
+        /// Gets the result of the most recent image analysis.
+        /// </summary>
+        public async Task GetResult()
+        {
+            // Enum of Cognex SDK result status.
+            CvsStatusLevel resultStatus;
+            
+            // Connects to sensor.
+            await Connect(CameraConnectionType.CM);
+            
+            // Gets result status from camera.
+            resultStatus = sensor.Results.StatusLevel;
+
+            switch (resultStatus)
+            {
+                case CvsStatusLevel.Pass:
+                    UpdateResult(ResultStatus.Pass);
+                    break;
+                case CvsStatusLevel.Warn:
+                    UpdateResult(ResultStatus.Warn);
+                    break;
+                case CvsStatusLevel.Fail:
+                    UpdateResult(ResultStatus.Fail);
+                    break;
+            }
+            
+            // Disconnects from camera.
+            await Disconnect(CameraConnectionType.CM);
         }
 
         // --------------------------------
