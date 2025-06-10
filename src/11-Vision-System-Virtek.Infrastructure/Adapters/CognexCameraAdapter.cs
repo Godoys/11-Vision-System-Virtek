@@ -144,6 +144,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Console.WriteLine("[*] Disconnected from sensor " + Address + "...");
         }
 
+        /// <summary>
+        /// Uploads a job file to a sensor.
+        /// </summary>
+        /// <param name="jobPath">File path to a job file.</param>
+        /// <param name="jobName">File name of a job file.</param>
         public async Task UploadJob(string jobPath, string jobName)
         {
             Console.WriteLine("[*] Uploading job " + jobName + "to sensor " + Address + "...");
@@ -181,6 +186,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Console.WriteLine("[*] " + jobName + " uploaded to sensor " + Address);
         }
 
+        /// <summary>
+        /// Sets the stored job file in camera as the one to be used in image analysis.
+        /// </summary>
+        /// <param name="jobName">File name of a job file.</param>
         public async Task LoadJob(string jobName)
         {
             Console.WriteLine("[*] Setting " + jobName + " as default job in sensor " + Address + "...");
