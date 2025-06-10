@@ -220,6 +220,20 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Console.WriteLine("[*] Job successfully loaded to sensor " + Address);
         }
 
+        public async Task TriggerImageCapture()
+        {
+            Console.WriteLine("[*] Triggering image capture");
+
+            try
+            {
+                await Task.Run(() => { sensor.ManualAcquire(); });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[!] " + ex.Message);
+            }
+        }
+
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
@@ -279,7 +293,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// Gets the job ID based on the job file name.
         /// </summary>
         /// <param name="jobName">Job file name.</param>
-        /// <returns></returns>
+        /// <returns>Returns the Id of the given job file.</returns>
         private string GetJobId(string jobName)
         {
             // Variable to hold the id value for return.
