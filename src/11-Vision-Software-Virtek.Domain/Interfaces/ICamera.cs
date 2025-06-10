@@ -72,7 +72,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <summary>
         /// Gets the result of the most recent image analysis.
         /// </summary>
-        /// <returns>The status of the result.</returns>
-        public Task<ResultStatus> GetResult();
+        public Task GetResult();
     }
 }
