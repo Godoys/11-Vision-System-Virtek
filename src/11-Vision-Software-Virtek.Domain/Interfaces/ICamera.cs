@@ -9,7 +9,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         string Password { get; }
         IPAddress Address { get; }
         CameraState State { get; }
-        ResultState Result { get; }
+        ResultStatus Result { get; }
 
         /// <summary>
         /// Updates Username with newUsername value.
@@ -39,7 +39,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// Updates the Result with newResult value.
         /// </summary>
         /// <param name="newResult">Holds the value of the new state to be set.</param>
-        public void UpdateResult(ResultState newResult);
+        public void UpdateResult(ResultStatus newResult);
 
         /// <summary>
         /// Connects to a camera.
@@ -63,5 +63,16 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="jobName">File name of a job file</param>
         public Task LoadJob(string jobName);
+        
+        /// <summary>
+        /// Triggers a camera to capture an image.
+        /// </summary>
+        public Task TriggerImageCapture();
+
+        /// <summary>
+        /// Gets the result of the most recent image analysis.
+        /// </summary>
+        /// <returns>The status of the result.</returns>
+        public Task<ResultStatus> GetResult();
     }
 }
