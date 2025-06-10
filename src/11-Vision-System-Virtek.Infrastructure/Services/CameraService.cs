@@ -11,11 +11,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
     public class CameraService : ICameraService
     {
-        private readonly ICamera Camera;
+        private readonly ICamera _camera;
 
         public CameraService(ICamera camera)
         {
-            Camera = camera;
+            _camera = camera;
         }
         
         // --------------------------------
@@ -30,10 +30,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public async Task LoadJobAsync(string filePath, string fileName)
         {
             // Uploads the job file to the camera.
-            await Camera.UploadJob(filePath, fileName);
+            await _camera.UploadJob(filePath, fileName);
             
             // Loads the job file and set it as the default for image analysis.
-            await Camera.LoadJob(fileName);
+            await _camera.LoadJob(fileName);
         }
 
         /// <summary>
@@ -43,13 +43,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public async Task<ResultStatus> GetImageResultAsync()
         {
             // Triggers an image capture.
-            await Camera.TriggerImageCapture();
+            await _camera.TriggerImageCapture();
             
             // Updates the result variable of camera.
-            await Camera.GetResult();
+            await _camera.GetResult();
             
             // Gets the result status from the camera and return it.
-            return Camera.Result;
+            return _camera.Result;
         }
         
         // --------------------------------

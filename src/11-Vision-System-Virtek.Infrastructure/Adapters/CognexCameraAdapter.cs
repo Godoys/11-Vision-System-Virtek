@@ -12,9 +12,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     {
         // Cognex sensor objects for different type of connections.
         
-        private readonly CvsInSight sensor;
-        private readonly CvsFtpClient sensorFTP;
-        private readonly CvsNativeModeClient sensorNativeMode;
+        private readonly CvsInSight _sensor;
+        private readonly CvsFtpClient _sensorFTP;
+        private readonly CvsNativeModeClient _sensorNativeMode;
         
         // Sensor logging, state, and result information.
         public string Username { get; private set; }
@@ -34,9 +34,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Address = address;
             State = CameraState.Offline;
             Result = ResultStatus.None;
-            sensor = new CvsInSight();
-            sensorFTP = new CvsFtpClient();
-            sensorNativeMode = new CvsNativeModeClient();
+            _sensor = new CvsInSight();
+            _sensorFTP = new CvsFtpClient();
+            _sensorNativeMode = new CvsNativeModeClient();
         }
 
         /// <summary>
@@ -128,13 +128,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             switch (connectionType)
             {
                 case CameraConnectionType.CM:
-                    await Task.Run(() => sensor.Disconnect());
+                    await Task.Run(() => _sensor.Disconnect());
                     break;
                 case CameraConnectionType.FTP:
-                    await Task.Run(() => sensorFTP.Disconnect());
+                    await Task.Run(() => _sensorFTP.Disconnect());
                     break;
                 case CameraConnectionType.NM:
-                    await Task.Run(() => sensorNativeMode.Disconnect());
+                    await Task.Run(() => _sensorNativeMode.Disconnect());
                     break;
             }
             
@@ -162,13 +162,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
                 // Checks if the JobName is accepted by the sensor system.
 
-                if (sensorFTP.IsValidFilename(jobName))
+                if (_sensorFTP.IsValidFilename(jobName))
                 {
                     await Task.Run(() =>
                     {
                         using (FileStream stream = new FileStream(jobPath, FileMode.Open))
                         {
-                            sensorFTP.SendFileToInSight(stream, jobName);
+                            _sensorFTP.SendFileToInSight(stream, jobName);
                         }
                     });
                 }
@@ -205,7 +205,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 string jobId = GetJobId(jobName);
 
                 // Set JobFile as the active job being used by the camera.
-                sensorNativeMode.SendCommand("SJ" + jobId);
+                _sensorNativeMode.SendCommand("SJ" + jobId);
                 
                 await Disconnect(CameraConnectionType.NM);
                 
@@ -230,7 +230,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             try
             {
                 await Connect(CameraConnectionType.CM);
-                await Task.Run(() => { sensor.ManualAcquire(); });
+                await Task.Run(() => { _sensor.ManualAcquire(); });
             }
             catch (Exception ex)
             {
@@ -252,7 +252,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             await Connect(CameraConnectionType.CM);
             
             // Gets result status from camera.
-            resultStatus = sensor.Results.StatusLevel;
+            resultStatus = _sensor.Results.StatusLevel;
 
             switch (resultStatus)
             {
@@ -284,7 +284,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
             try
             {
-                await Task.Run(() => { sensor.Connect(Address, Username, Password, false, true); });
+                await Task.Run(() => { _sensor.Connect(Address, Username, Password, false, true); });
             }
             catch (Exception ex)
             {
@@ -301,7 +301,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
             try
             {
-                await Task.Run(() => { sensorFTP.Connect(Address, Username, Password); });
+                await Task.Run(() => { _sensorFTP.Connect(Address, Username, Password); });
             }
             catch (Exception ex)
             {
@@ -318,7 +318,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
             try
             {
-                await Task.Run(() => { sensorNativeMode.Connect(Address, Username, Password); });
+                await Task.Run(() => { _sensorNativeMode.Connect(Address, Username, Password); });
             }
             catch (Exception ex)
             {
