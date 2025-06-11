@@ -1,10 +1,15 @@
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
     public class MessageBroker : IMessageBroker
     {
+        private IConnection _connection;
+        private IChannel _channel;
+        private AsyncEventingBasicConsumer _consumer;
+        
         public string HostName { get; }
         public string VirtualHost { get; }
         public string Username { get; }
@@ -36,21 +41,21 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 Password = Password,
             };
             
-            IConnection connection = await factory.CreateConnectionAsync();
-            IChannel channel = await connection.CreateChannelAsync();
+            _connection = await factory.CreateConnectionAsync();
+            _channel = await _connection.CreateChannelAsync();
             
             // Declaring Direct Exchange
 
-            await channel.ExchangeDeclareAsync(ExchangeName, "direct", true);
+            await _channel.ExchangeDeclareAsync(ExchangeName, "direct", true);
             
             // Declaring Queue
             
-            await channel.QueueDeclareAsync(QueueName, true, false, false);
+            await _channel.QueueDeclareAsync(QueueName, true, false, false);
             
             // Binding Queue to Direct Exchange
 
             string routingKey = clientId;
-            await channel.QueueBindAsync(QueueName, ExchangeName, routingKey);
+            await _channel.QueueBindAsync(QueueName, ExchangeName, routingKey);
         }
 
         /// <summary>
