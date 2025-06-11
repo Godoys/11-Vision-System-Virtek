@@ -23,15 +23,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public Task Disconnect();
 
         /// <summary>
-        /// Publishes a message to the broker using the specified routing key.
-        /// </summary>
-        /// <typeparam name="T">The type of the message (will be serialized).</typeparam>
-        /// <param name="routingKey">The routing key for message routing.</param>
-        /// <param name="message">The message to publish.</param>
-        /// <returns>A task representing the asynchronous publish operation.</returns>
-        public Task Publish<T>(string routingKey, T message);
-
-        /// <summary>
         /// Subscribes to messages with the given routing key and processes them with the provided handler.
         /// </summary>
         /// <param name="routingKey">The routing key to subscribe with.</param>
