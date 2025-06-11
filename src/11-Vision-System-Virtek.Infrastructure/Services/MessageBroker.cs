@@ -64,7 +64,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         /// <returns>A task representing the asynchronous disconnection.</returns>
         public async Task Disconnect()
         {
-            throw new NotImplementedException();
+            await _connection.DisposeAsync();
         }
 
         /// <summary>
