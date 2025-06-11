@@ -14,7 +14,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// Connects to the message broker.
         /// </summary>
         /// <returns>A task representing the asynchronous connection.</returns>
-        public Task Connect();
+        public Task Connect(string clientId);
 
         /// <summary>
         /// Disconnects from the message broker.
