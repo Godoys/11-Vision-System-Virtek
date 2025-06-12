@@ -45,7 +45,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             _channel = await _connection.CreateChannelAsync();
             
             // Declaring Direct Exchange
-
+            
             await _channel.ExchangeDeclareAsync(ExchangeName, "direct", true);
             
             // Declaring Queue
@@ -75,7 +75,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         /// <returns>A task representing the asynchronous subscription.</returns>
         public async Task Subscribe(string routingKey, Func<byte[], Task> handler)
         {
-            throw new NotImplementedException();
+            // Declaring consumer.
+            
+            _consumer = new AsyncEventingBasicConsumer(_channel);
+            
+            // Pass message to handler.
+            
+            _consumer.ReceivedAsync += (model, ea) => handler(ea.Body.ToArray());
         }
     }
 }
