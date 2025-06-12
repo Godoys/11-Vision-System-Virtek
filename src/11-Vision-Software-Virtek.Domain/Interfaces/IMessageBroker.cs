@@ -28,6 +28,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <param name="routingKey">The routing key to subscribe with.</param>
         /// <param name="handler">An async delegate that handles received messages as a byte array.</param>
         /// <returns>A task representing the asynchronous subscription.</returns>
-        public Task Subscribe(string routingKey, Func<byte[], Task> handler);
+        public Task Subscribe(string routingKey, Func<byte[], bool> handler);
     }
 }
