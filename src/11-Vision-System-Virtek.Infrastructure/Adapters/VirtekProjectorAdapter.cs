@@ -14,15 +14,15 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     public class VirtekProjectorAdapter : IProjector
     {
         // Variable used for telling CallApiAndWaitForMessage that message was received.
-        private static TaskCompletionSource<bool> _tcs = null;
+        private TaskCompletionSource<bool> _tcs = null;
         
         // Variable used for checking RMQ message values.
         private string _currentRequestName = "";
         
         // Vision and Projection service API instances
-        private dynamic systemApiInstance = new SystemApi();
-        private dynamic toolOperationApiInstance = new ToolOperationApi();
-        private dynamic projectionApiInstance = new ProjectionApi();
+        private readonly SystemApi _systemApiInstance = new SystemApi();
+        private readonly ToolOperationApi _toolOperationApiInstance = new ToolOperationApi();
+        private readonly ProjectionApi _projectionApiInstance = new ProjectionApi();
         
         public string ClientId { get; }
         public string ProjectorSerialNumber { get; }
@@ -31,7 +31,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         //    Public Methods Declaration
         // --------------------------------
 
-        VirtekProjectorAdapter(string clientId, string projectorSerialNumber)
+        public VirtekProjectorAdapter(string clientId, string projectorSerialNumber)
         {
             ClientId = clientId;
             ProjectorSerialNumber = projectorSerialNumber;
@@ -41,21 +41,21 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
-            await CallApiWaitForMessage(() => systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+            await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
         }
 
         public async Task Disconnect()
         {
             var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
-            await CallApiWaitForMessage(() => systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
+            await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
         }
 
         public async Task PauseProjection()
         {
             var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
-            await CallApiWaitForMessage(() => projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
+            await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
         }
         
         // --------------------------------
