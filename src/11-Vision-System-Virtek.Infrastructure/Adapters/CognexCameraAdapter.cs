@@ -27,7 +27,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         //    Public Methods Declaration
         // --------------------------------
 
-        CognexCameraAdapter(string username, string password, IPAddress address)
+        public CognexCameraAdapter(string username, string password, IPAddress address)
         {
             Username = username;
             Password = password;
