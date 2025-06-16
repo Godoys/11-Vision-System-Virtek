@@ -5,7 +5,7 @@ using RabbitMQ.Client.Events;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
-    public class MessageBroker : IMessageBroker
+    public class MessageBrokerService : IMessageBrokerService
     {
         private IConnection _connection;
         private IChannel _channel;
@@ -18,7 +18,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public string ExchangeName { get; }
         public string QueueName { get; }
 
-        public MessageBroker(string exchangeName, string queueName)
+        public MessageBrokerService(string exchangeName, string queueName)
         {
             HostName     = "127.0.0.1";
             VirtualHost  = "virtek";

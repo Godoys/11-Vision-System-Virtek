@@ -15,4 +15,8 @@
     <ProjectReference Include="..\11-Vision-Software-Virtek.Domain\11-Vision-Software-Virtek.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="UseCases\PauseCurrentProjectionUseCase.cs" />
+  </ItemGroup>
+
 </Project>

@@ -16,7 +16,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public CameraState State { get; set; }
         
         // Holds the most current result of a image analysis.
-        public ResultState Result { get; set; }
+        public ResultStatus Result { get; set; }
         
         public Camera(string username, string password, IPAddress address)
         {

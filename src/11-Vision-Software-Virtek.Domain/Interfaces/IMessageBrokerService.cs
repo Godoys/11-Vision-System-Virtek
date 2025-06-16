@@ -1,7 +1,7 @@
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
-    public interface IMessageBroker
+    public interface IMessageBrokerService
     {
         string HostName { get; }
         string VirtualHost { get; }
