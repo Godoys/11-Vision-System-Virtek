@@ -58,6 +58,26 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
         }
         
+        public bool IsExpectedMessage(byte[] msg)
+        {
+            string message = Encoding.UTF8.GetString(msg);
+            
+            var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
+
+            if (messageObject != null && messageObject.RequestName != null)
+            {
+                string requestedName = messageObject.RequestName.ToString();
+
+                if (requestedName == _currentRequestName)
+                {
+                    _tcs.TrySetResult(true);
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+        
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
@@ -118,26 +138,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 string errorMessage = "[!] Error while executing API call:" + ex.Message;
                 return (false, default(T)!,  errorMessage);
             }
-        }
-        
-        private bool IsExpectedMessage(byte[] msg)
-        {
-            string message = Encoding.UTF8.GetString(msg);
-            
-            var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
-
-            if (messageObject != null && messageObject.RequestName != null)
-            {
-                string requestedName = messageObject.RequestName.ToString();
-
-                if (requestedName == _currentRequestName)
-                {
-                    _tcs.TrySetResult(true);
-                    return true;
-                }
-            }
-            
-            return false;
         }
 
         private void UpdateExpectedRequest(string newRequestName)
