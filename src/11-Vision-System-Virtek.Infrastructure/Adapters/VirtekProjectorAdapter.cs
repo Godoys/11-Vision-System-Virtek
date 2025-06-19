@@ -1,13 +1,7 @@
 using System.Text;
 using _11_Vision_System_Virtek.Domain.Interfaces;
-using _11_Vision_System_Virtek.Infrastructure.Services;
 using VisionAndProjectionService.Swagger.Api;
-using VisionAndProjectionService.Swagger.Client;
-using VisionAndProjectionService.Swagger.Model;
-
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
-using ProjectEntityWithFullNameDto = VisionAndProjectionService.Swagger.Model.ProjectEntityWithFullNameDto;
-using ProjectionEntityFullNameDto = VisionAndProjectionService.Swagger.Model.ProjectionEntityFullNameDto;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
