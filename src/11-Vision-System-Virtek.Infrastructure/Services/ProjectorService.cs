@@ -24,11 +24,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             // Gets projector clientId.
             string clientId = _projector.ClientId; 
             
-            // Connets to the Projector Client.
-            await _projector.Connect();
-            
             // Connects to the RabbitMQ broker.
             await _messageBrokerService.Connect(clientId);
+            
+            // Connects to the Projector Client.
+            await _projector.Connect();
         }
 
         /// <summary>
