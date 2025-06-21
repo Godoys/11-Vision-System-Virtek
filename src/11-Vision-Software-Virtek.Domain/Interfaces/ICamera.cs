@@ -9,69 +9,82 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         string Password { get; }
         IPAddress Address { get; }
         CameraState State { get; }
-        ResultStatus Result { get; }
+        ResultStatus LastAnalysisResult { get; }
 
         /// <summary>
-        /// Updates Username with newUsername value.
+        /// Changes the camera's username.
         /// </summary>
-        /// <param name="newUsername">Holds the value of the new username to be set.</param>
+        /// <param name="newUsername">The new login username.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
         public void UpdateUsername(string newUsername);
         
         /// <summary>
-        /// Updates the Password with newPassword value.
+        /// Changes the camera's password.
         /// </summary>
-        /// <param name="newPassword">Holds the value of the new password to be set.</param>
+        /// <param name="newPassword">The new login password.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
         public void UpdatePassword(string newPassword);
         
         /// <summary>
-        /// Updates the Address with newAddress value.
+        /// Changes the camera's address.
         /// </summary>
-        /// <param name="newAddress">Holds the value of the new password to be set.</param>
+        /// <param name="newAddress">The new IP address.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
         public void UpdateAddress(IPAddress newAddress);
         
         /// <summary>
-        /// Updates the State with newState value.
+        /// Changes the camera's state.
         /// </summary>
-        /// <param name="newState">Holds the value of the new state to be set.</param>
+        /// <param name="newState">The new camera state.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
         public void UpdateState(CameraState newState);
         
         /// <summary>
-        /// Updates the Result with newResult value.
+        /// Changes the camera's last image analysis result.
         /// </summary>
-        /// <param name="newResult">Holds the value of the new state to be set.</param>
+        /// <param name="newResult">The new image analysis result.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
         public void UpdateResult(ResultStatus newResult);
 
         /// <summary>
-        /// Connects to a camera.
+        /// Establishes a connection with the camera.
         /// </summary>
-        public Task Connect(CameraConnectionType connectionType);
+        /// <param name="connectionType">Type of connection to use.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public Task ConnectAsync(CameraConnectionType connectionType);
         
         /// <summary>
-        /// Disconnects from a camera.
+        /// Closes the connection with the camera.
         /// </summary>
-        public Task Disconnect(CameraConnectionType connectionType);
+        /// <param name="connectionType">Type of connection used.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public Task DisconnectAsync(CameraConnectionType connectionType);
         
         /// <summary>
         /// Uploads a job file to a camera.
         /// </summary>
         /// <param name="jobPath">File path to a job file.</param>
         /// <param name="jobName">File name of a job file</param>
-        public Task UploadJob(string jobPath, string jobName);
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public Task UploadJobAsync(string jobPath, string jobName);
 
         /// <summary>
-        /// Sets the stored job file in camera as the one to be used in image analysis.
+        /// Activate a pre-uploaded job for analysis.
         /// </summary>
-        /// <param name="jobName">File name of a job file</param>
-        public Task LoadJob(string jobName);
+        /// <param name="jobName">The name of the job file.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public Task LoadJobAsync(string jobName);
         
         /// <summary>
-        /// Triggers a camera to capture an image.
+        /// Triggers an image capture
         /// </summary>
-        public Task TriggerImageCapture();
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public Task TriggerImageCaptureAsync();
 
         /// <summary>
-        /// Gets the result of the most recent image analysis.
+        /// Retrieves the result of the last image analysis
         /// </summary>
-        public Task GetResult();
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public Task GetAnalysisResultAsync();
     }
 }
