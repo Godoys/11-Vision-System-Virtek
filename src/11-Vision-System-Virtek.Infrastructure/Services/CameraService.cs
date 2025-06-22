@@ -9,6 +9,9 @@ using System.Text.RegularExpressions;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
+    /// <summary>
+    /// Handles end-to-end flow: upload a job, trigger image capture, fetch result and wrap into domain outcomes.
+    /// </summary>
     public class CameraService : ICameraService
     {
         private readonly ICamera _camera;
@@ -22,34 +25,25 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         //    Public Methods Declaration
         // --------------------------------
         
-        /// <summary>
-        /// Uploads a Job file to a camera, then load it as the current job being used.
-        /// </summary>
-        /// <param name="filePath">File path to the Job file.</param>
-        /// <param name="fileName">File name of the Job file.</param>
-        public async Task LoadJobAsync(string filePath, string fileName)
+        public async Task UploadAndLoadJobAsync(string filePath, string fileName)
         {
             // Uploads the job file to the camera.
-            await _camera.UploadJob(filePath, fileName);
+            await _camera.UploadJobAsync(filePath, fileName);
             
             // Loads the job file and set it as the default for image analysis.
-            await _camera.LoadJob(fileName);
+            await _camera.LoadJobAsync(fileName);
         }
-
-        /// <summary>
-        /// Gets the result status of the image analysis done by a camera and raises an event based on the result status.
-        /// </summary>
-        /// <returns>The result status of the most recent image analysis.</returns>
-        public async Task<ResultStatus> GetImageResultAsync()
+        
+        public async Task<ResultStatus> GetLastAnalysisResultAsync()
         {
             // Triggers an image capture.
-            await _camera.TriggerImageCapture();
+            await _camera.TriggerImageCaptureAsync();
             
             // Updates the result variable of camera.
-            await _camera.GetResult();
+            await _camera.GetAnalysisResultAsync();
             
             // Gets the result status from the camera and return it.
-            return _camera.Result;
+            return _camera.LastAnalysisResult;
         }
         
         // --------------------------------
