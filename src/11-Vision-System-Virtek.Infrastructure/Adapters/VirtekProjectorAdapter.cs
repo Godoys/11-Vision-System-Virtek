@@ -5,6 +5,9 @@ using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
+    /// <summary>
+    /// Adapts the Virtek Vision Swagger API and RAbbitMQ messages into IProjector interface.
+    /// </summary>
     public class VirtekProjectorAdapter : IProjector
     {
         // Variable used for telling CallApiAndWaitForMessage that message was received.
@@ -31,21 +34,21 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             ProjectorSerialNumber = projectorSerialNumber;
         }
 
-        public async Task Connect()
+        public async Task ConnectAsync()
         {
             var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
             await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
         }
 
-        public async Task Disconnect()
+        public async Task DisconnectAsync()
         {
             var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
             await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
         }
 
-        public async Task PauseProjection()
+        public async Task PauseProjectionAsync()
         {
             var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
