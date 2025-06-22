@@ -1,21 +1,27 @@
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
+    /// <summary>
+    /// Orchestrates projector lifecycle and projection control at a business-logic level.
+    /// </summary>
     public interface IProjectorService
     {
         /// <summary>
-        /// Connects to a projector.
+        /// Establishes a session with the industrial laser projector.
         /// </summary>
-        public Task Connect();
+        /// <returns>A task that completes when connected.</returns>
+        public Task ConnectAsync();
         
         /// <summary>
-        /// Disconnects from projector.
+        /// Gracefully closes the session with the projector.
         /// </summary>
-        public Task Disconnect();
+        /// <returns>A task that completes when disconnected.</returns>
+        public Task DisconnectAsync();
 
         /// <summary>
-        /// Pauses current projection.
+        /// Pauses the current projection.
         /// </summary>
-        public Task PauseProjection();
+        /// <returns>A task that completes when projection paused.</returns>
+        public Task PauseProjectionAsync();
     }
 }
