@@ -2,6 +2,9 @@ using _11_Vision_System_Virtek.Domain.Interfaces;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
+    /// <summary>
+    /// Orchestrates projection connectitvity, functioning, and message handling via RabbitMQ
+    /// </summary>
     public class ProjectorService : IProjectorService
     {
         // RabbitMQ broker interface.
@@ -16,39 +19,33 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             _projector = projector;
         }
         
-        /// <summary>
-        /// Connects to a projector using RabbitMQ.
-        /// </summary>
-        public async Task Connect()
+        public async Task ConnectAsync()
         {
             // Gets projector clientId.
             string clientId = _projector.ClientId; 
             
             // Connects to the RabbitMQ broker.
-            await _messageBrokerService.Connect(clientId);
+            await _messageBrokerService.ConnectAsync(clientId);
             
             // Subscribe to projector RabbitMQ channel.
-            await _messageBrokerService.Subscribe(clientId, _projector.IsExpectedMessage);
+            await _messageBrokerService.SubscribeAsync(clientId, _projector.IsExpectedMessage);
             
             // Connects to the Projector Client.
-            await _projector.Connect();
+            await _projector.ConnectAsync();
         }
-
-        /// <summary>
-        /// Disconnects from projector using RabbitMQ.
-        /// </summary>
-        public async Task Disconnect()
+        
+        public async Task DisconnectAsync()
         {
-            await _messageBrokerService.Disconnect();
+            await _messageBrokerService.DisconnectAsync();
         }
 
-        public async Task PauseProjection()
+        public async Task PauseProjectionAsync()
         {
             // Gets projector clientId.
             string clientId = _projector.ClientId; 
             
             // Pause current projection.
-            await _projector.PauseProjection();
+            await _projector.PauseProjectionAsync();
         }
     }
 }
