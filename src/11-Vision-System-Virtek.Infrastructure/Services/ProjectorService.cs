@@ -26,6 +26,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             
             // Connects to the RabbitMQ broker.
             await _messageBrokerService.Connect(clientId);
+            
+            // Subscribe to projector RabbitMQ channel.
+            await _messageBrokerService.Subscribe(clientId, _projector.IsExpectedMessage);
+            
+            // Connects to the Projector Client.
+            await _projector.Connect();
         }
 
         /// <summary>
@@ -40,9 +46,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         {
             // Gets projector clientId.
             string clientId = _projector.ClientId; 
-            
-            // Subscribe to projector RabbitMQ channel.
-            await _messageBrokerService.Subscribe(clientId, _projector.IsExpectedMessage);
             
             // Pause current projection.
             await _projector.PauseProjection();
