@@ -3,7 +3,7 @@ using _11_Vision_System_Virtek.Domain.Interfaces;
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
     /// <summary>
-    /// Orchestrates projection connectitvity, functioning, and message handling via RabbitMQ
+    /// Orchestrates projection connectivity, functioning, and message handling via RabbitMQ
     /// </summary>
     public class ProjectorService : IProjectorService
     {
@@ -12,6 +12,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         
         // Virtek Vision projector interface,
         private readonly IProjector _projector;
+        
+        // Current and previous active projection entities in Work Order.
+        private string _currentProjectionEntity = "";
+        private string _previousProjectionEntity = "";
 
         public ProjectorService(IMessageBrokerService brokerService, IProjector projector)
         {
@@ -46,6 +50,38 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             
             // Pause current projection.
             await _projector.PauseProjectionAsync();
+        }
+
+        public async Task CheckCurrentProjectionEntityAsync(CancellationToken token)
+        {
+            // Gets the current name of the active projection entity
+            _currentProjectionEntity = await _projector.GetCurrentProjectionEntityAsync();
+            
+            // Loops while the cancellation token is not activated
+            while (!token.IsCancellationRequested)
+            {
+                // Compares the current and previous projection entity name.
+                if (_currentProjectionEntity != _previousProjectionEntity)
+                {
+                    OnNextStepEvent(EventArgs.Empty);
+                    
+                    // Sets the _previousProjectionEntity to be equal to _currentProjectionEntity
+                    _previousProjectionEntity = _currentProjectionEntity;
+                }
+            }
+            
+
+        }
+        
+        public event IProjectorService.NextStepEventHandler NextStep;
+
+        /// <summary>
+        /// Method to invoke event.
+        /// </summary>
+        /// <param name="e">Event arguments passed to delegate.</param>
+        protected virtual void OnNextStepEvent(EventArgs e)
+        {
+            NextStep?.Invoke(this, e);
         }
     }
 }
