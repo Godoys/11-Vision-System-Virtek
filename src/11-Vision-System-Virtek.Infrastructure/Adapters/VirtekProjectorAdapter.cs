@@ -6,7 +6,7 @@ using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
     /// <summary>
-    /// Adapts the Virtek Vision Swagger API and RAbbitMQ messages into IProjector interface.
+    /// Adapts the Virtek Vision Swagger API and RabbitMQ messages into IProjector interface.
     /// </summary>
     public class VirtekProjectorAdapter : IProjector
     {
