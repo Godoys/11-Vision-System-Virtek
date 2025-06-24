@@ -41,6 +41,12 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public Task<string> GetCurrentProjectionEntityAsync();
         
         /// <summary>
+        /// Gets the name of the current open Work Order.
+        /// </summary>
+        /// <returns>The name of the open Work Order.</returns>
+        public Task<string> GetCurrentWorkOrderNameAsync();
+        
+        /// <summary>
         /// Process an incoming projector message.
         /// </summary>
         /// <param name="msg">The raw bytes received from the projector.</param>
