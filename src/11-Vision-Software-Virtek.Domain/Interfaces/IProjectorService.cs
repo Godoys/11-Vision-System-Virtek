@@ -30,5 +30,15 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <param name="token">A cancellation token that when activated completes the task.</param>
         /// <returns>A task that completes when Cancellation Token is activated.</returns>
         public Task CheckCurrentProjectionEntityAsync(CancellationToken token);
+        
+        /// <summary>
+        /// Signature of the handler of the NextStep event.
+        /// </summary>
+        public delegate void NextStepEventHandler(object sender, EventArgs e);
+        
+        /// <summary>
+        /// NextStep event declaration.
+        /// </summary>
+        event NextStepEventHandler NextStep;
     }
 }
