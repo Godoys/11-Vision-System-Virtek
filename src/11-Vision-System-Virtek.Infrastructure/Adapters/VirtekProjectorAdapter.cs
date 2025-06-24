@@ -54,6 +54,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
         }
+
+
         
         public bool IsExpectedMessage(byte[] msg)
         {
@@ -79,6 +81,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         //   Private Methods Declaration
         // --------------------------------
 
+        /// <summary>
+        /// Executes the API call and waits for a response from the projector.
+        /// </summary>
+        /// <param name="apiCall">The function that represents the API call.</param>
+        /// <param name="expectedRequest">The expected message to be received after the API call.</param>
+        /// <param name="apiName">The name of the API being used.</param>
+        /// <param name="waitForMessage">If true, waits 30 seconds for response; False, do not wait for response.</param>
         private async Task CallApiWaitForMessage<T>(Func<T> apiCall, string expectedRequest, string apiName,
             bool waitForMessage)
         {
@@ -123,6 +132,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             UpdateExpectedRequest("");
         }
 
+        /// <summary>
+        /// Executes the API call.
+        /// </summary>
+        /// <param name="apiCall">The function that represents the API call.</param>
+        /// <returns>A tuple that holds three values about the execution of the API call.</returns>
         private (bool success, T result, string errorMessage) ExecuteApiCall<T>(Func<T> apiCall)
         {
             try
@@ -137,6 +151,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
         }
 
+        /// <summary>
+        /// Changes the current request name. 
+        /// </summary>
+        /// <param name="newRequestName">The new request name.</param>
         private void UpdateExpectedRequest(string newRequestName)
         {
             _currentRequestName = newRequestName;
