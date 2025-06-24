@@ -23,5 +23,10 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <returns>A task that completes when projection paused.</returns>
         public Task PauseProjectionAsync();
+        
+        /// <summary>
+        /// Checks if the current projection entity changed.
+        /// </summary>
+        public Task CheckCurrentProjectionEntityAsync();
     }
 }
