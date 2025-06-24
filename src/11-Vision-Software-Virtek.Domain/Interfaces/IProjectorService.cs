@@ -27,6 +27,8 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <summary>
         /// Checks if the current projection entity changed.
         /// </summary>
-        public Task CheckCurrentProjectionEntityAsync();
+        /// <param name="token">A cancellation token that when activated completes the task.</param>
+        /// <returns>A task that completes when Cancellation Token is activated.</returns>
+        public Task CheckCurrentProjectionEntityAsync(CancellationToken token);
     }
 }
