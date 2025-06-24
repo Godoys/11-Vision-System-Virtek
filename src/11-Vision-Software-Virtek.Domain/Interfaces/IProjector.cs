@@ -33,6 +33,12 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <returns>A task that completes when projection pauses.</returns>
         public Task PauseProjectionAsync();
+
+        /// <summary>
+        /// Gets the current projection entity.
+        /// </summary>
+        /// <returns>A task that completed when current projection entity name is returned.</returns>
+        public Task<string> GetCurrentProjectionEntityAsync();
         
         /// <summary>
         /// Process an incoming projector message.
