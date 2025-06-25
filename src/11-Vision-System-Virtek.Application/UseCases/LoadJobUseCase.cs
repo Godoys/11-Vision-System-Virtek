@@ -13,7 +13,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
 
         public async Task Execute(string filePath, string fileName)
         {
-            await _cameraService.LoadJobAsync(filePath, fileName);
+            await _cameraService.UploadAndLoadJobAsync(filePath, fileName);
         }
     }
 }

@@ -5,6 +5,9 @@ using RabbitMQ.Client.Events;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Services
 {
+    /// <summary>
+    /// Publishes and subscribes to RabbitMQ messages.
+    /// </summary>
     public class MessageBrokerService : IMessageBrokerService
     {
         private IConnection _connection;
@@ -27,12 +30,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             ExchangeName = exchangeName;
             QueueName    = queueName;
         }
-
-        /// <summary>
-        /// Connects to the message broker.
-        /// </summary>
-        /// <returns>A task representing the asynchronous connection.</returns>
-        public async Task Connect(string clientId)
+        
+        public async Task ConnectAsync(string clientId)
         {
             ConnectionFactory factory = new ConnectionFactory
             {
@@ -58,24 +57,14 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             string routingKey = clientId;
             await _channel.QueueBindAsync(QueueName, ExchangeName, routingKey);
         }
-
-        /// <summary>
-        /// Disconnects from the message broker.
-        /// </summary>
-        /// <returns>A task representing the asynchronous disconnection.</returns>
-        public async Task Disconnect()
+        
+        public async Task DisconnectAsync()
         {
             await _connection.DisposeAsync();
             await _channel.DisposeAsync();
         }
-
-        /// <summary>
-        /// Subscribes to messages with the given routing key and processes them with the provided handler.
-        /// </summary>
-        /// <param name="routingKey">The routing key to subscribe with.</param>
-        /// <param name="handler">An async delegate that handles received messages as a byte array.</param>
-        /// <returns>A task representing the asynchronous subscription.</returns>
-        public async Task Subscribe(string routingKey, Func<byte[], bool> handler)
+        
+        public async Task SubscribeAsync(string routingKey, Func<byte[], bool> handler)
         {
             // Declaring consumer.
             

@@ -8,6 +8,9 @@ using Cognex.InSight.NativeMode;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
+    /// <summary>
+    /// Adapts Cognex InSight SDK to the ICamera interface.
+    /// </summary>
     public class CognexCameraAdapter : ICamera
     {
         // Cognex sensor objects for different type of connections.
@@ -16,12 +19,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private readonly CvsFtpClient _sensorFTP;
         private readonly CvsNativeModeClient _sensorNativeMode;
         
-        // Sensor logging, state, and result information.
         public string Username { get; private set; }
         public string Password { get; private set; }
         public IPAddress Address { get; private set; }
         public CameraState State { get; private set; }
-        public ResultStatus Result { get; private set; }
+        public ResultStatus LastAnalysisResult { get; private set; }
         
         // --------------------------------
         //    Public Methods Declaration
@@ -33,69 +35,38 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             Password = password;
             Address = address;
             State = CameraState.Offline;
-            Result = ResultStatus.None;
+            LastAnalysisResult = ResultStatus.None;
             _sensor = new CvsInSight();
             _sensorFTP = new CvsFtpClient();
             _sensorNativeMode = new CvsNativeModeClient();
         }
-
-        /// <summary>
-        /// Updates Username with newUsername value.
-        /// </summary>
-        /// <param name="newUsername">Holds the value of the new username to be set.</param>
         
         public void UpdateUsername(string newUsername)
         {
             Username = newUsername;
         }
-
-        /// <summary>
-        /// Updates the Password with newPassword value.
-        /// </summary>
-        /// <param name="newPassword">Holds the value of the new password to be set.</param>
         
         public void UpdatePassword(string newPassword)
         {
             Password = newPassword;
         }
-
-        /// <summary>
-        /// Updates the Address with newAddress value.
-        /// </summary>
-        /// <param name="newAddress">Holds the value of the new password to be set.</param>
         
         public void UpdateAddress(IPAddress newAddress)
         {
             Address = newAddress;
         }
 
-        /// <summary>
-        /// Updates the State with newState value.
-        /// </summary>
-        /// <param name="newState">Holds the value of the new state to be set.</param>
-
         public void UpdateState(CameraState newState)
         {
             State = newState;
         }
 
-        /// <summary>
-        /// Updates the Result with newResult value.
-        /// </summary>
-        /// <param name="newResult">Holds the value of the new state to be set.</param>
-
         public void UpdateResult(ResultStatus newResult)
         {
-            Result = newResult;
+            LastAnalysisResult = newResult;
         }
-
-        /// <summary>
-        /// Connects to a camera through ConnectionType.
-        /// </summary>
-        /// <param name="connectionType">Type of connection that will be used.</param>
-        /// <exception cref="NotSupportedException">Connection type is not support.</exception>
         
-        public async Task Connect(CameraConnectionType connectionType)
+        public async Task ConnectAsync(CameraConnectionType connectionType)
         {
             switch (connectionType)
             {
@@ -115,13 +86,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             // Set state to connected.
             State = CameraState.Connected;
         }
-
-        /// <summary>
-        /// Disconnects from a camera.
-        /// </summary>
-        /// <param name="connectionType">Type of connection used.</param>
         
-        public async Task Disconnect(CameraConnectionType connectionType)
+        public async Task DisconnectAsync(CameraConnectionType connectionType)
         {
             Console.WriteLine("[*] Disconnecting from sensor " + Address + "...");
             
@@ -143,19 +109,14 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             Console.WriteLine("[*] Disconnected from sensor " + Address + "...");
         }
-
-        /// <summary>
-        /// Uploads a job file to a sensor.
-        /// </summary>
-        /// <param name="jobPath">File path to a job file.</param>
-        /// <param name="jobName">File name of a job file.</param>
-        public async Task UploadJob(string jobPath, string jobName)
+        
+        public async Task UploadJobAsync(string jobPath, string jobName)
         {
             Console.WriteLine("[*] Uploading job " + jobName + "to sensor " + Address + "...");
 
             try
             {
-                await Connect(CameraConnectionType.FTP);
+                await ConnectAsync(CameraConnectionType.FTP);
                 
                 // Set state to connected.
                 State = CameraState.Connected;
@@ -173,7 +134,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     });
                 }
 
-                await Disconnect(CameraConnectionType.FTP);
+                await DisconnectAsync(CameraConnectionType.FTP);
                 
                 // Set state to disconnected.
                 State = CameraState.Disconnected;
@@ -185,29 +146,25 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             Console.WriteLine("[*] " + jobName + " uploaded to sensor " + Address);
         }
-
-        /// <summary>
-        /// Sets the stored job file in camera as the one to be used in image analysis.
-        /// </summary>
-        /// <param name="jobName">File name of a job file.</param>
-        public async Task LoadJob(string jobName)
+        
+        public async Task LoadJobAsync(string jobName)
         {
             Console.WriteLine("[*] Setting " + jobName + " as default job in sensor " + Address + "...");
 
             try
             {
-                await Connect(CameraConnectionType.NM);
+                await ConnectAsync(CameraConnectionType.NM);
                 
                 // Set state to connected.
                 State = CameraState.Connected;
 
                 // Gets the jobId.
-                string jobId = GetJobId(jobName);
+                string jobId = ParseJobId(jobName);
 
                 // Set JobFile as the active job being used by the camera.
                 _sensorNativeMode.SendCommand("SJ" + jobId);
                 
-                await Disconnect(CameraConnectionType.NM);
+                await DisconnectAsync(CameraConnectionType.NM);
                 
                 // Set state to disconnected.
                 State = CameraState.Disconnected;
@@ -219,17 +176,14 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             Console.WriteLine("[*] Job successfully loaded to sensor " + Address);
         }
-
-        /// <summary>
-        /// Triggers a camera to capture an image.
-        /// </summary>
-        public async Task TriggerImageCapture()
+        
+        public async Task TriggerImageCaptureAsync()
         {
             Console.WriteLine("[*] Triggering image capture");
 
             try
             {
-                await Connect(CameraConnectionType.CM);
+                await ConnectAsync(CameraConnectionType.CM);
                 await Task.Run(() => { _sensor.ManualAcquire(); });
             }
             catch (Exception ex)
@@ -237,19 +191,16 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 Console.WriteLine("[!] " + ex.Message);
             }
             
-            await Disconnect(CameraConnectionType.CM);
+            await DisconnectAsync(CameraConnectionType.CM);
         }
-
-        /// <summary>
-        /// Gets the result of the most recent image analysis.
-        /// </summary>
-        public async Task GetResult()
+        
+        public async Task GetAnalysisResultAsync()
         {
             // Enum of Cognex SDK result status.
             CvsStatusLevel resultStatus;
             
             // Connects to sensor.
-            await Connect(CameraConnectionType.CM);
+            await ConnectAsync(CameraConnectionType.CM);
             
             // Gets result status from camera.
             resultStatus = _sensor.Results.StatusLevel;
@@ -268,7 +219,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
             
             // Disconnects from camera.
-            await Disconnect(CameraConnectionType.CM);
+            await DisconnectAsync(CameraConnectionType.CM);
         }
 
         // --------------------------------
@@ -327,34 +278,15 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         }
         
         /// <summary>
-        /// Gets the job ID based on the job file name.
+        /// Gets the job identifier based on the job file name.
         /// </summary>
         /// <param name="jobName">Job file name.</param>
-        /// <returns>Returns the Id of the given job file.</returns>
-        private string GetJobId(string jobName)
+        /// <returns>Returns the identifier of the given job file.</returns>
+        private string ParseJobId(string jobName)
         {
-            // Variable to hold the id value for return.
-            string result = string.Empty;
-            
-            // Regex to get the first alphabetic character on the JobName.
-            Regex rx = new Regex(@"a-zA-Z");
-            
-            // Collection of matches that hold the first alphabethic character.
-            MatchCollection matches = rx.Matches(jobName);
-            
-            // First alphabetic character found in JobName.
-            string firstAlphaCharacter = matches[0].Value;
-            
-            // Location of the first alphabetic character.
-            int charLocation = jobName.IndexOf(firstAlphaCharacter, StringComparison.Ordinal);
-            
-            // Gets the substring that represents the job ID.
-            if (charLocation > 0)
-            {
-                result = jobName.Substring(0, charLocation);
-            }
-            
-            return result;
+            // Extract numeric prefix (e.g. "123ABC" -> "123")
+            var m = Regex.Match(jobName, @"^\d+");
+            return m.Success ? m.Value : throw new FormatException($"[!] Invalid job name: {jobName}");
         }
     }
 }

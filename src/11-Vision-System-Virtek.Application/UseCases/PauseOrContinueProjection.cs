@@ -25,7 +25,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             switch (result)
             {
                 case ResultStatus.Fail:
-                    await _projectorService.PauseProjection();
+                    await _projectorService.PauseProjectionAsync();
                     break;
                 case ResultStatus.Pass:
                     break;

@@ -14,7 +14,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
 
         public async Task<ResultStatus> Execute()
         {
-            return await _cameraService.GetImageResultAsync();
+            return await _cameraService.GetLastAnalysisResultAsync();
         }
     }
 }
