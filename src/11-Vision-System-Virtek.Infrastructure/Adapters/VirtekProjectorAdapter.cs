@@ -1,14 +1,8 @@
 using System.Text;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using VisionAndProjectionService.Swagger.Api;
-using VisionAndProjectionService.Swagger.Client;
-using VisionAndProjectionService.Swagger.Model;
 using WorkorderTrackerService.Swagger.Api;
-using WorkorderTrackerService.Swagger.Client;
 using WorkorderTrackerService.Swagger.Model;
-using WorkorderService.Swagger.Api;
-using WorkorderService.Swagger.Client;
-using WorkorderService.Swagger.Model;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 using LoadWorkOrderDto = WorkorderTrackerService.Swagger.Model.LoadWorkOrderDto;
 
