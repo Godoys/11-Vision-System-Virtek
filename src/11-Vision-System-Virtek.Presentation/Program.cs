@@ -8,11 +8,6 @@ IProjectorService projectorService = new ProjectorService(messageBrokerService, 
 
 await projectorService.ConnectAsync();
 
-Console.WriteLine("[*] Type 1 to stop projection or 0 to continue projection.");
+string projectionEntity = await projector.GetCurrentProjectionEntityAsync();
 
-string userInput = Console.ReadLine();
-
-if (userInput == "1")
-{
-    await projectorService.PauseProjectionAsync();
-}
+Console.WriteLine(projectionEntity);
