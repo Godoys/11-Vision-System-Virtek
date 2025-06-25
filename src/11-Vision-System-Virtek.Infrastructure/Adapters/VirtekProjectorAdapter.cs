@@ -70,7 +70,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>The string with the active projection entity</returns>
         public async Task<string> GetCurrentProjectionEntityAsync()
         {
-            LoadWorkOrderDto loadWorkOrderDto = new  LoadWorkOrderDto(clientId: ClientId, workOrderName: "LT5");
+            string workorderName = await GetCurrentWorkOrderNameAsync();
+            
+            LoadWorkOrderDto loadWorkOrderDto = new  LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
 
             ResultDtoWorkOrderProjectionEntityCollectionDto projectionEntityCollection = new ResultDtoWorkOrderProjectionEntityCollectionDto();
             
@@ -80,7 +82,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
             return currentProjectionEntities;
         }
-        
+
+        public async Task<string> GetCurrentWorkOrderNameAsync()
+        {
+            return "LT5";
+        }
+
         public bool IsExpectedMessage(byte[] msg)
         {
             string message = Encoding.UTF8.GetString(msg);
