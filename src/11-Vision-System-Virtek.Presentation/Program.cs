@@ -6,7 +6,7 @@ IMessageBrokerService messageBrokerService = new MessageBrokerService("Direct", 
 IProjector projector = new VirtekProjectorAdapter("220e806b-c33b-4ccb-9b7a-de4cc45234e5", "24039611");
 IProjectorService projectorService = new ProjectorService(messageBrokerService, projector);
 
-await projectorService.Connect();
+await projectorService.ConnectAsync();
 
 Console.WriteLine("[*] Type 1 to stop projection or 0 to continue projection.");
 
@@ -14,5 +14,5 @@ string userInput = Console.ReadLine();
 
 if (userInput == "1")
 {
-    await projectorService.PauseProjection();
+    await projectorService.PauseProjectionAsync();
 }
