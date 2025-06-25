@@ -5,6 +5,7 @@ using WorkorderTrackerService.Swagger.Api;
 using WorkorderTrackerService.Swagger.Model;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 using LoadWorkOrderDto = WorkorderTrackerService.Swagger.Model.LoadWorkOrderDto;
+using Newtonsoft.Json.Linq;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
@@ -64,17 +65,22 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>The string with the active projection entity</returns>
         public async Task<string> GetCurrentProjectionEntityAsync()
         {
+            // Gets the name of the current open Work Order and stores it.
             string workorderName = await GetCurrentWorkOrderNameAsync();
             
+            // DTO for storing data for Work Order access.
             LoadWorkOrderDto loadWorkOrderDto = new  LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
 
-            ResultDtoWorkOrderProjectionEntityCollectionDto projectionEntityCollection = new ResultDtoWorkOrderProjectionEntityCollectionDto();
+            // DTO for storing the result of the API call.
+            ResultDtoWorkOrderProjectionEntityCollectionDto projectionEntityCollectionJson = new ResultDtoWorkOrderProjectionEntityCollectionDto();
             
-            await CallApiWaitForMessage(() => projectionEntityCollection = _trackingRetrievalOperationsApiInstance.WorkOrderTrackerServiceGetCurrentProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
+            // Calls the API command that collects the list of projection entities.
+            await CallApiWaitForMessage(() => projectionEntityCollectionJson = _trackingRetrievalOperationsApiInstance.WorkOrderTrackerServiceGetCurrentProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
 
-            string currentProjectionEntities = projectionEntityCollection.ToString();
+            // Gets the name of the current projection entity.
+            string currentProjectionEntity = projectionEntityCollectionJson.Payload.ProjectionEntities[0].Name;
 
-            return currentProjectionEntities;
+            return currentProjectionEntity;
         }
 
         public async Task<string> GetCurrentWorkOrderNameAsync()
