@@ -3,9 +3,10 @@ using _11_Vision_System_Virtek.Domain.Interfaces;
 using VisionAndProjectionService.Swagger.Api;
 using WorkorderTrackerService.Swagger.Api;
 using WorkorderTrackerService.Swagger.Model;
+using WorkorderService.Swagger.Api;
+using WorkorderService.Swagger.Model;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 using LoadWorkOrderDto = WorkorderTrackerService.Swagger.Model.LoadWorkOrderDto;
-using Newtonsoft.Json.Linq;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
@@ -24,6 +25,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private readonly SystemApi _systemApiInstance = new SystemApi();
         private readonly ProjectionApi _projectionApiInstance = new ProjectionApi();
         private readonly TrackingRetrievalOperationsApi _trackingRetrievalOperationsApiInstance = new TrackingRetrievalOperationsApi();
+        private readonly WorkOrderOperationsApi _workOrderOperationsApiInstance = new WorkOrderOperationsApi();
         
         public string ClientId { get; }
         public string ProjectorSerialNumber { get; }
@@ -74,7 +76,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             // DTO for storing the result of the API call.
             ResultDtoWorkOrderProjectionEntityCollectionDto projectionEntityCollectionJson = new ResultDtoWorkOrderProjectionEntityCollectionDto();
             
-            // Calls the API command that collects the list of projection entities.
+            // Calls the API command that collects the DTO that holds list of projection entities.
             await CallApiWaitForMessage(() => projectionEntityCollectionJson = _trackingRetrievalOperationsApiInstance.WorkOrderTrackerServiceGetCurrentProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
 
             // Gets the name of the current projection entity.
@@ -85,7 +87,19 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task<string> GetCurrentWorkOrderNameAsync()
         {
-            return "LT5";
+            // DTO that stores the value of the client ID.
+            ClientIdDto clientIdDto = new ClientIdDto(clientId: ClientId);
+            
+            // DTO that holds the result of the API call.
+            ResultDtoWorkOrderNameDto workOrderNameDto = new ResultDtoWorkOrderNameDto();
+            
+            // Calls the API command that collects the DTO that holds the Work Order name.
+            await CallApiWaitForMessage(() => workOrderNameDto = _workOrderOperationsApiInstance.WorkOrderServiceGetCurrentWorkOrderName(clientIdDto), "NO  USEFUL MESSAGE EXPECTED", "GetCurrentWorkOrderName", false);
+            
+            // Current open Work Order name.
+            string workOrderName = workOrderNameDto.Payload.WorkOrderName;
+            
+            return workOrderName;
         }
 
         public bool IsExpectedMessage(byte[] msg)
