@@ -2,13 +2,14 @@
 
 All URIs are relative to *http://localhost:9030*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**WorkOrderTrackerServiceGetWorkOrderPartSerials**](PartSerialOperationsApi.md#workordertrackerservicegetworkorderpartserials) | **POST** /GetWorkOrderPartSerials | Provides a list of all Part Serials of the Work Order (if any ).
-
+ Method                                                                                                                          | HTTP request                      | Description                                                      
+---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|------------------------------------------------------------------
+ [**WorkOrderTrackerServiceGetWorkOrderPartSerials**](PartSerialOperationsApi.md#workordertrackerservicegetworkorderpartserials) | **POST** /GetWorkOrderPartSerials | Provides a list of all Part Serials of the Work Order (if any ). 
 
 <a name="workordertrackerservicegetworkorderpartserials"></a>
+
 # **WorkOrderTrackerServiceGetWorkOrderPartSerials**
+
 > ResultDtoListPartSerialDto WorkOrderTrackerServiceGetWorkOrderPartSerials (WorkOrderNameInfoDto workOrderName)
 
 Provides a list of all Part Serials of the Work Order (if any ).
@@ -16,6 +17,7 @@ Provides a list of all Part Serials of the Work Order (if any ).
 This in case Part Serial Configuration is enabled
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -49,9 +51,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **workOrderName** | [**WorkOrderNameInfoDto**](WorkOrderNameInfoDto.md)| Name of the Work Order | 
+ Name              | Type                                                | Description            | Notes 
+-------------------|-----------------------------------------------------|------------------------|-------
+ **workOrderName** | [**WorkOrderNameInfoDto**](WorkOrderNameInfoDto.md) | Name of the Work Order |
 
 ### Return type
 
@@ -63,8 +65,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -2,18 +2,20 @@
 
 All URIs are relative to *http://localhost:9030*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**WorkOrderTrackerServiceGetVersion**](CommonApi.md#workordertrackerservicegetversion) | **GET** /GetVersion | Returns the version of the service
-
+ Method                                                                                  | HTTP request        | Description                        
+-----------------------------------------------------------------------------------------|---------------------|------------------------------------
+ [**WorkOrderTrackerServiceGetVersion**](CommonApi.md#workordertrackerservicegetversion) | **GET** /GetVersion | Returns the version of the service 
 
 <a name="workordertrackerservicegetversion"></a>
+
 # **WorkOrderTrackerServiceGetVersion**
+
 > ResultDtoApiVersionDto WorkOrderTrackerServiceGetVersion ()
 
 Returns the version of the service
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -45,6 +47,7 @@ namespace Example
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -57,8 +60,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

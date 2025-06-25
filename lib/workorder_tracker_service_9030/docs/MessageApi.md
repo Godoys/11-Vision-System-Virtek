@@ -2,18 +2,18 @@
 
 All URIs are relative to *http://localhost:9030*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**MessagePost**](MessageApi.md#messagepost) | **POST** /Message | 
-
+ Method                                       | HTTP request      | Description 
+----------------------------------------------|-------------------|-------------
+ [**MessagePost**](MessageApi.md#messagepost) | **POST** /Message |
 
 <a name="messagepost"></a>
+
 # **MessagePost**
+
 > void MessagePost (string jsonObject)
 
-
-
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -45,9 +45,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jsonObject** | **string**|  | 
+ Name           | Type       | Description | Notes 
+----------------|------------|-------------|-------
+ **jsonObject** | **string** |             |
 
 ### Return type
 
@@ -59,8 +59,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: Not defined
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

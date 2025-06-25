@@ -2,42 +2,44 @@
 
 All URIs are relative to *http://localhost:9015*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CoreLaserServiceAcceptTrackerPosition**](ProjectedMenusApi.md#corelaserserviceaccepttrackerposition) | **POST** /AcceptTrackerPosition | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceAddProjectedMenu**](ProjectedMenusApi.md#corelaserserviceaddprojectedmenu) | **POST** /AddProjectedMenu | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceAddProjectedMenus**](ProjectedMenusApi.md#corelaserserviceaddprojectedmenus) | **POST** /AddProjectedMenus | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCancelCursorTracking**](ProjectedMenusApi.md#corelaserservicecancelcursortracking) | **POST** /CancelCursorTracking | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCenterCursorTracker**](ProjectedMenusApi.md#corelaserservicecentercursortracker) | **POST** /CenterCursorTracker | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceClearMenus**](ProjectedMenusApi.md#corelaserserviceclearmenus) | **POST** /ClearMenus | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceConfigureCursorTracking**](ProjectedMenusApi.md#corelaserserviceconfigurecursortracking) | **POST** /ConfigureCursorTracker | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerGetLocation**](ProjectedMenusApi.md#corelaserservicecursortrackergetlocation) | **POST** /CursorTrackerGetLocation | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerGetOrientationAngle**](ProjectedMenusApi.md#corelaserservicecursortrackergetorientationangle) | **POST** /CursorTrackerGetOrientationAngle | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerMove**](ProjectedMenusApi.md#corelaserservicecursortrackermove) | **POST** /CursorTrackerMouseMove | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerSetLocation**](ProjectedMenusApi.md#corelaserservicecursortrackersetlocation) | **POST** /CursorTrackerSetLocation | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerSetOrientationAngle**](ProjectedMenusApi.md#corelaserservicecursortrackersetorientationangle) | **POST** /CursorTrackerSetOrientationAngle | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerSetOrientationOrigin**](ProjectedMenusApi.md#corelaserservicecursortrackersetorientationorigin) | **POST** /CursorTrackerSetOrientationOrigin | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceCursorTrackerSetUseOrientation**](ProjectedMenusApi.md#corelaserservicecursortrackersetuseorientation) | **POST** /CursorTrackerSetUseOrientation | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceGetMenuConfiguration**](ProjectedMenusApi.md#corelaserservicegetmenuconfiguration) | **POST** /GetMenuConfiguration | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceRemoveProjectedMenus**](ProjectedMenusApi.md#corelaserserviceremoveprojectedmenus) | **POST** /RemoveProjectedMenus | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceSetMenuConfiguration**](ProjectedMenusApi.md#corelaserservicesetmenuconfiguration) | **POST** /SetMenuConfiguration | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceSetMenuTrackerLocation**](ProjectedMenusApi.md#corelaserservicesetmenutrackerlocation) | **POST** /SetMenuTrackerLocation | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceSetPickNProjectMode**](ProjectedMenusApi.md#corelaserservicesetpicknprojectmode) | **POST** /SetPickNProjectMode | Set in pick n project mode or not
-[**CoreLaserServiceShowProjectedActivationIcons**](ProjectedMenusApi.md#corelaserserviceshowprojectedactivationicons) | **POST** /ShowProjectedActivationIcons | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceShowSpecificMenu**](ProjectedMenusApi.md#corelaserserviceshowspecificmenu) | **POST** /ShowSpecificMenu | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceStartCursorTracker**](ProjectedMenusApi.md#corelaserservicestartcursortracker) | **POST** /StartCursorTracker | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceStartMenuTracker**](ProjectedMenusApi.md#corelaserservicestartmenutracker) | **POST** /StartMenuTracker | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceStopCursorTracker**](ProjectedMenusApi.md#corelaserservicestopcursortracker) | **POST** /StopCursorTracker | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-[**CoreLaserServiceStopMenuTracker**](ProjectedMenusApi.md#corelaserservicestopmenutracker) | **POST** /StopMenuTracker | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide.
-
+ Method                                                                                                                          | HTTP request                                | Description                                                                 
+---------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------------------------------------------------
+ [**CoreLaserServiceAcceptTrackerPosition**](ProjectedMenusApi.md#corelaserserviceaccepttrackerposition)                         | **POST** /AcceptTrackerPosition             | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceAddProjectedMenu**](ProjectedMenusApi.md#corelaserserviceaddprojectedmenu)                                   | **POST** /AddProjectedMenu                  | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceAddProjectedMenus**](ProjectedMenusApi.md#corelaserserviceaddprojectedmenus)                                 | **POST** /AddProjectedMenus                 | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCancelCursorTracking**](ProjectedMenusApi.md#corelaserservicecancelcursortracking)                           | **POST** /CancelCursorTracking              | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCenterCursorTracker**](ProjectedMenusApi.md#corelaserservicecentercursortracker)                             | **POST** /CenterCursorTracker               | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceClearMenus**](ProjectedMenusApi.md#corelaserserviceclearmenus)                                               | **POST** /ClearMenus                        | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceConfigureCursorTracking**](ProjectedMenusApi.md#corelaserserviceconfigurecursortracking)                     | **POST** /ConfigureCursorTracker            | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerGetLocation**](ProjectedMenusApi.md#corelaserservicecursortrackergetlocation)                   | **POST** /CursorTrackerGetLocation          | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerGetOrientationAngle**](ProjectedMenusApi.md#corelaserservicecursortrackergetorientationangle)   | **POST** /CursorTrackerGetOrientationAngle  | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerMove**](ProjectedMenusApi.md#corelaserservicecursortrackermove)                                 | **POST** /CursorTrackerMouseMove            | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerSetLocation**](ProjectedMenusApi.md#corelaserservicecursortrackersetlocation)                   | **POST** /CursorTrackerSetLocation          | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerSetOrientationAngle**](ProjectedMenusApi.md#corelaserservicecursortrackersetorientationangle)   | **POST** /CursorTrackerSetOrientationAngle  | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerSetOrientationOrigin**](ProjectedMenusApi.md#corelaserservicecursortrackersetorientationorigin) | **POST** /CursorTrackerSetOrientationOrigin | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceCursorTrackerSetUseOrientation**](ProjectedMenusApi.md#corelaserservicecursortrackersetuseorientation)       | **POST** /CursorTrackerSetUseOrientation    | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceGetMenuConfiguration**](ProjectedMenusApi.md#corelaserservicegetmenuconfiguration)                           | **POST** /GetMenuConfiguration              | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceRemoveProjectedMenus**](ProjectedMenusApi.md#corelaserserviceremoveprojectedmenus)                           | **POST** /RemoveProjectedMenus              | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceSetMenuConfiguration**](ProjectedMenusApi.md#corelaserservicesetmenuconfiguration)                           | **POST** /SetMenuConfiguration              | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceSetMenuTrackerLocation**](ProjectedMenusApi.md#corelaserservicesetmenutrackerlocation)                       | **POST** /SetMenuTrackerLocation            | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceSetPickNProjectMode**](ProjectedMenusApi.md#corelaserservicesetpicknprojectmode)                             | **POST** /SetPickNProjectMode               | Set in pick n project mode or not                                           
+ [**CoreLaserServiceShowProjectedActivationIcons**](ProjectedMenusApi.md#corelaserserviceshowprojectedactivationicons)           | **POST** /ShowProjectedActivationIcons      | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceShowSpecificMenu**](ProjectedMenusApi.md#corelaserserviceshowspecificmenu)                                   | **POST** /ShowSpecificMenu                  | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceStartCursorTracker**](ProjectedMenusApi.md#corelaserservicestartcursortracker)                               | **POST** /StartCursorTracker                | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceStartMenuTracker**](ProjectedMenusApi.md#corelaserservicestartmenutracker)                                   | **POST** /StartMenuTracker                  | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceStopCursorTracker**](ProjectedMenusApi.md#corelaserservicestopcursortracker)                                 | **POST** /StopCursorTracker                 | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
+ [**CoreLaserServiceStopMenuTracker**](ProjectedMenusApi.md#corelaserservicestopmenutracker)                                     | **POST** /StopMenuTracker                   | See \&quot;Placing/Moving Projected Menus\&quot; in Integrator&#39;s Guide. 
 
 <a name="corelaserserviceaccepttrackerposition"></a>
+
 # **CoreLaserServiceAcceptTrackerPosition**
+
 > ResultDto CoreLaserServiceAcceptTrackerPosition (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -71,9 +73,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -85,20 +87,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceaddprojectedmenu"></a>
+
 # **CoreLaserServiceAddProjectedMenu**
+
 > ResultDto CoreLaserServiceAddProjectedMenu (AddProjectedMenuDto addProjectedMenu)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
-3 new optional flags are added to extend projected menu customizations.  IconFile - This is an optional field to load custom activation icon file for newly added projected menu.  AlwaysEnableIconProjection - This is an optional field to remain activation icon projection when menus are opened.  ShowProjectedActivationIcon - This is an optional field to start projection of activation icons of the given projector right away after adding it to the projector.
+3 new optional flags are added to extend projected menu customizations. IconFile - This is an optional field to load
+custom activation icon file for newly added projected menu. AlwaysEnableIconProjection - This is an optional field to
+remain activation icon projection when menus are opened. ShowProjectedActivationIcon - This is an optional field to
+start projection of activation icons of the given projector right away after adding it to the projector.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -132,9 +140,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **addProjectedMenu** | [**AddProjectedMenuDto**](AddProjectedMenuDto.md)|  | 
+ Name                 | Type                                              | Description | Notes 
+----------------------|---------------------------------------------------|-------------|-------
+ **addProjectedMenu** | [**AddProjectedMenuDto**](AddProjectedMenuDto.md) |             |
 
 ### Return type
 
@@ -146,18 +154,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceaddprojectedmenus"></a>
+
 # **CoreLaserServiceAddProjectedMenus**
+
 > ResultDto CoreLaserServiceAddProjectedMenus (AddProjectedMenusDto addProjectedMenus)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -191,9 +202,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **addProjectedMenus** | [**AddProjectedMenusDto**](AddProjectedMenusDto.md)|  | 
+ Name                  | Type                                                | Description | Notes 
+-----------------------|-----------------------------------------------------|-------------|-------
+ **addProjectedMenus** | [**AddProjectedMenusDto**](AddProjectedMenusDto.md) |             |
 
 ### Return type
 
@@ -205,18 +216,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecancelcursortracking"></a>
+
 # **CoreLaserServiceCancelCursorTracking**
+
 > ResultDto CoreLaserServiceCancelCursorTracking (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -250,9 +264,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -264,18 +278,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecentercursortracker"></a>
+
 # **CoreLaserServiceCenterCursorTracker**
+
 > ResultDto CoreLaserServiceCenterCursorTracker (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -309,9 +326,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -323,18 +340,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceclearmenus"></a>
+
 # **CoreLaserServiceClearMenus**
+
 > ResultDto CoreLaserServiceClearMenus (ClientInfoDto clientInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -368,9 +388,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientInfo** | [**ClientInfoDto**](ClientInfoDto.md)|  | 
+ Name           | Type                                  | Description | Notes 
+----------------|---------------------------------------|-------------|-------
+ **clientInfo** | [**ClientInfoDto**](ClientInfoDto.md) |             |
 
 ### Return type
 
@@ -382,18 +402,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceconfigurecursortracking"></a>
+
 # **CoreLaserServiceConfigureCursorTracking**
+
 > ResultDto CoreLaserServiceConfigureCursorTracking (ClientProjectorFlagDto configureCursorTracking)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -427,9 +450,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **configureCursorTracking** | [**ClientProjectorFlagDto**](ClientProjectorFlagDto.md)|  | 
+ Name                        | Type                                                    | Description | Notes 
+-----------------------------|---------------------------------------------------------|-------------|-------
+ **configureCursorTracking** | [**ClientProjectorFlagDto**](ClientProjectorFlagDto.md) |             |
 
 ### Return type
 
@@ -441,18 +464,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackergetlocation"></a>
+
 # **CoreLaserServiceCursorTrackerGetLocation**
+
 > ResultDtoCoord2dDto CoreLaserServiceCursorTrackerGetLocation (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -486,9 +512,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -500,18 +526,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackergetorientationangle"></a>
+
 # **CoreLaserServiceCursorTrackerGetOrientationAngle**
+
 > ResultDtoDouble CoreLaserServiceCursorTrackerGetOrientationAngle (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -545,9 +574,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -559,18 +588,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackermove"></a>
+
 # **CoreLaserServiceCursorTrackerMove**
+
 > ResultDto CoreLaserServiceCursorTrackerMove (TrackerCoord2dDto cursorTrackerMove)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -604,9 +636,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cursorTrackerMove** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md)|  | 
+ Name                  | Type                                          | Description | Notes 
+-----------------------|-----------------------------------------------|-------------|-------
+ **cursorTrackerMove** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md) |             |
 
 ### Return type
 
@@ -618,18 +650,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackersetlocation"></a>
+
 # **CoreLaserServiceCursorTrackerSetLocation**
+
 > ResultDto CoreLaserServiceCursorTrackerSetLocation (TrackerCoord2dDto location)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -663,9 +698,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **location** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md)|  | 
+ Name         | Type                                          | Description | Notes 
+--------------|-----------------------------------------------|-------------|-------
+ **location** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md) |             |
 
 ### Return type
 
@@ -677,18 +712,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackersetorientationangle"></a>
+
 # **CoreLaserServiceCursorTrackerSetOrientationAngle**
+
 > ResultDto CoreLaserServiceCursorTrackerSetOrientationAngle (CursorTrackerOrientationAngleDto orientationAngle)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -722,9 +760,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orientationAngle** | [**CursorTrackerOrientationAngleDto**](CursorTrackerOrientationAngleDto.md)|  | 
+ Name                 | Type                                                                        | Description | Notes 
+----------------------|-----------------------------------------------------------------------------|-------------|-------
+ **orientationAngle** | [**CursorTrackerOrientationAngleDto**](CursorTrackerOrientationAngleDto.md) |             |
 
 ### Return type
 
@@ -736,18 +774,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackersetorientationorigin"></a>
+
 # **CoreLaserServiceCursorTrackerSetOrientationOrigin**
+
 > ResultDto CoreLaserServiceCursorTrackerSetOrientationOrigin (TrackerCoord2dDto orientationOrigin)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -781,9 +822,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orientationOrigin** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md)|  | 
+ Name                  | Type                                          | Description | Notes 
+-----------------------|-----------------------------------------------|-------------|-------
+ **orientationOrigin** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md) |             |
 
 ### Return type
 
@@ -795,18 +836,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicecursortrackersetuseorientation"></a>
+
 # **CoreLaserServiceCursorTrackerSetUseOrientation**
+
 > ResultDto CoreLaserServiceCursorTrackerSetUseOrientation (ClientProjectorFlagDto useOrientation)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -840,9 +884,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **useOrientation** | [**ClientProjectorFlagDto**](ClientProjectorFlagDto.md)|  | 
+ Name               | Type                                                    | Description | Notes 
+--------------------|---------------------------------------------------------|-------------|-------
+ **useOrientation** | [**ClientProjectorFlagDto**](ClientProjectorFlagDto.md) |             |
 
 ### Return type
 
@@ -854,18 +898,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicegetmenuconfiguration"></a>
+
 # **CoreLaserServiceGetMenuConfiguration**
+
 > ResultDtoProjectedMenuConfigurationDto CoreLaserServiceGetMenuConfiguration (ProjectorMenuIconDto projectorMenuIcon)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -899,9 +946,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectorMenuIcon** | [**ProjectorMenuIconDto**](ProjectorMenuIconDto.md)|  | 
+ Name                  | Type                                                | Description | Notes 
+-----------------------|-----------------------------------------------------|-------------|-------
+ **projectorMenuIcon** | [**ProjectorMenuIconDto**](ProjectorMenuIconDto.md) |             |
 
 ### Return type
 
@@ -913,18 +960,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceremoveprojectedmenus"></a>
+
 # **CoreLaserServiceRemoveProjectedMenus**
+
 > ResultDto CoreLaserServiceRemoveProjectedMenus (RemoveProjectedMenusDto removedProjectedMenus)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -958,9 +1008,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **removedProjectedMenus** | [**RemoveProjectedMenusDto**](RemoveProjectedMenusDto.md)|  | 
+ Name                      | Type                                                      | Description | Notes 
+---------------------------|-----------------------------------------------------------|-------------|-------
+ **removedProjectedMenus** | [**RemoveProjectedMenusDto**](RemoveProjectedMenusDto.md) |             |
 
 ### Return type
 
@@ -972,18 +1022,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicesetmenuconfiguration"></a>
+
 # **CoreLaserServiceSetMenuConfiguration**
+
 > ResultDto CoreLaserServiceSetMenuConfiguration (ProjectedMenuConfigurationDto configuration)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1017,9 +1070,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **configuration** | [**ProjectedMenuConfigurationDto**](ProjectedMenuConfigurationDto.md)|  | 
+ Name              | Type                                                                  | Description | Notes 
+-------------------|-----------------------------------------------------------------------|-------------|-------
+ **configuration** | [**ProjectedMenuConfigurationDto**](ProjectedMenuConfigurationDto.md) |             |
 
 ### Return type
 
@@ -1031,18 +1084,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicesetmenutrackerlocation"></a>
+
 # **CoreLaserServiceSetMenuTrackerLocation**
+
 > ResultDto CoreLaserServiceSetMenuTrackerLocation (TrackerCoord2dDto location)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1076,9 +1132,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **location** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md)|  | 
+ Name         | Type                                          | Description | Notes 
+--------------|-----------------------------------------------|-------------|-------
+ **location** | [**TrackerCoord2dDto**](TrackerCoord2dDto.md) |             |
 
 ### Return type
 
@@ -1090,18 +1146,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicesetpicknprojectmode"></a>
+
 # **CoreLaserServiceSetPickNProjectMode**
+
 > ResultDto CoreLaserServiceSetPickNProjectMode (SetPickNProjectModeDto pickNProjectMode)
 
 Set in pick n project mode or not
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1135,9 +1194,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pickNProjectMode** | [**SetPickNProjectModeDto**](SetPickNProjectModeDto.md)|  | 
+ Name                 | Type                                                    | Description | Notes 
+----------------------|---------------------------------------------------------|-------------|-------
+ **pickNProjectMode** | [**SetPickNProjectModeDto**](SetPickNProjectModeDto.md) |             |
 
 ### Return type
 
@@ -1149,18 +1208,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceshowprojectedactivationicons"></a>
+
 # **CoreLaserServiceShowProjectedActivationIcons**
+
 > ResultDto CoreLaserServiceShowProjectedActivationIcons (ShowProjectedActivationIconsDto showProjectedActivationIcons)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1194,9 +1256,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **showProjectedActivationIcons** | [**ShowProjectedActivationIconsDto**](ShowProjectedActivationIconsDto.md)|  | 
+ Name                             | Type                                                                      | Description | Notes 
+----------------------------------|---------------------------------------------------------------------------|-------------|-------
+ **showProjectedActivationIcons** | [**ShowProjectedActivationIconsDto**](ShowProjectedActivationIconsDto.md) |             |
 
 ### Return type
 
@@ -1208,18 +1270,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserserviceshowspecificmenu"></a>
+
 # **CoreLaserServiceShowSpecificMenu**
+
 > ResultDto CoreLaserServiceShowSpecificMenu (ProjectorMenuIconDto showSpecificMenu)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1253,9 +1318,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **showSpecificMenu** | [**ProjectorMenuIconDto**](ProjectorMenuIconDto.md)|  | 
+ Name                 | Type                                                | Description | Notes 
+----------------------|-----------------------------------------------------|-------------|-------
+ **showSpecificMenu** | [**ProjectorMenuIconDto**](ProjectorMenuIconDto.md) |             |
 
 ### Return type
 
@@ -1267,18 +1332,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicestartcursortracker"></a>
+
 # **CoreLaserServiceStartCursorTracker**
+
 > ResultDto CoreLaserServiceStartCursorTracker (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1312,9 +1380,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -1326,18 +1394,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicestartmenutracker"></a>
+
 # **CoreLaserServiceStartMenuTracker**
+
 > ResultDto CoreLaserServiceStartMenuTracker (StartMenuTrackerDto startMenuTrackerDto)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1371,9 +1442,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startMenuTrackerDto** | [**StartMenuTrackerDto**](StartMenuTrackerDto.md)|  | 
+ Name                    | Type                                              | Description | Notes 
+-------------------------|---------------------------------------------------|-------------|-------
+ **startMenuTrackerDto** | [**StartMenuTrackerDto**](StartMenuTrackerDto.md) |             |
 
 ### Return type
 
@@ -1385,18 +1456,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicestopcursortracker"></a>
+
 # **CoreLaserServiceStopCursorTracker**
+
 > ResultDto CoreLaserServiceStopCursorTracker (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1430,9 +1504,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -1444,18 +1518,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="corelaserservicestopmenutracker"></a>
+
 # **CoreLaserServiceStopMenuTracker**
+
 > ResultDto CoreLaserServiceStopMenuTracker (ClientProjectorInfoDto clientProjectorInfo)
 
 See \"Placing/Moving Projected Menus\" in Integrator's Guide.
 
 ### Example
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1489,9 +1566,9 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md)|  | 
+ Name                    | Type                                                    | Description | Notes 
+-------------------------|---------------------------------------------------------|-------------|-------
+ **clientProjectorInfo** | [**ClientProjectorInfoDto**](ClientProjectorInfoDto.md) |             |
 
 ### Return type
 
@@ -1503,8 +1580,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, text/html, application/xml, text/xml
+- **Content-Type**: application/json, text/json, text/html, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, text/html, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
