@@ -32,13 +32,13 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public Task CheckCurrentProjectionEntityAsync(CancellationToken token);
         
         /// <summary>
-        /// Signature of the handler of the NextStep event.
-        /// </summary>
-        public delegate void NextStepEventHandler(object sender, EventArgs e);
-        
-        /// <summary>
         /// NextStep event declaration.
         /// </summary>
         event NextStepEventHandler NextStep;
+        
+        /// <summary>
+        /// Signature of the handler of the NextStep event.
+        /// </summary>
+        public delegate Task NextStepEventHandler(object sender, EventArgs e);
     }
 }
