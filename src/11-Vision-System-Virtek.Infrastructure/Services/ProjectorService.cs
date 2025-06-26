@@ -63,7 +63,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 // Compares the current and previous projection entity name.
                 if (_currentProjectionEntity != _previousProjectionEntity)
                 {
-                    OnNextStepEvent(EventArgs.Empty);
+                    await OnNextStepEvent(this, EventArgs.Empty);
                     
                     // Sets the _previousProjectionEntity to be equal to _currentProjectionEntity
                     _previousProjectionEntity = _currentProjectionEntity;
@@ -78,10 +78,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         /// <summary>
         /// Method to invoke event.
         /// </summary>
+        /// <param name="sender">Object passed to event handler.</param>
         /// <param name="e">Event arguments passed to delegate.</param>
-        protected virtual void OnNextStepEvent(EventArgs e)
+        protected virtual async Task OnNextStepEvent(object sender, EventArgs e)
         {
-            NextStep?.Invoke(this, e);
+            NextStep?.Invoke(sender, e);
         }
     }
 }
