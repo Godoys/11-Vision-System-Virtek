@@ -16,8 +16,16 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             _getImageResult = new GetImageAnalysisResultUseCase(_cameraService);
         }
 
-        public async Task Execute()
+        public void Subscribe()
         {
+            // Subscribe to the event.
+            _projectorService.NextStep += Execute;
+        }
+
+        private async Task Execute(object sender, EventArgs e)
+        {
+            Console.WriteLine("[!] Next Step event raised!");
+            
             // Image analysis result;
             ResultStatus result = await _getImageResult.Execute();
             
@@ -28,9 +36,10 @@ namespace _11_Vision_System_Virtek.Application.UseCases
                     await _projectorService.PauseProjectionAsync();
                     break;
                 case ResultStatus.Pass:
+                    Console.WriteLine("[!] Passed image analysis with a unconditional pass.");
                     break;
                 case ResultStatus.Warn:
-                    Console.WriteLine("[!] Passed image analysis with a WARNING");
+                    Console.WriteLine("[!] Passed image analysis with a WARNING,");
                     break;
                 case ResultStatus.None:
                     break;
