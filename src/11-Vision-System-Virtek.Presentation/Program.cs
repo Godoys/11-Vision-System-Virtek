@@ -10,4 +10,10 @@ await projectorService.ConnectAsync();
 
 string projectionEntity = await projector.GetCurrentProjectionEntityAsync();
 
+Console.WriteLine("[!] Projector Entity:");
 Console.WriteLine(projectionEntity);
+
+CancellationToken cts = CancellationToken.None;
+
+Console.WriteLine("[!] Waiting for Next Step event...");
+await projectorService.CheckCurrentProjectionEntityAsync(cts);
