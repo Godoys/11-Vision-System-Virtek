@@ -24,6 +24,12 @@
     <Reference Include="Cognex.InSight.Controls.Display">
       <HintPath>..\..\lib\Cognex\In-Sight\6.5.21.1\Cognex.InSight.Controls.Display.dll</HintPath>
     </Reference>
+    <Reference Include="Keyence.IV2.Sdk">
+      <HintPath>..\..\lib\Keyence\Keyence.IV2.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Keyence.IV2.Sdk.Lib">
+      <HintPath>..\..\lib\Keyence\Keyence.IV2.Sdk.Lib.dll</HintPath>
+    </Reference>
     <Reference Include="VisionAndProjectionService.Swagger">
       <HintPath>..\..\lib\vision_and_projection_service_9015\bin\VisionAndProjectionService.Swagger.dll</HintPath>
     </Reference>
