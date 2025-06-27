@@ -6,7 +6,7 @@ using WorkorderTrackerService.Swagger.Model;
 using WorkorderService.Swagger.Api;
 using WorkorderService.Swagger.Model;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
-using LoadWorkOrderDto = WorkorderTrackerService.Swagger.Model.LoadWorkOrderDto;
+using LoadWorkOrderDto = WorkorderService.Swagger.Model.LoadWorkOrderDto;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
@@ -24,8 +24,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         // Vision and Projection service API instances
         private readonly SystemApi _systemApiInstance = new SystemApi();
         private readonly ProjectionApi _projectionApiInstance = new ProjectionApi();
-        private readonly TrackingRetrievalOperationsApi _trackingRetrievalOperationsApiInstance = new TrackingRetrievalOperationsApi();
         private readonly WorkOrderOperationsApi _workOrderOperationsApiInstance = new WorkOrderOperationsApi();
+        private readonly ProjectionOperationsApi _projectionOperationsApiInstance = new ProjectionOperationsApi();
         
         public string ClientId { get; }
         public string ProjectorSerialNumber { get; }
@@ -74,13 +74,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             LoadWorkOrderDto loadWorkOrderDto = new  LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
 
             // DTO for storing the result of the API call.
-            ResultDtoWorkOrderProjectionEntityCollectionDto projectionEntityCollectionJson = new ResultDtoWorkOrderProjectionEntityCollectionDto();
+            ResultDtoListString projectionEntityCollectionJson = new ResultDtoListString();
             
             // Calls the API command that collects the DTO that holds list of projection entities.
-            await CallApiWaitForMessage(() => projectionEntityCollectionJson = _trackingRetrievalOperationsApiInstance.WorkOrderTrackerServiceGetCurrentProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
+            await CallApiWaitForMessage(() => projectionEntityCollectionJson = _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
 
             // Gets the name of the current projection entity.
-            string currentProjectionEntity = projectionEntityCollectionJson.Payload.ProjectionEntities[0].Name;
+            string currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
 
             return currentProjectionEntity;
         }
