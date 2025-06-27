@@ -92,9 +92,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             throw new NotImplementedException();
         }
 
-        public Task TriggerImageCaptureAsync()
+        public async Task TriggerImageCaptureAsync()
         {
-            throw new NotImplementedException();
+            await Task.Run(() => _sensor.Trigger());
         }
 
         public Task GetAnalysisResultAsync()
