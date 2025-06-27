@@ -1,11 +1,15 @@
 ﻿using System.Net;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using _11_Vision_System_Virtek.Domain.Enums;
+using Keyence.IV2.Sdk;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
     public class KeyenceCameraAdapter : ICamera
     {
+        // Keyence camera object.
+        private IVisionSensor _sensor;
+        
         public string Username { get; private set;  }
         
         public string Password { get; private set; }
@@ -15,12 +19,15 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         public CameraState State { get;  private set; }
         
         public ResultStatus LastAnalysisResult { get; private set; }
+        
+        public ushort PortNumber { get; private set; }
 
-        KeyenceCameraAdapter(string username, string password, IPAddress address)
+        KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber)
         {
             Username = username;
             Password = password;
             Address = address;
+            PortNumber = portNumber;
             State = CameraState.Offline;
             LastAnalysisResult = ResultStatus.None;
         }
@@ -50,9 +57,24 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             LastAnalysisResult = newResult;
         }
 
-        public Task ConnectAsync(CameraConnectionType connectionType)
+        public void UpdatePortnumber(ushort newPortNumber)
         {
-            throw new NotImplementedException();
+            PortNumber = newPortNumber;
+        }
+
+        public async Task ConnectAsync(CameraConnectionType connectionType)
+        {
+            // Object used to create a connection to a Keyence sensor.
+            VisionSensorStore sensorStore = new VisionSensorStore();
+
+            try
+            {
+                await Task.Run(() => _sensor = sensorStore.Create(Address, PortNumber));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Error trying to establish connection: {e.Message}");
+            }
         }
 
         public Task DisconnectAsync(CameraConnectionType connectionType)
