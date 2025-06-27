@@ -79,8 +79,18 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             // Calls the API command that collects the DTO that holds list of projection entities.
             await CallApiWaitForMessage(() => projectionEntityCollectionJson = _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
 
-            // Gets the name of the current projection entity.
-            string currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+            string currentProjectionEntity = "";
+            
+            try
+            {
+                // Gets the name of the current projection entity.
+                currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+            }
+            catch (Exception e)
+            {
+                await Task.Delay(TimeSpan.FromMilliseconds(500));
+                currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+            }
 
             return currentProjectionEntity;
         }
