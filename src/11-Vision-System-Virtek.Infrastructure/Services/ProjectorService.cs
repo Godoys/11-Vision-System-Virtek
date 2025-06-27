@@ -54,9 +54,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
 
         public async Task CheckCurrentProjectionEntityAsync(CancellationToken token)
         {
-            // Gets the current name of the active projection entity
-            _currentProjectionEntity = await _projector.GetCurrentProjectionEntityAsync();
-            
             // Loops while the cancellation token is not activated
             while (!token.IsCancellationRequested)
             {
@@ -67,6 +64,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                     
                     // Sets the _previousProjectionEntity to be equal to _currentProjectionEntity
                     _previousProjectionEntity = _currentProjectionEntity;
+                }
+                else
+                {
+                    // Gets the current name of the active projection entity
+                    _currentProjectionEntity = await _projector.GetCurrentProjectionEntityAsync();
                 }
             }
             
