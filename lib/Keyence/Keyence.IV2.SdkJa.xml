@@ -1,0 +1,1332 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Keyence.IV2.Sdk</name>
+  </assembly>
+  <members>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.ThumbnailMonoImage">
+      <summary>tuTHUMBNAIL_MONO_IMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.EdgePresenceThresholdWithHiSetting">
+      <summary>tsEDGEPRESENCE_THRESHOLDWITHHISETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OneAxisPosAdjustSensorRegisterSetting">
+      <summary>tsONEAXISPOSADJUSTREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrSensorRegisterSetting">
+      <summary>tsOCRSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CountSensorRegisterSetting">
+      <summary>tsCOUNTSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ColorToleranceSetting">
+      <summary>tsCOLOR_TOLERANCE_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaRegisterRecord">
+      <summary>tsAREAREGISTERRECORD</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.VisionSensorState">
+      <summary>tsVISIONSENSOR_STATE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.TriggerSetting">
+      <summary>tsTRIGGER_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.ReservedSensorSetting">
+      <summary>tsRESERVED_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.OneAxisPosadjustSensorSetting">
+      <summary>tsONE_AXIS_POSADJUST_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.LightAdjustSetting">
+      <summary>tsLIGHT_ADJUST_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.EdgePixelCountSensorSetting">
+      <summary>tsEDGE_PIXEL_COUNT_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.ColorAveSensorRunningInfo">
+      <summary>tsCOLORAVE_SENSOR_RUNNING_INFO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.BankSettingCommon">
+      <summary>tsBANK_SETTING_COMMON_FOR_APL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolSettingBase">
+      <summary> このクラスはツール設定を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.MaxValue">
+      <summary> ツール結果値の最大値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.MinValue">
+      <summary> ツール結果値の最小値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.OkMaxValue">
+      <summary> ツール結果のOK上限値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.OkMinValue">
+      <summary> ツール結果のOK下限値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.ToolName">
+      <summary> ツール名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.ToolWindow">
+      <summary> ツール枠を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.ToolType">
+      <summary> ツールタイプを文字列で取得します。"Outline", "PositionAdjust", "MonochromeArea", "ColorArea", "EdgePixels", "Width", "Diameter", "Edge", "Pitch", "1AxisAdjustment", "2AxisAdjustment", "Ocr", "Learn-Window", "BrightnessAverage", "ColorAverage", "BrightnessProhibit", "ColorProhibit", ""のいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.MultiToolWindow">
+      <summary> 複数のツール枠を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolSettingBase.Scaling">
+      <summary> ツールのスケーリング設定を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolResultBase">
+      <summary> このクラスはツール結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultBase.Ok">
+      <summary> ツール結果を表します、OKまたはNGのいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultBase.Value">
+      <summary> ツール運転結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultBase.Extend">
+      <summary> ツール運転拡張結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultBase.Scaling">
+      <summary> ツールのスケーリング結果を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.OcrTargetType">
+      <summary> OCRの読取対象 </summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.OcrTargetType.Character">
+      <summary>文字</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.OcrTargetType.CharacterNumber">
+      <summary>文字数</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.OcrTargetType.Date">
+      <summary>日付</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.Iv2aFileErrors">
+      <summary> この列挙体はIV2Aファイル操作失敗時のエラー種別を表します。 </summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsNone">
+      <summary>エラーなし</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsOpen">
+      <summary>オープンに失敗</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsRead">
+      <summary>読み込みに失敗</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsIv2a">
+      <summary>不正なIV2Aファイル</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsVersion">
+      <summary>バージョンが新しい</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsCompatible">
+      <summary>機種互換NG</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsHardware">
+      <summary>ハードウェアバージョンが新しい</summary>
+    </member>
+    <member name="F:Keyence.IV2.Sdk.Iv2aFileErrors.FileErrorsUnkown">
+      <summary>不明なエラー</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.MonoImage">
+      <summary>tuMONO_IMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.ImageSetMono">
+      <summary>tsIMAGE_SET_MONO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ShapeSensorOperationSetting">
+      <summary>tsSHAPESENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.PositionAdjustRegisterSetting">
+      <summary>tsPOSITIONADJUSTREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrLetterThre">
+      <summary>tsOCR_LETTER_THRE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.DiameterValidArea">
+      <summary>tsDIAMETER_VALID_AREA</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.DiameterSensorResult">
+      <summary>tsDIAMETERSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.ImageLoggingCond">
+      <summary>teIMAGE_LOGGING_COND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.FileDef.IvSoftwareVersion">
+      <summary>tsSOFTWARE_VERSION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.ImageSize">
+      <summary>tsIMAGE_SIZE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.VisionSensorSystemSetting">
+      <summary>tsVISIONSENSOR_SYSTEM_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.MonitorVersion">
+      <summary>tsMONITOR_VERSION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.Histogram">
+      <summary>tsHISTOGRAM</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.BankSettingAll">
+      <summary>tsBANK_SETTING_ALL_FOR_APL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.Image">
+      <summary> このクラスはセンサーから取得される画像を表します。</summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Image.Region">
+      <summary> 画像の左上ピクセルのCMOS原点からのオフセットと、画像サイズで形成されるRectangleを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Image.ByteData">
+      <summary> byte配列形式で画像データを取得します。配列の長さはRegionプロパティの値によらず常に640x480x3(BGRの順)です。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.ThumbnailImage">
+      <summary>tuTHUMBNAIL_IMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.ThumbnailColorImage">
+      <summary>tuTHUMBNAIL_COLOR_IMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.SensorMode">
+      <summary>tSENSOR_MODE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.LightingMode">
+      <summary>teLIGHTING_MODE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectoreAreaItemEllipse">
+      <summary>tsVECTORAREAITEMELLIPSE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CsSensorOperationSetting">
+      <summary>tsCS_SENSOR_OPERATION_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.FileDef.IvVersionInfoData">
+      <summary>tsIV_VERSION_INFO_DATA</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.FileDef.IvCommonBlockHeader">
+      <summary>tsIV_COMMON_BLOCK_HEADER</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.CommonConstants">
+      <summary>Common.h</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommHeader">
+      <summary>tsCOMM_HEADER</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.BankName">
+      <summary>tsBANK_NAME</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.AngleType">
+      <summary>teANGLE_TYPE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvaBlockId">
+      <summary>IvParts.h</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ConnectionLostException">
+      <summary> この例外はアプリケーションがセンサーとの接続に失敗した場合にスローされます。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.AvailableNicExplorer">
+      <summary> このクラスを使って有効なNICを捜索します。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.AvailableNicExplorer.GetClients">
+      <summary> 有効なクライアント(PC側)NICを取得します。 </summary>
+      <returns> クライアントIPアドレスの候補リストです。 </returns>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolResultUpdatedEventHandler">
+      <summary> このデリゲートは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ResultUpdated" />イベントのハンドラのシグネチャを表します。 </summary>
+      <param name="sender"> イベントの発行者です。 </param>
+      <param name="e">
+        <see cref="E:Keyence.IV2.Sdk.IVisionSensor.ResultUpdated" />イベントの引数です、ツール結果を含んでいます。 </param>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs">
+      <summary> このクラスは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ResultUpdated" />イベントの引数を表します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.IPossiblyUpdated">
+      <summary> このインターフェースは変更された可能性のあるプロパティを表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IPossiblyUpdated.PropetyList">
+      <summary> 変更された可能性のある<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトのプロパティ名のリストを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs.ProcessingTimeMicroSec">
+      <summary> us単位で処理時間を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs.TotalStatusResult">
+      <summary> 総合判定を取得します、OK(true)またはNG(false)のいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs.TriggerCount">
+      <summary> 発行されたトリガー数を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs.PositionAdjust">
+      <summary> 位置補正ツールの運転結果を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs.Item(System.Byte)">
+      <summary> ツール結果を取得します。 </summary>
+      <param name="toolNo"> ツール番号です、1-16の値を指定します。 </param>
+      <returns> 指定されたツール番号のツール結果です。 </returns>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolResultUpdatedEventArgs.PropetyList">
+      <summary> 変更された可能性のある<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトのプロパティ名のリストを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.MultiWindowShape">
+      <summary> このクラスはツールウィンドウの形状を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.MultiWindowShape.Enabled">
+      <summary> 複数のツール枠が有効か取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.MultiWindowShape.ToolWindow1">
+      <summary> ツール枠1を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.MultiWindowShape.ToolWindow2">
+      <summary> ツール枠2を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.OutPattern">
+      <summary>teOUT_PATTERN</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.PositionAdjustResult">
+      <summary>tsPOSITIONADJUSTRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrDateThre">
+      <summary>tsOCR_DATE_THRE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.MasterColorSetting">
+      <summary>tsMASTER_COLOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaHsvThre">
+      <summary>teAREAHSVTHRE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.UdpCmdKind">
+      <summary>teUDP_CMD_KIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.OutSetting">
+      <summary>tsOUT_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.CsSensorSetting">
+      <summary>tsCS_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.ColorFilterKind">
+      <summary>teCOLOR_FILTER_KIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.BankBrief">
+      <summary>tsBANK_LIST_FOR_APL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvffResult">
+      <summary>teLIIVFF_RESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.BankSettingAllForFile">
+      <summary>tsBANK_SETTING_ALL(for File)</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VisionSensorUpdateStatus">
+      <summary>teVISIONSENSOR_UPDATE_STATUS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.StateOption">
+      <summary>teSTATE_OPTION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.RegressionState">
+      <summary>teREGRESSION_STATE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.RectArea">
+      <summary>tsRECT_AREA</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.InType">
+      <summary>teIN_TYPE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.EdgePresenceMatchPercentLimitSetting">
+      <summary>teEDGEPRESENCE_MATCHPERCENTLIMITSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectorAreaItemHeader">
+      <summary>tsVECTORAREAITEMHEADER</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectorAreaItem">
+      <summary>tsVECTORAREAITEM</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.SensorResult">
+      <summary>tsSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ScalingDispSetting">
+      <summary>tsSCALINGDISPSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.QuadrangleFourCouners">
+      <summary>tsQuadrangleFourCouners</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrReadResult">
+      <summary>tsOCR_READ_RESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgeDesignAction">
+      <summary>tsEDGEDESIGNATION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.DiameterScore">
+      <summary>teDIAMETER_SCORE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Error.ErrI">
+      <summary>teERRI</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.WriteBalance">
+      <summary>tsWHITEBALANCE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.Utility">
+      <summary>sUtility</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.Summary">
+      <summary>tsSUMMARY</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.MachineName">
+      <summary>tsMACHINE_NAME</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.InOutSetting">
+      <summary>tsIN_OUT_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.InOut">
+      <summary>sInOut</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.Bank">
+      <summary>sBank</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.BankListImageInfo">
+      <summary>tsBANK_LIST_IMAGE_INFO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Available">
+      <summary>teAVAILABLE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.WindowShape">
+      <summary> このクラスはツールウィンドウの形状を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.WindowShape.Center">
+      <summary> ウィンドウの中心座標(Pixel)を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.WindowShape.Angle">
+      <summary> ウィンドウの回転角(°)を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VsaKindAvailable">
+      <summary>teVSA_KIND_AVAILABLE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VisionSensorMode">
+      <summary>teVISIONSENSOR_MODE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.TcpConnectModeEnum">
+      <summary>teTCP_CONNECT_MODE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.RegStatusMasterImg">
+      <summary>teREG_STATUS_MASTER_IMG</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.HighThresholdSetting">
+      <summary>teHITHRESHOLDSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.TwoAxesPosAdjustSensorRegisterSetting">
+      <summary>tsTWOAXESPOSADJUSTREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.PositionAdjustOperationSetting">
+      <summary>tsPOSITIONADJUSTOPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OneOfTwoAxesResult">
+      <summary>tsONEOFTWOAXESRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.InvasionAreaMonoSensorOperationSetting">
+      <summary>tsINVASIONAREAMONOSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePresenceSensorResult">
+      <summary>tsEDGEPRESENCESENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ColorAveSensorResult">
+      <summary>tsCOLORAVE_SENSOR_RESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.VisionSensorVersion">
+      <summary>tsVISIONSENSOR_VERSION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.TwoAxesPosadjustSensorSetting">
+      <summary>tsTWO_AXES_POSADJUST_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.ScreenArea">
+      <summary>tsSCREEN_AREA</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.MacAddress">
+      <summary>tsMAC_ADDRESS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.DiameterSensorSetting">
+      <summary>tsDIAMETER_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.AutoFocus">
+      <summary>tsAUTO_FOCUS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.SensorError">
+      <summary> このクラスはセンサーのエラーを表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.SensorError.ErrorCode">
+      <summary> 内部エラー番号を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.SensorError.Description">
+      <summary> エラー詳細を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.SensorError.ProgramaticallyClearable">
+      <summary> エラーがクリア可能かを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.SensorError.Sustainable">
+      <summary> 接続継続が可能かを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ImageAcquiredEventArgs">
+      <summary> このクラスは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ImageAcquired" />イベントの引数を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ImageAcquiredEventArgs.LiveImage">
+      <summary> 最新画像を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ImageAcquiredEventArgs.PropetyList">
+      <summary> 変更された可能性のある<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトのプロパティ名のリストを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ProgramHeader">
+      <summary> このクラスはプログラム概要を表します。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.ProgramHeader.ToString">
+      <summary> プログラムの文字列表現を取得します。 </summary>
+      <returns> プログラムの文字列表現です。 </returns>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramHeader.ProgramName">
+      <summary> プログラム名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramHeader.ProgramNo">
+      <summary> プログラム番号を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramHeader.ExternalTrigger">
+      <summary> トリガー設定が外部(true)または内部(false)かを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramHeader.TriggerCycleMilliSec">
+      <summary> トリガー周期をms単位で取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.Iv2aReader">
+      <summary> このクラスはIV2Aファイルの読み込み操作をします。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.Iv2aReader.#ctor(System.String)">
+      <summary> 新しい<see cref="T:Keyence.IV2.Sdk.Iv2aReader" />インスタンスを作成、初期化します。 </summary>
+      <param name="filePath"> IV2Aファイルのフルパスです。 </param>
+      <exception cref="T:Keyence.IV2.Sdk.Iv2aFileException"> IV2Aファイルの読み込みに失敗した場合にスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.Iv2aReader.Finalize">
+      <summary>
+        <see cref="T:Keyence.IV2.Sdk.Iv2aReader" /> がガベージ コレクションにより収集される前に、その <see cref="T:Keyence.IV2.Sdk.Iv2aReader" /> がリソースを解放し、その他のクリーンアップ操作を実行できるようにします。  </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.Iv2aReader.Dispose">
+      <summary>
+        <see cref="T:Keyence.IV2.Sdk.Iv2aReader" />オブジェクトで使用したリソースを破棄します。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.Iv2aReader.Close">
+      <summary> IV2Aファイルをクローズします。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.Iv2aReader.GetProgramDescriptionList">
+      <summary> IV2Aファイルからプログラム設定概要を取得します。 </summary>
+      <returns> IV2Aファイルプログラム設定概要の配列を取得します。 </returns>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aReader.Disposed">
+      <summary> オブジェクトは破棄済みかを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aReader.CanRead">
+      <summary> 読み込みが可能かを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.Iv2aProgramDescription">
+      <summary> このクラスはIV2Aファイルのプログラム設定概要を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aProgramDescription.ProgramNo">
+      <summary> プログラム番号を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aProgramDescription.ProgramName">
+      <summary> プログラム名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aProgramDescription.Configured">
+      <summary> 設定有無を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aProgramDescription.MasterAvailable">
+      <summary> マスター画像登録有無を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aProgramDescription.ThumbnailImage">
+      <summary> マスター画像のサムネイルを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.SensorDetect">
+      <summary>teSENSOR_DETECT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.PointN">
+      <summary>tsPOINTN</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.TrapezoidAdjust">
+      <summary>tsTRAPEZOID_ADJUST</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrDateFormat">
+      <summary>tsOCR_DATE_FORMAT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgeWidthSensorMask">
+      <summary>tsEDGEWIDTHSENSORMASK</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePixelExtract">
+      <summary>tsEDGEPIXELEXTRACT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ColorAveSensorRegisterSetting">
+      <summary>tsCOLORAVE_SENSOR_REGISTER_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.FocusDistance">
+      <summary>teFOCUS_DISTANCE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.SdStatusBit">
+      <summary>teSD_STATE_BIT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.OcrSensorSetting">
+      <summary>tsOCR_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.AreaColorSensorSetting">
+      <summary>tsAREA_COLOR_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ProgramSettingsUpdatedEventArgs">
+      <summary> このクラスは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ProgramSettingsUpdated" />イベントの引数を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramSettingsUpdatedEventArgs.PropetyList">
+      <summary> 変更された可能性のある<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトのプロパティ名のリストを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.VisionSensorStore">
+      <summary> このクラスを使って<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトを作成します。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.VisionSensorStore.#ctor">
+      <summary> 新しい<see cref="T:Keyence.IV2.Sdk.VisionSensorStore" />インスタンスを作成、初期化します。 </summary>
+      <remarks> あるスレッドにおいて<see cref="T:Keyence.IV2.Sdk.VisionSensorStore" />オブジェクトが既に作成されており破棄されていなければ、別のスレッドでの新しいインスタンス作成は失敗します。 </remarks>
+      <exception cref="T:System.ApplicationException"> モニターの重複起動(SDKを含みます)をしようとした場合にスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.VisionSensorStore.Dispose">
+      <summary>
+        <see cref="T:Keyence.IV2.Sdk.VisionSensorStore" />オブジェクトで使用したリソースを破棄します。 </summary>
+      <remarks> あるスレッドが作成した全ての<see cref="T:Keyence.IV2.Sdk.VisionSensorStore" />インスタンスを破棄するまで別のスレッドはインスタンスの生成に失敗します。 </remarks>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.VisionSensorStore.Create(System.Net.IPAddress,System.UInt16)">
+      <summary> 指定されたネットワーク設定で<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトを作成します。 </summary>
+      <param name="ipAddress"> センサーのIPアドレスです。 </param>
+      <param name="portNo"> センサーのポート番号です。 </param>
+      <returns> 作成された新しい<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />インスタンスです。 </returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:Keyence.IV2.Sdk.IVisionSensor" />インスタンスを破棄する前に同一のインスタンスを作成しようとした場合にスローされます。 </exception>
+      <exception cref="T:Keyence.IV2.Sdk.ConnectionLostException"> アプリケーションがセンサーとの接続に失敗したときにスローされます。 </exception>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.VisionSensorStore.StartPoint">
+      <summary> クライアント(PC側)のIPアドレスを設定、取得します。 </summary>
+      <exception cref="T:System.ArgumentException"> 指定されたIPアドレスがクライアントとして認識できなかった場合にスローされます。 </exception>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolScalingResult">
+      <summary> このクラスはツールのスケーリング結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingResult.Enabled">
+      <summary> ツールのスケーリング設定が有効か取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingResult.Value1">
+      <summary> ツール運転結果値1を取得します。 下3桁が少数部。ピッチの最小値。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingResult.Value2">
+      <summary> ツール運転結果値2を取得します。 下3桁が少数部。ピッチの最大値。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.OcrToolSetting">
+      <summary> このクラスはOCRツールの設定を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.MaxValue">
+      <summary> ツール結果値の最大値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.MinValue">
+      <summary> ツール結果値の最小値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.OkMaxValue">
+      <summary> ツール結果のOK上限値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.OkMinValue">
+      <summary> ツール結果のOK下限値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.ToolName">
+      <summary> ツール名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.ToolWindow">
+      <summary> ツール枠を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.ToolType">
+      <summary> ツールタイプを文字列で取得します。"Outline", "PositionAdjust", "MonochromeArea", "ColorArea", "EdgePixels", "Width", "Diameter", "Edge", "Pitch", "1AxisAdjustment", "2AxisAdjustment", ""のいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.MultiToolWindow">
+      <summary> 複数のツール枠を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.Scaling">
+      <summary> ツールのスケーリング設定を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrToolSetting.OcrTargetType">
+      <summary> OCRの読取対象設定を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VisionSensorStateEnum">
+      <summary>teVISIONSENSOR_STATE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.TriggerTypes">
+      <summary>teTRIGGER_TYPES</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.RgbKind">
+      <summary>teRGB_KIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.InPattern">
+      <summary>teIN_PATTERN</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectorAreaItems">
+      <summary>tsVECTORAREAITEMS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ShapeSensorRegisterSetting">
+      <summary>tsSHAPESENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.SensorOperationSettingDetail">
+      <summary>tsSENSOROPERATIONSETTINGDETAIL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ScalingSetting">
+      <summary>tsSCALINGSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrResultStr">
+      <summary>tsOCR_RESULT_STR</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgeMaskRectangle">
+      <summary>tsEDGEMASKRECTANGLE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaMonoSensorResult">
+      <summary>tsAREACOLORSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.HardwareVersion">
+      <summary>teHARDWARE_VERSION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.StructSize">
+      <summary>tsSTRUCT_SIZE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.SetUp">
+      <summary>tsSETUP</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.PictureSetting">
+      <summary>tsPICTURE_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.AreaMonoSensorSetting">
+      <summary>tsAREA_MONO_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.BankSettingAllImageInfo">
+      <summary>tsBANK_SETTING_ALL_IMAGE_INFO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.CmosType">
+      <summary>teCMOS_TYPE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvVariableArrayElement">
+      <summary>tsIV_VARIABLEARRAY_ELEMENT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvBankSettingBlockHeader">
+      <summary>tsIV_BANK_SETTING_BLOCK_HEADER</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolHsvResult">
+      <summary> このクラスはツールのHSV結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolHsvResult.Hue">
+      <summary> 色平均ツールの色相を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolHsvResult.Saturation">
+      <summary> 色平均ツールの彩度を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolHsvResult.Value">
+      <summary> 色平均ツールの明度を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.IVisionSensor">
+      <summary> このインターフェースは1台のIV2-シリーズのセンサーを表します。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.TickTack">
+      <summary> この関数は周期的に呼び出す必要があります。呼び出し周期は1分未満でなければなりません。 </summary>
+      <exception cref="T:Keyence.IV2.Sdk.ConnectionLostException"> アプリケーションがセンサーとの接続に失敗したときにスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.Unlock(System.String)">
+      <summary> センサーのセキュリティロックを解除します。 </summary>
+      <param name="password"> パスワード文字列です。 </param>
+      <returns> ロック解除の成功如何です。 </returns>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.Lock">
+      <summary> センサーのセキュリティロックを有効にします。 </summary>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.SwitchProgramTo(Keyence.IV2.Sdk.ProgramHeader)">
+      <summary> アクティブプログラムを変更します。 </summary>
+      <param name="destinationProgram"> 有効にしようとしているプログラムです。</param>
+      <exception cref="T:System.InvalidOperationException"> プログラム切替が無効の場合にスローされます。 </exception>
+      <exception cref="T:Keyence.IV2.Sdk.ConnectionLostException"> アプリケーションがセンサーとの接続に失敗したときにスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.Trigger">
+      <summary> マニュアルトリガを入力します。 </summary>
+      <exception cref="T:System.InvalidOperationException"> マニュアルトリガが無効の場合にスローされます。 </exception>
+      <exception cref="T:Keyence.IV2.Sdk.ConnectionLostException"> アプリケーションがセンサーとの接続に失敗したときにスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.ClearError(Keyence.IV2.Sdk.SensorError)">
+      <summary> センサーエラーをクリアします。 </summary>
+      <param name="occurredError"> クリアしようとしているエラーです。 </param>
+      <exception cref="T:Keyence.IV2.Sdk.ConnectionLostException"> アプリケーションがセンサーとの接続に失敗したときにスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.DrawWindow(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Byte)">
+      <summary> 渡された<see cref="T:System.Drawing.Graphics" />オブジェクトにツール結果を描画します。サイズはVGA(640x480)でなければなりません。 </summary>
+      <param name="graphics"> ツール結果を描画する<see cref="T:System.Drawing.Graphics" />オブジェクトです。 </param>
+      <param name="ok"> OKの場合に用いられる結果を描画する色です。 </param>
+      <param name="ng"> NGの場合に用いられる結果を描画する色です。 </param>
+      <param name="toolNo"> 描画対象のツール番号です。位置補正ツールは0を指定します。 </param>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.ImportSingleProgram(Keyence.IV2.Sdk.Iv2aReader,System.Int32,System.Int32)">
+      <summary> プログラム設定をインポートします。 </summary>
+      <param name="reader"> IV2Aファイル読み込みクラスです。 </param>
+      <param name="srcProgramNo"> IV2Aファイル内のプログラム番号です、0-31の間で指定します。 SD拡張されているIV2Aファイル場合は、0-127の間で指定します。</param>
+      <param name="dstProgramNo"> 送信するプログラム番号です、0-31の間で指定します。 SD拡張されている場合は、0-127の間で指定します。</param>
+      <exception cref="T:System.ArgumentException"> 指定されたプログラム番号が無効のときにスローされます。 </exception>
+      <exception cref="T:System.InvalidOperationException"> Iv2aReaderが読み込み不可能または破棄済みのときにスローされます。 </exception>
+      <exception cref="T:Keyence.IV2.Sdk.Iv2aFileException"> IV2Aファイルのインポートに失敗した場合にスローされます。 </exception>
+      <exception cref="T:Keyence.IV2.Sdk.ConnectionLostException"> アプリケーションがセンサーとの接続に失敗したときにスローされます。 </exception>
+    </member>
+    <member name="M:Keyence.IV2.Sdk.IVisionSensor.Dispose">
+      <summary> センサーとの接続を切断するときにこの関数を呼び出します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.Programs">
+      <summary> プログラム概要の配列を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.ActiveProgram">
+      <summary> アクティブプログラムの詳細を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.Errors">
+      <summary> センサーで発生しているエラーを配列形式で取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.PasswordRequired">
+      <summary> パスワードが必要かどうかを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.Unlocked">
+      <summary> センサーがアンロック状態かを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.ExternalProgramSwitch">
+      <summary> 外部プログラム切替設定を取得します。</summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.EventEnable">
+      <summary> イベント発生状態を設定、取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.ModelName">
+      <summary> センサーの型式名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.DeviceName">
+      <summary> センサ－の機器名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.SensorVersion">
+      <summary> センサーのバージョンを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.IVisionSensor.SerialNo">
+      <summary> センサーのシリアル番号を取得します。 </summary>
+    </member>
+    <member name="E:Keyence.IV2.Sdk.IVisionSensor.ImageAcquired">
+      <summary> 最新画像が更新されたことを通知するイベントです。 </summary>
+    </member>
+    <member name="E:Keyence.IV2.Sdk.IVisionSensor.ResultUpdated">
+      <summary> 運転結果が更新されたことを通知するイベントです。 </summary>
+    </member>
+    <member name="E:Keyence.IV2.Sdk.IVisionSensor.ErrorStatusUpdated">
+      <summary> センサーエラー状態が更新されたことを通知するイベントです。 </summary>
+    </member>
+    <member name="E:Keyence.IV2.Sdk.IVisionSensor.ProgramSettingsUpdated">
+      <summary> アクティブプログラム設定が更新されたことを通知するイベントです。 </summary>
+    </member>
+    <member name="E:Keyence.IV2.Sdk.IVisionSensor.Disposing">
+      <summary> 内部用途です、このイベントは監視しないで下さい。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.OutTimerFunc">
+      <summary>teOUT_TIMER_FUNC</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.ThresholdWithHiSetting">
+      <summary>tsTHRESHOLDWITHHISETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.PointL">
+      <summary>tsPOINTL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.MonoAveSensorRegisterSetting">
+      <summary>tsCOLORAVE_SENSOR_REGISTER_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.InvasionAreaMonoSensorResult">
+      <summary>tsINVASIONAREAMONOSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePixelCountSensorRegisterSetting">
+      <summary>tsEDGEPIXELCOUNTSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CsSensorResult">
+      <summary>tsCS_SENSOR_RESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaExtractHsvSetting">
+      <summary>tsAREAEXTARCTHSVSETTINGS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.ImageKind">
+      <summary>teIMAGE_KIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.FlipReqIndex">
+      <summary>teFLIP_REQ_INDEX</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.InvasionAreaMonoSensorSetting">
+      <summary>tsINVASION_AREA_MONO_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.CountSensorSetting">
+      <summary>tsCOUNT_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.CameraSpec">
+      <summary>tsCAMERA_SPEC</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.BrightnessMode">
+      <summary>teBRIGHTNESS_MODE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvCommonCheckWork">
+      <summary>tsIV_COMMON_CHECK_WORK</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ErrorDetectedEventArgs">
+      <summary> このクラスは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ErrorStatusUpdated" />イベントの引数を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ErrorDetectedEventArgs.PropetyList">
+      <summary> 変更された可能性のある<see cref="T:Keyence.IV2.Sdk.IVisionSensor" />オブジェクトのプロパティ名のリストを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ProgramSettingsUpdatedEventHandler">
+      <summary> このデリゲートは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ProgramSettingsUpdated" />イベントのハンドラのシグネチャを表します。 </summary>
+      <param name="sender"> イベントの発行者です。 </param>
+      <param name="e">
+        <see cref="E:Keyence.IV2.Sdk.IVisionSensor.ProgramSettingsUpdated" />イベントの引数です。 </param>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.RegStatusSensor">
+      <summary>teREG_STATUS_SENSOR</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectorAreaType">
+      <summary>teVECTORAREAITEM</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ShapeSearchResultItem">
+      <summary>tsSHAPESEARCHRESULTITEM</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrDateJudge">
+      <summary>tsOCR_DATE_JUDGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePitchSensorRegisterSetting">
+      <summary>tsEDGEPITCHSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaMonoSensorOperationSetting">
+      <summary>tsAREAMONOSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommDataKind">
+      <summary>teCommdataKIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.VsaRunningInfo">
+      <summary>tsVSA_RUNNING_INFO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.Security">
+      <summary>sSecurity</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ImageAcquiredEventHandler">
+      <summary> このデリゲートは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ImageAcquired" />イベントハンドラのシグネチャを表します。 </summary>
+      <param name="sender"> イベントの発行者です。 </param>
+      <param name="e">
+        <see cref="E:Keyence.IV2.Sdk.IVisionSensor.ImageAcquired" />イベントの引数です、最新画像を含んでいます。 </param>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvFixedArrayBlockHeader">
+      <summary>tsIV_FIXEDARRAY_BLOCK_HEADER</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ProgramDescription">
+      <summary> このクラスはプログラム詳細を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.ProgramName">
+      <summary> プログラム名を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.ProgramNo">
+      <summary> プログラム番号を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.ExternalTrigger">
+      <summary> トリガー設定が外部(true)または内部(false)かを取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.TriggerCycleMilliSec">
+      <summary> トリガー周期をms単位で取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.PositionAdjustSetting">
+      <summary> 位置補正ツール設定を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.Item(System.Byte)">
+      <summary> ツール設定を取得します。 </summary>
+      <param name="toolNo"> ツール番号です、1-16の間で指定します。 </param>
+      <returns> 指定されたツール番号のツール設定です。 </returns>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ProgramDescription.MasterImage">
+      <summary> マスター画像を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.MasterImage">
+      <summary>tsMASTER_IMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VsData">
+      <summary>teVSDATA</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.IoType">
+      <summary>teIO_TYPE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgeWidthSensorRegisterSetting">
+      <summary>tsEDGEWIDTHSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CountSensorOperationSetting">
+      <summary>tsCOUNTSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ColorAveSensorSetting">
+      <summary>tsCOLORAVE_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CircleDetectedDetail">
+      <summary>tsCIRCLE_DETECTED_DETAIL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaMonoSensorRegisterSetting">
+      <summary>tsAREACOLORSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaColorSensorResult">
+      <summary>tsAREACOLORSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Error.ErrorLevels">
+      <summary>teERROR_LEVELS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.DeviceSeriesVersion">
+      <summary>teDEVICE_SERIES_VERSION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.TcpCmdKind">
+      <summary>teTCP_CMD_KIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.SummaryOfTool">
+      <summary>tsVSA_SUMMARY</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.SensorSetting">
+      <summary>tsSENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.PositionAdjustSetting">
+      <summary>tsPOSITION_ADJUST_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.ModelName">
+      <summary>tsMODEL_NAME</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.InvasionAreaColorSensorSetting">
+      <summary>tsINVASION_AREA_COLOR_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolScalingSetting">
+      <summary> このクラスはツールのスケーリング設定を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingSetting.Enabled">
+      <summary> ツールのスケーリング設定が有効か取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingSetting.MaxValue">
+      <summary> ツール結果値の最大値を取得します。 下3桁が少数部 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingSetting.MinValue">
+      <summary> ツール結果値の最小値を取得します。 下3桁が少数部 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingSetting.OkMaxValue">
+      <summary> ツール結果のOK上限値を取得します。 下3桁が少数部 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolScalingSetting.OkMinValue">
+      <summary> ツール結果のOK下限値を取得します。 下3桁が少数部 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ThumbnailImage">
+      <summary> このクラスはサムネイル画像を表します。</summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ThumbnailImage.ByteData">
+      <summary> byte配列形式で画像データを取得します。配列の長さは常に80x60x3(BGRの順)です。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectoreAreaItemCircle">
+      <summary>tsVECTORAREAITEMCIRCLE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.SensorOperationSetting">
+      <summary>tsSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ResultOfEachHsv">
+      <summary>tsRESULT_OF_EACH_HSV</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrCharLimit">
+      <summary>tsOCR_CHAR_LIMIT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.NinePixelMapToOneBitBinaryImage">
+      <summary>ts9PIXELMAPTO1BITBINARYIMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePresenceSensorMask">
+      <summary>tsEDGEPRESENCESENSORMASK</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ColorAveSensorOperationSetting">
+      <summary>tsCOLORAVE_SENSOR_OPERATION_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.SettingChangeInfo">
+      <summary>tsSETTING_CHANGE_INFO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.EdgeWidthSensorSetting">
+      <summary>tsEDGE_WIDTH_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.IvFile.IvVariableArrayBlockHeader">
+      <summary>tsIV_VARIABLEARRAY_BLOCK_HEADER</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.DomainLayer.ExternalMedia.BankSettingCommonForFile">
+      <summary>tsBANK_SETTING_COMMON(for File)</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VisionSensorType">
+      <summary>teVISIONSENSOR_TYPE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.TrapezoidProof">
+      <summary>tsTRAPEZOID_PROOF</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrResultPoints">
+      <summary>tsOCR_RESULT_POINTS</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.InvasionAreaColorSensorRegisterSetting">
+      <summary>tsINVASIONAREACOLORSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePitchSensorResult">
+      <summary>tsEDGEPITCHSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.DiameterSensorRegisterSetting">
+      <summary>tsDIAMETERSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaHsvThreshold">
+      <summary>tsAREAHSVTHRESHOLD</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.ImageLoggingState">
+      <summary>teIMAGE_LOGGING_STATE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.FileDef.BlockOffsetIndex">
+      <summary>teLIIVFF_BLOCK_OFSIDX</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.Option">
+      <summary>CCommandOption</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.VisionSensorProof">
+      <summary>tsVISIONSENSOR_PROOF</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.InSetting">
+      <summary>tsIN_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.EdgePitchSensorSetting">
+      <summary>tsEDGE_PITCH_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ErrorDetectedEventHandler">
+      <summary> このデリゲートは<see cref="E:Keyence.IV2.Sdk.IVisionSensor.ErrorStatusUpdated" />イベントのハンドラのシグネチャを表します。 </summary>
+      <param name="sender"> イベントの発行者です。 </param>
+      <param name="e">
+        <see cref="E:Keyence.IV2.Sdk.IVisionSensor.ErrorStatusUpdated" />イベントの引数です </param>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.BrightnessAverageToolResult">
+      <summary> このクラスは明るさ平均ツールの結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.BrightnessAverageToolResult.Value">
+      <summary> ツール運転結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.BrightnessAverageToolResult.Extend">
+      <summary> ツール運転拡張結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.BrightnessAverageToolResult.Scaling">
+      <summary> ツールのスケーリング結果を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.BrightnessAverageToolResult.Ok">
+      <summary> ツール結果を表します、OKまたはNGのいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.BrightnessAverageToolResult.Brightness">
+      <summary> 明るさ平均ツールの明るさを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.VsaKind">
+      <summary>teVSA_KIND</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.SensorJudgeResult">
+      <summary>teSENSORJUDGERESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.VectorAreaItemRectangle">
+      <summary>tsVECTORAREAITEMRECTANGLE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.SensorRegisterSetting">
+      <summary>tsSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.PartOfTwoAxesresult">
+      <summary>tsPARTOFTWOAXESRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.InvasionAreaMonoSensorRegisterSetting">
+      <summary>tsINVASIONAREAMONOSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePixelCountSensorResult">
+      <summary>tsEDGEPIXELCOUNTSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgeInfo">
+      <summary>tsEDGEINFO</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaColorSensorOperationSetting">
+      <summary>tsAREACOLORSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.LightPwmCorrection">
+      <summary>tsLIGHT_PWM_CORRECTION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.BrightnessTable">
+      <summary>tsBRIGHTNESS_TABLE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ColorAverageToolResult">
+      <summary> このクラスは色平均ツールの結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ColorAverageToolResult.Value">
+      <summary> ツール運転結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ColorAverageToolResult.Extend">
+      <summary> ツール運転拡張結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ColorAverageToolResult.Scaling">
+      <summary> ツールのスケーリング結果を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ColorAverageToolResult.Hsv">
+      <summary> ツールのHSV結果を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ColorAverageToolResult.Ok">
+      <summary> ツール結果を表します、OKまたはNGのいずれかです。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.ToolExtendResult">
+      <summary> このクラスはツールの拡張結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolExtendResult.Enabled">
+      <summary> 拡張結果が有効か取得します。 ピッチのみtrue </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolExtendResult.Value1">
+      <summary> ツール運転拡張結果値1を取得します。 ピッチの最小値 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.ToolExtendResult.Value2">
+      <summary> ツール運転拡張結果値2を取得します。 ピッチの最大値 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.OcrStringToolResult">
+      <summary> このクラスはOCRツール(文字)の結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringToolResult.Value">
+      <summary> ツール運転結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringToolResult.Extend">
+      <summary> ツール運転拡張結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringToolResult.Scaling">
+      <summary> ツールのスケーリング結果を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringToolResult.Ok">
+      <summary> ツール結果を表します、OKまたはNGのいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringToolResult.Master">
+      <summary> OCRツールのマスター文字／マスター日付を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringToolResult.Read">
+      <summary> OCRツールの読取結果を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.OcrStringLengthToolResult">
+      <summary> このクラスはOCRツール(文字数)の結果を表します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.Value">
+      <summary> ツール運転結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.Extend">
+      <summary> ツール運転拡張結果値を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.Scaling">
+      <summary> ツールのスケーリング結果を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.Ok">
+      <summary> ツール結果を表します、OKまたはNGのいずれかです。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.Read">
+      <summary> OCRツールの読取結果文字数を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.MinLength">
+      <summary> OCRツールの最小マスター文字数を取得します。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.OcrStringLengthToolResult.MaxLength">
+      <summary> OCRツールの最大マスター文字数を取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.Iv2aFileException">
+      <summary> この例外はIV2Aファイルの操作に失敗した場合にスローされます。 </summary>
+    </member>
+    <member name="P:Keyence.IV2.Sdk.Iv2aFileException.ErrorCode">
+      <summary> エラーコードを取得します。 </summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.ColorImage">
+      <summary>tuCOLOR_IMAGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.ImageSetColor">
+      <summary>tsIMAGE_SET_COLOR</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.PositionControl">
+      <summary>tsPOSITIONCONTROL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.PointW">
+      <summary>tsPOINTW</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Basis.Hsv">
+      <summary>tsHSV</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.TwoAxesPosAdjustResult">
+      <summary>tsTWOAXESPOSADJUSTRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OneOfTwoAxesRegisterSetting">
+      <summary>tsONEOFTWOAXESREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrSensorOperationSetting">
+      <summary>tsOCRSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.InvasionAreaColorSensorResult">
+      <summary>tsINVASIONAREACOLORSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.InvasionAreaColorSensorOperationSetting">
+      <summary>tsINVASIONAREACOLORSENSOROPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgeWidthSensorResult">
+      <summary>tsEDGEWIDTHSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CsSensorRegisterSetting">
+      <summary>tsCS_SENSOR_REGISTER_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CountSensorResult">
+      <summary>tsCOUNTSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.CircleDetect">
+      <summary>tsCIRCLE_DETECT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaExtractPosition">
+      <summary>teAREAEXTRACTPOSITION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.VsaSettingMode">
+      <summary>teVSA_SETTING_MODE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.StructTpCalib">
+      <summary>TpCalib</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.SettingVersion">
+      <summary>tsSETTING_VERSION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.ShapeSensorResult">
+      <summary>tsSHAPESENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.SensorRegisterSettingDetail">
+      <summary>tsSENSORREGISTERSETTINGDETAIL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OneAxisPosAdjustSensorOperationSetting">
+      <summary>tsONEAXISPOSADJUSTOPERATIONSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OneAxisPosAdjustResult">
+      <summary>tsONEAXISPOSADJUSTRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrSensorResult">
+      <summary>tsOCRSENSORRESULT</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.EdgePresenceSensorRegisterSetting">
+      <summary>tsEDGEPRESENCESENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.AreaColorSensorRegisterSetting">
+      <summary>tsAREACOLORSENSORREGISTERSETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.VisionSensorError">
+      <summary>sVisionSensorError</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.ShapeSensorSetting">
+      <summary>tsSHAPE_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.RunningInfoSetting">
+      <summary>tsRUNNING_INFO_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.BankSettingVsa">
+      <summary>tsBANK_SETTING_VSA_FOR_APL</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.MasterImageSet">
+      <summary>tsMASTER_IMAGE_SET</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.OcrLetterJudge">
+      <summary>tsOCR_LETTER_JUDGE</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Include.Algorithm.ImageProcessTypes.MatchPercentOfEachHsv">
+      <summary>tsMATCH_PERCENT_OF_EACH_HSV</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.UdpCmdDirection">
+      <summary>teUDP_CMD_DIRECTION</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.EdgePresenceSensorSetting">
+      <summary>tsEDGE_PRESENCE_SENSOR_SETTING</summary>
+    </member>
+    <member name="T:Keyence.IV2.Sdk.InfraLayer.Common.Command.CommandData.BrightnessModeThre">
+      <summary>tsBRIGHTNESS_MODE_THRE</summary>
+    </member>
+  </members>
+</doc>
