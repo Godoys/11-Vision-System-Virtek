@@ -21,6 +21,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         public ResultStatus LastAnalysisResult { get; private set; }
         
         public ushort PortNumber { get; private set; }
+        
+        // --------------------------------
+        //    Public Methods Declaration
+        // --------------------------------
 
         KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber)
         {
@@ -100,6 +104,22 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         public Task GetAnalysisResultAsync()
         {
             throw new NotImplementedException();
+        }
+        
+        // --------------------------------
+        //   Private Methods Declaration
+        // --------------------------------
+
+        private void GetAnalysisResultStatus(Object sender, ToolResultUpdatedEventArgs e)
+        {
+            if (e.TotalStatusResult)
+            {
+                UpdateResult(ResultStatus.Pass);
+            }
+            else
+            {
+                UpdateResult(ResultStatus.Fail);
+            }
         }
     }
 }
