@@ -77,9 +77,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
         }
 
-        public Task DisconnectAsync(CameraConnectionType connectionType)
+        public async Task DisconnectAsync(CameraConnectionType connectionType)
         {
-            throw new NotImplementedException();
+            await Task.Run(() => _sensor.Dispose());
         }
 
         public Task UploadJobAsync(string jobPath, string jobName)
