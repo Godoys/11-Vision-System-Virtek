@@ -85,6 +85,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             return currentProjectionEntity;
         }
 
+        /// <summary>
+        /// Gets the name of the current open Work Order.
+        /// </summary>
+        /// <returns>The name of the current open Work Order.</returns>
         public async Task<string> GetCurrentWorkOrderNameAsync()
         {
             // DTO that stores the value of the client ID.
@@ -102,6 +106,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             return workOrderName;
         }
 
+        /// <summary>
+        /// Verifies if the received message is equals to the expected message.
+        /// </summary>
+        /// <param name="msg">Received message</param>
+        /// <returns>Returns true if the received message is equal to the expected; False, otherwise.</returns>
         public bool IsExpectedMessage(byte[] msg)
         {
             string message = Encoding.UTF8.GetString(msg);
