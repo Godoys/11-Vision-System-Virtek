@@ -107,7 +107,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         }
 
         /// <summary>
-        /// Verifies if the received message is equals to the expected message.
+        /// Checks if the received message is equals to the expected message.
         /// </summary>
         /// <param name="msg">Received message</param>
         /// <returns>Returns true if the received message is equal to the expected; False, otherwise.</returns>

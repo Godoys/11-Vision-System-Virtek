@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yktkVKv8/Og=",
+  "dgSpecHash": "a+zUcbBCxo4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-SandBox-Vision-System-Virtek\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj",
+  "projectFilePath": "/home/godoy/Documents/[01] Computer Science/[01] Projects/Sandbox-11/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Guilherme\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
-    "C:\\Users\\Guilherme\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "/home/godoy/.nuget/packages/mediatr/12.5.0/mediatr.12.5.0.nupkg.sha512",
+    "/home/godoy/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/godoy/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
