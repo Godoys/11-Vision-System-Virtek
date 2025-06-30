@@ -101,25 +101,27 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             await Task.Run(() => _sensor.Trigger());
         }
 
-        public Task GetAnalysisResultAsync()
+        public async Task GetAnalysisResultAsync()
         {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                _sensor.ResultUpdated += (sender, args) =>
+                {
+                    if (args.TotalStatusResult)
+                    {
+                        UpdateResult(ResultStatus.Pass);
+                    }
+                    else
+                    {
+                        UpdateResult(ResultStatus.Fail);
+                    }
+                };
+            });
         }
         
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
-
-        private void GetAnalysisResultStatus(Object sender, ToolResultUpdatedEventArgs e)
-        {
-            if (e.TotalStatusResult)
-            {
-                UpdateResult(ResultStatus.Pass);
-            }
-            else
-            {
-                UpdateResult(ResultStatus.Fail);
-            }
-        }
+        
     }
 }
