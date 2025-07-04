@@ -3,12 +3,10 @@ using _11_Vision_System_Virtek.Domain.Enums;
 
 namespace _11_Vision_System_Virtek.Domain.Entities
 {
-    
     /// <summary>
-    /// Represents a Camera with CameraObj (object of a camera SDK) , Username, Password, IP Address, and State.
+    /// Holds the configuration details used to connect to a camera.
     /// </summary>
-    
-    public class Camera
+    public class CameraConfig
     {
         public string Username { get; }
         public string Password { get; }

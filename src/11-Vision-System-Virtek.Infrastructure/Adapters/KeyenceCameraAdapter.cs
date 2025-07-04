@@ -26,7 +26,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         //    Public Methods Declaration
         // --------------------------------
 
-        KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber)
+        public KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber)
         {
             Username = username;
             Password = password;
@@ -80,7 +80,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 Console.WriteLine($"[!] Error trying to establish connection: {e.Message}");
             }
         }
-
+        
         public async Task DisconnectAsync(CameraConnectionType connectionType)
         {
             await Task.Run(() => _sensor.Dispose());
@@ -122,6 +122,20 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
+
+        /// <summary>
+        /// Syncs the data collected by the camera with the data in the class.
+        /// </summary>
+        private async void SyncData()
+        {
+            while (true)
+            {
+                await Task.Delay(500);
+                
+                // Runs method that syncs the data with the camera.
+                _sensor.TickTack();
+            }
+        }
         
     }
 }
