@@ -74,6 +74,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             try
             {
                 await Task.Run(() => _sensor = sensorStore.Create(Address, PortNumber));
+                SyncData();
             }
             catch (Exception e)
             {
