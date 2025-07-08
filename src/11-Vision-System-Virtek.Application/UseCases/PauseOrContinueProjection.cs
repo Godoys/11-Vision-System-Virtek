@@ -16,7 +16,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             _getImageResult = new GetImageAnalysisResultUseCase(_cameraService);
         }
 
-        public void Subscribe()
+        public async void Subscribe()
         {
             // Subscribe to the event.
             _projectorService.NextStep += Execute;
@@ -25,7 +25,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             CancellationTokenSource cts = new();
             
             // Checks if the current projection entity changed.
-            _projectorService.CheckCurrentProjectionEntityAsync(cts.Token);
+            await _projectorService.CheckCurrentProjectionEntityAsync(cts.Token);
         }
 
         private async Task Execute(object sender, EventArgs e)
