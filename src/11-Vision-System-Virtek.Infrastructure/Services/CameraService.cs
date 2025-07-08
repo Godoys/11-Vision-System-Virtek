@@ -41,6 +41,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             
             // Updates the result variable of camera.
             await _camera.GetAnalysisResultAsync();
+
+            // Delays 1s for image result analysis gets updated.
+            await Task.Delay(1000);
             
             // Gets the result status from the camera and return it.
             return _camera.LastAnalysisResult;
