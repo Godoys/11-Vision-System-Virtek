@@ -67,6 +67,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
                 }
                 else
                 {
+                    await Task.Delay(2000);
                     // Gets the current name of the active projection entity
                     _currentProjectionEntity = await _projector.GetCurrentProjectionEntityAsync();
                 }
