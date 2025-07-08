@@ -37,10 +37,11 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             switch (result)
             {
                 case ResultStatus.Fail:
+                    Console.WriteLine("[!] Failed image analysis with a FAIL.");
                     await _projectorService.PauseProjectionAsync();
                     break;
                 case ResultStatus.Pass:
-                    Console.WriteLine("[!] Passed image analysis with a unconditional pass.");
+                    Console.WriteLine("[!] Passed image analysis with a unconditional PASS.");
                     break;
                 case ResultStatus.Warn:
                     Console.WriteLine("[!] Passed image analysis with a WARNING,");
