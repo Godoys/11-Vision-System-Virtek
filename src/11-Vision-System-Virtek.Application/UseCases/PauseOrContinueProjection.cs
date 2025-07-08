@@ -30,8 +30,6 @@ namespace _11_Vision_System_Virtek.Application.UseCases
 
         private async Task Execute(object sender, EventArgs e)
         {
-            Console.WriteLine("[!] Next Step event raised!");
-            
             // Image analysis result;
             ResultStatus result = await _getImageResult.Execute();
             
