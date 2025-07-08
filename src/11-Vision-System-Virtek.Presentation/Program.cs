@@ -24,23 +24,13 @@ ICameraService cameraService = new CameraService(camera);
 
 PauseOrContinueProjection pauseOrContinueProjection = new PauseOrContinueProjection(cameraService,  projectorService);
 
+await camera.ConnectAsync(CameraConnectionType.CM);
+await projectorService.ConnectAsync();
+pauseOrContinueProjection.Subscribe();
+
 while (true)
 {
-    Console.WriteLine("[*] Write command");
-    string command = Console.ReadLine();
-
-    switch (command)
-    {
-        case "1":
-            Console.WriteLine("[*] Connection to Keyence camera and Virtek projector...");
-            await camera.ConnectAsync(CameraConnectionType.CM);
-            await projectorService.ConnectAsync();
-            break;
-        case "2":
-            Console.WriteLine("[*] Running Pause-or-Continue Projection...");
-            pauseOrContinueProjection.Subscribe();
-            break;
-    }
+    
 }
 
 
