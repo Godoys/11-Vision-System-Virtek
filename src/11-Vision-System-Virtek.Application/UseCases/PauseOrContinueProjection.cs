@@ -20,6 +20,12 @@ namespace _11_Vision_System_Virtek.Application.UseCases
         {
             // Subscribe to the event.
             _projectorService.NextStep += Execute;
+            
+            // Cancellation token for CurrentProjectionEntity checker.
+            CancellationTokenSource cts = new();
+            
+            // Checks if the current projection entity changed.
+            _projectorService.CheckCurrentProjectionEntityAsync(cts.Token);
         }
 
         private async Task Execute(object sender, EventArgs e)
