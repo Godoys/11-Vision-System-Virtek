@@ -4,47 +4,33 @@ using _11_Vision_System_Virtek.Domain.Entities;
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
+    /// <summary>
+    /// Controls a sensor: connects/disconnects, triggers image capture, retrieves image analysis result.
+    /// </summary>
     public interface ISensor
     {
         public SensorConfig Config { get; }
 
         /// <summary>
-        /// Establishes a connection with the camera.
+        /// Establishes a connection with the sensor.
         /// </summary>
-        /// <param name="connectionType">Type of connection to use.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
         public Task ConnectAsync();
         
         /// <summary>
-        /// Closes the connection with the camera.
+        /// Closes the connection with the sensor.
         /// </summary>
-        /// <param name="connectionType">Type of connection used.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
         public Task DisconnectAsync();
         
         /// <summary>
-        /// Uploads a job file to a camera.
-        /// </summary>
-        /// <param name="jobPath">File path to a job file.</param>
-        /// <param name="jobName">File name of a job file</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public Task UploadJobAsync(string jobPath, string jobName);
-
-        /// <summary>
-        /// Activate a pre-uploaded job for analysis.
-        /// </summary>
-        /// <param name="jobName">The name of the job file.</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public Task LoadJobAsync(string jobName);
-        
-        /// <summary>
-        /// Triggers an image capture
+        /// Triggers an image capture.
         /// </summary>
         /// <returns>A Task representing the asynchronous operation.</returns>
         public Task TriggerImageCaptureAsync();
 
         /// <summary>
-        /// Retrieves the result of the last image analysis
+        /// Retrieves the result of the last image analysis.
         /// </summary>
         /// <returns>A Task representing the asynchronous operation.</returns>
         public Task GetAnalysisResultAsync();
