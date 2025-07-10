@@ -5,15 +5,15 @@ namespace _11_Vision_System_Virtek.Application.UseCases
 {
     public class PauseOrContinueProjection
     {
-        private readonly ICameraService _cameraService;
+        private readonly ISensorService _sensorService;
         private readonly IProjectorService _projectorService;
         private readonly GetImageAnalysisResultUseCase _getImageResult;
 
-        public PauseOrContinueProjection(ICameraService cameraService, IProjectorService projectorService)
+        public PauseOrContinueProjection(ISensorService sensorService, IProjectorService projectorService)
         {
-            _cameraService = cameraService;
+            _sensorService = sensorService;
             _projectorService = projectorService;
-            _getImageResult = new GetImageAnalysisResultUseCase(_cameraService);
+            _getImageResult = new GetImageAnalysisResultUseCase(_sensorService);
         }
 
         public void Subscribe()
