@@ -10,14 +10,16 @@ namespace _11_Vision_System_Virtek.Domain.Entities
     {
         public string         Username { get; private set; }
         public string         Password { get; private set; }
+        public ushort       PortNumber { get; private set; }
         public IPAddress       Address { get; private set; }
         public SensorState       State { get; private set; }
         public ResultStatus LastResult { get; private set; }
 
-        public SensorConfig(string username, string password, IPAddress address)
+        public SensorConfig(string username, string password, IPAddress address, ushort portNumber = 0)
         {
             Username = username;
             Password = password;
+            PortNumber = portNumber;
             Address = address;
             State = SensorState.Offline;
             LastResult = ResultStatus.None;
