@@ -11,7 +11,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public string         Username { get; private set; }
         public string         Password { get; private set; }
         public IPAddress       Address { get; private set; }
-        public CameraState       State { get; private set; }
+        public SensorState       State { get; private set; }
         public ResultStatus LastResult { get; private set; }
 
         public SensorConfig(string username, string password, IPAddress address)
@@ -19,7 +19,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
             Username = username;
             Password = password;
             Address = address;
-            State = CameraState.Offline;
+            State = SensorState.Offline;
             LastResult = ResultStatus.None;
         }
 
@@ -58,7 +58,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         /// </summary>
         /// <param name="newState">The new sensor state.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateState(CameraState newState)
+        public void UpdateState(SensorState newState)
         {
             State = newState;
         }
