@@ -17,14 +17,14 @@ IProjectorService projectorService = new ProjectorService(brokerService, project
 // Camera configuration.
 
 IPAddress address = IPAddress.Parse("169.254.181.230"); 
-ICamera camera = new KeyenceCameraAdapter("", "", address, 63000);
-ICameraService cameraService = new CameraService(camera);
+ISensor camera = new KeyenceCameraAdapter("", "", address, 63000);
+ISensorService cameraService = new SensorService(camera);
 
 // Use cases configuration.
 
 PauseOrContinueProjection pauseOrContinueProjection = new PauseOrContinueProjection(cameraService,  projectorService);
 
-await camera.ConnectAsync(CameraConnectionType.CM);
+await camera.ConnectAsync();
 await projectorService.ConnectAsync();
 pauseOrContinueProjection.Subscribe();
 

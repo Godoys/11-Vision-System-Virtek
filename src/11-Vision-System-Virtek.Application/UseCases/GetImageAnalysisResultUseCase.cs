@@ -5,9 +5,9 @@ namespace _11_Vision_System_Virtek.Application.UseCases
 {
     public class GetImageAnalysisResultUseCase
     {
-        private readonly ICameraService _cameraService;
+        private readonly ISensorService _cameraService;
 
-        public GetImageAnalysisResultUseCase(ICameraService cameraService)
+        public GetImageAnalysisResultUseCase(ISensorService cameraService)
         {
             _cameraService = cameraService;
         }
