@@ -8,7 +8,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         string Username { get; }
         string Password { get; }
         IPAddress Address { get; }
-        CameraState State { get; }
+        SensorState State { get; }
         ResultStatus LastAnalysisResult { get; }
 
         /// <summary>
@@ -16,14 +16,14 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="connectionType">Type of connection to use.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
-        public Task ConnectAsync(CameraConnectionType connectionType);
+        public Task ConnectAsync();
         
         /// <summary>
         /// Closes the connection with the camera.
         /// </summary>
         /// <param name="connectionType">Type of connection used.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
-        public Task DisconnectAsync(CameraConnectionType connectionType);
+        public Task DisconnectAsync();
         
         /// <summary>
         /// Uploads a job file to a camera.
