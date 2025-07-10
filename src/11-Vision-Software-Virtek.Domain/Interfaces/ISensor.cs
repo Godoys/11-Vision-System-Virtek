@@ -1,15 +1,12 @@
 using System.Net;
 using _11_Vision_System_Virtek.Domain.Enums;
+using _11_Vision_System_Virtek.Domain.Entities;
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
     public interface ISensor
     {
-        string Username { get; }
-        string Password { get; }
-        IPAddress Address { get; }
-        SensorState State { get; }
-        ResultStatus LastAnalysisResult { get; }
+        public SensorConfig Config { get; }
 
         /// <summary>
         /// Establishes a connection with the camera.
