@@ -12,41 +12,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         ResultStatus LastAnalysisResult { get; }
 
         /// <summary>
-        /// Changes the camera's username.
-        /// </summary>
-        /// <param name="newUsername">The new login username.</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateUsername(string newUsername);
-        
-        /// <summary>
-        /// Changes the camera's password.
-        /// </summary>
-        /// <param name="newPassword">The new login password.</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdatePassword(string newPassword);
-        
-        /// <summary>
-        /// Changes the camera's address.
-        /// </summary>
-        /// <param name="newAddress">The new IP address.</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateAddress(IPAddress newAddress);
-        
-        /// <summary>
-        /// Changes the camera's state.
-        /// </summary>
-        /// <param name="newState">The new camera state.</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateState(CameraState newState);
-        
-        /// <summary>
-        /// Changes the camera's last image analysis result.
-        /// </summary>
-        /// <param name="newResult">The new image analysis result.</param>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateResult(ResultStatus newResult);
-
-        /// <summary>
         /// Establishes a connection with the camera.
         /// </summary>
         /// <param name="connectionType">Type of connection to use.</param>
