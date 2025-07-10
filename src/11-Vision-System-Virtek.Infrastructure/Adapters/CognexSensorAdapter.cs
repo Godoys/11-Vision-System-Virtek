@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text.RegularExpressions;
+using _11_Vision_System_Virtek.Domain.Entities;
 using _11_Vision_System_Virtek.Domain.Enums;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using Cognex.InSight;
@@ -13,17 +14,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     /// </summary>
     public class CognexSensorAdapter : ISensor
     {
-        // Cognex sensor objects for different type of connections.
-        
+        // Cognex SDK sensor object that is used for interaction with real sensor.
         private readonly CvsInSight _sensor;
-        private readonly CvsFtpClient _sensorFTP;
-        private readonly CvsNativeModeClient _sensorNativeMode;
         
-        public string Username { get; private set; }
-        public string Password { get; private set; }
-        public IPAddress Address { get; private set; }
-        public CameraState State { get; private set; }
-        public ResultStatus LastAnalysisResult { get; private set; }
+        public SensorConfig Config { get; }
         
         // --------------------------------
         //    Public Methods Declaration
@@ -31,262 +25,139 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public CognexSensorAdapter(string username, string password, IPAddress address)
         {
-            Username = username;
-            Password = password;
-            Address = address;
-            State = CameraState.Offline;
-            LastAnalysisResult = ResultStatus.None;
+            Config = new SensorConfig(username,  password,  address);
             _sensor = new CvsInSight();
-            _sensorFTP = new CvsFtpClient();
-            _sensorNativeMode = new CvsNativeModeClient();
         }
         
-        public void UpdateUsername(string newUsername)
-        {
-            Username = newUsername;
-        }
         
-        public void UpdatePassword(string newPassword)
+        public async Task ConnectAsync()
         {
-            Password = newPassword;
-        }
-        
-        public void UpdateAddress(IPAddress newAddress)
-        {
-            Address = newAddress;
-        }
-
-        public void UpdateState(CameraState newState)
-        {
-            State = newState;
-        }
-
-        public void UpdateResult(ResultStatus newResult)
-        {
-            LastAnalysisResult = newResult;
-        }
-        
-        public async Task ConnectAsync(CameraConnectionType connectionType)
-        {
-            switch (connectionType)
-            {
-                case CameraConnectionType.CM:
-                    await ConnectCm();
-                    break;
-                case CameraConnectionType.FTP:
-                    await ConnectFtp();
-                    break;
-                case CameraConnectionType.NM:
-                    await ConnectNm();
-                    break;
-                default:
-                    throw new NotSupportedException("[!] Unsupported connection type: " + connectionType);
-            }
-            
-            // Set state to connected.
-            State = CameraState.Connected;
-        }
-        
-        public async Task DisconnectAsync(CameraConnectionType connectionType)
-        {
-            Console.WriteLine("[*] Disconnecting from sensor " + Address + "...");
-            
-            switch (connectionType)
-            {
-                case CameraConnectionType.CM:
-                    await Task.Run(() => _sensor.Disconnect());
-                    break;
-                case CameraConnectionType.FTP:
-                    await Task.Run(() => _sensorFTP.Disconnect());
-                    break;
-                case CameraConnectionType.NM:
-                    await Task.Run(() => _sensorNativeMode.Disconnect());
-                    break;
-            }
-            
-            // Set state to disconnected.
-            State = CameraState.Disconnected;
-            
-            Console.WriteLine("[*] Disconnected from sensor " + Address + "...");
-        }
-        
-        public async Task UploadJobAsync(string jobPath, string jobName)
-        {
-            Console.WriteLine("[*] Uploading job " + jobName + "to sensor " + Address + "...");
-
             try
             {
-                await ConnectAsync(CameraConnectionType.FTP);
-                
-                // Set state to connected.
-                State = CameraState.Connected;
-
-                // Checks if the JobName is accepted by the sensor system.
-
-                if (_sensorFTP.IsValidFilename(jobName))
+                if (Config.State == SensorState.Connected)
                 {
-                    await Task.Run(() =>
-                    {
-                        using (FileStream stream = new FileStream(jobPath, FileMode.Open))
-                        {
-                            _sensorFTP.SendFileToInSight(stream, jobName);
-                        }
-                    });
+                    Console.WriteLine($"[!] Sensor {Config.Address} is already connected");
                 }
-
-                await DisconnectAsync(CameraConnectionType.FTP);
+                else
+                {
+                    Console.WriteLine($"[*] Connecting to Cognex In-Sight sensor {Config.Address}.");
                 
-                // Set state to disconnected.
-                State = CameraState.Disconnected;
+                    // Connects to a Cognex sensor using the Cognex SDK Connect method.
+                    await Task.Run(() => _sensor.Connect(Config.Address, Config.Username, Config.Password, false, true));
+                
+                    // Updates the CameraState in configuration object.
+                    Config.UpdateState(SensorState.Connected);   
+                    
+                    Console.WriteLine($"[*] Connected to sensor {Config.Address}.");
+                }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                Console.WriteLine("[!] " + ex.Message);
+                Console.WriteLine(e);
+                throw;
             }
-            
-            Console.WriteLine("[*] " + jobName + " uploaded to sensor " + Address);
         }
         
-        public async Task LoadJobAsync(string jobName)
+        public async Task DisconnectAsync()
         {
-            Console.WriteLine("[*] Setting " + jobName + " as default job in sensor " + Address + "...");
-
             try
             {
-                await ConnectAsync(CameraConnectionType.NM);
+                if (Config.State == SensorState.Disconnected || Config.State == SensorState.Offline)
+                {
+                    Console.WriteLine($"[!] Sensor {Config.Address} is already disconnected");
+                }
+                else
+                {
+                    Console.WriteLine($"[*] Disconnecting from sensor {Config.Address}.");
+                    
+                    // Disconnects to a Cognex sensor using the Cognex SDK Disconnect method.
+                    await Task.Run(() => _sensor.Disconnect());
                 
-                // Set state to connected.
-                State = CameraState.Connected;
-
-                // Gets the jobId.
-                string jobId = ParseJobId(jobName);
-
-                // Set JobFile as the active job being used by the camera.
-                _sensorNativeMode.SendCommand("SJ" + jobId);
-                
-                await DisconnectAsync(CameraConnectionType.NM);
-                
-                // Set state to disconnected.
-                State = CameraState.Disconnected;
+                    // Updates the CameraState in configuration object.
+                    Config.UpdateState(SensorState.Disconnected);   
+                    
+                    Console.WriteLine($"[*] Disconnected to sensor {Config.Address}.");
+                }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                Console.WriteLine("[!] " + ex.Message);
+                Console.WriteLine(e);
+                throw;
             }
-            
-            Console.WriteLine("[*] Job successfully loaded to sensor " + Address);
         }
         
         public async Task TriggerImageCaptureAsync()
         {
-            Console.WriteLine("[*] Triggering image capture");
-
             try
             {
-                await ConnectAsync(CameraConnectionType.CM);
-                await Task.Run(() => { _sensor.ManualAcquire(); });
+                if (Config.State == SensorState.Connected)
+                {
+                    Console.WriteLine($"[*] Triggering image capture in sensor {Config.Address}.");
+
+                    // Triggers image capture to a Cognex sensor using the Cognex SDK ManualAcquire method.
+                    await Task.Run(() => _sensor.ManualAcquire());
+                    
+                    Console.WriteLine($"[*] Image captured by sensor {Config.Address}.");
+                }
+                else
+                {
+                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to estabilish a connection with sensor {Config.Address}.");
+
+                    // Trying to reconnect with sensor.
+                    await ConnectAsync();
+                }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                Console.WriteLine("[!] " + ex.Message);
+                Console.WriteLine(e);
+                throw;
             }
-            
-            await DisconnectAsync(CameraConnectionType.CM);
         }
         
         public async Task GetAnalysisResultAsync()
         {
-            // Enum of Cognex SDK result status.
-            CvsStatusLevel resultStatus;
-            
-            // Connects to sensor.
-            await ConnectAsync(CameraConnectionType.CM);
-            
-            // Gets result status from camera.
-            resultStatus = _sensor.Results.StatusLevel;
-
-            switch (resultStatus)
+            try
             {
-                case CvsStatusLevel.Pass:
-                    UpdateResult(ResultStatus.Pass);
-                    break;
-                case CvsStatusLevel.Warn:
-                    UpdateResult(ResultStatus.Warn);
-                    break;
-                case CvsStatusLevel.Fail:
-                    UpdateResult(ResultStatus.Fail);
-                    break;
+                if (Config.State == SensorState.Connected)
+                {
+                    Console.WriteLine($"[*] Retrieving image analysis result in sensor {Config.Address}.");
+                    
+                    // Enum of Cognex SDK result status.
+                    CvsStatusLevel resultStatus = _sensor.Results.StatusLevel;
+                    
+                    // Checks the sensor results and updates the result variable on the sensor configuration object.
+                    switch (resultStatus)
+                    {
+                        case CvsStatusLevel.Pass:
+                            Config.UpdateResult(ResultStatus.Pass);
+                            break;
+                        case CvsStatusLevel.Warn:
+                            Config.UpdateResult(ResultStatus.Warn);
+                            break;
+                        case CvsStatusLevel.Fail:
+                            Config.UpdateResult(ResultStatus.Fail);
+                            break;
+                    }
+                    
+                    Console.WriteLine($"[*] Result status updated in sensor {Config.Address}.");
+                }
+                else
+                {
+                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to estabilish a connection with sensor {Config.Address}.");
+
+                    // Trying to reconnect with sensor.
+                    await ConnectAsync();
+                }
             }
-            
-            // Disconnects from camera.
-            await DisconnectAsync(CameraConnectionType.CM);
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         // --------------------------------
         //   Private Methods Declaration
         // --------------------------------
-
-        /// <summary>
-        /// Connects to InSight sensor using the high-level CvsInSight class.
-        /// </summary>
-        private async Task ConnectCm()
-        {
-            Console.WriteLine("[*] Connecting to InSight sensor " + Address + "...");
-
-            try
-            {
-                await Task.Run(() => { _sensor.Connect(Address, Username, Password, false, true); });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[!] " + ex.Message);
-            }
-        }
-
-        /// <summary>
-        /// Connects to InSight sensor using the File Transfer Protocol.
-        /// </summary>
-        private async Task ConnectFtp()
-        {
-            Console.WriteLine("[*] Connecting to InSight sensor " + Address + "through FTP...");
-
-            try
-            {
-                await Task.Run(() => { _sensorFTP.Connect(Address, Username, Password); });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[!] " + ex.Message);
-            }
-        }
-
-        /// <summary>
-        /// Connects to InSight sensor using the Native Mode.
-        /// </summary>
-        private async Task ConnectNm()
-        {
-            Console.WriteLine("[*] Connecting to InSight sensor " + Address + "through Native Mode...");
-
-            try
-            {
-                await Task.Run(() => { _sensorNativeMode.Connect(Address, Username, Password); });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[!] " + ex.Message);
-            }
-        }
-        
-        /// <summary>
-        /// Gets the job identifier based on the job file name.
-        /// </summary>
-        /// <param name="jobName">Job file name.</param>
-        /// <returns>Returns the identifier of the given job file.</returns>
-        private string ParseJobId(string jobName)
-        {
-            // Extract numeric prefix (e.g. "123ABC" -> "123")
-            var m = Regex.Match(jobName, @"^\d+");
-            return m.Success ? m.Value : throw new FormatException($"[!] Invalid job name: {jobName}");
-        }
     }
 }
