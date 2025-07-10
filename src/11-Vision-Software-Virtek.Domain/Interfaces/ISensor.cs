@@ -3,7 +3,7 @@ using _11_Vision_System_Virtek.Domain.Enums;
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
 {
-    public interface ICamera
+    public interface ISensor
     {
         string Username { get; }
         string Password { get; }

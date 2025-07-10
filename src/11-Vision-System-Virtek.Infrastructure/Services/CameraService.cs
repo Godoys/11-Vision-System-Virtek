@@ -14,11 +14,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
     /// </summary>
     public class CameraService : ICameraService
     {
-        private readonly ICamera _camera;
+        private readonly ISensor _sensor;
 
-        public CameraService(ICamera camera)
+        public CameraService(ISensor sensor)
         {
-            _camera = camera;
+            _sensor = sensor;
         }
         
         // --------------------------------
@@ -28,22 +28,22 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public async Task UploadAndLoadJobAsync(string filePath, string fileName)
         {
             // Uploads the job file to the camera.
-            await _camera.UploadJobAsync(filePath, fileName);
+            await _sensor.UploadJobAsync(filePath, fileName);
             
             // Loads the job file and set it as the default for image analysis.
-            await _camera.LoadJobAsync(fileName);
+            await _sensor.LoadJobAsync(fileName);
         }
         
         public async Task<ResultStatus> GetLastAnalysisResultAsync()
         {
             // Triggers an image capture.
-            await _camera.TriggerImageCaptureAsync();
+            await _sensor.TriggerImageCaptureAsync();
             
             // Updates the result variable of camera.
-            await _camera.GetAnalysisResultAsync();
+            await _sensor.GetAnalysisResultAsync();
             
             // Gets the result status from the camera and return it.
-            return _camera.LastAnalysisResult;
+            return _sensor.LastAnalysisResult;
         }
         
         // --------------------------------

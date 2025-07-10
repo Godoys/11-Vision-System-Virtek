@@ -11,7 +11,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     /// <summary>
     /// Adapts Cognex InSight SDK to the ICamera interface.
     /// </summary>
-    public class CognexCameraAdapter : ICamera
+    public class CognexSensorAdapter : ISensor
     {
         // Cognex sensor objects for different type of connections.
         
@@ -29,7 +29,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         //    Public Methods Declaration
         // --------------------------------
 
-        public CognexCameraAdapter(string username, string password, IPAddress address)
+        public CognexSensorAdapter(string username, string password, IPAddress address)
         {
             Username = username;
             Password = password;
