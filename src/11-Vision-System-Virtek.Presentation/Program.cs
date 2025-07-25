@@ -11,7 +11,7 @@ IMessageBrokerService brokerService = new MessageBrokerService("Direct", "Projec
 
 // Projector configuration.
 
-IProjector projector = new VirtekProjectorAdapter("220e806b-c33b-4ccb-9b7a-de4cc45234e5", "");
+IProjector projector = new VirtekProjectorAdapter("");
 IProjectorService projectorService = new ProjectorService(brokerService, projector);
 
 // Camera configuration.
