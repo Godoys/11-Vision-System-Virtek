@@ -251,13 +251,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             _tcs = new TaskCompletionSource<bool>();
             
             UpdateExpectedRequest(expectedRequest);
-            
-            Console.WriteLine($"[{apiName}] Expected RabbitMQ message request: {expectedRequest}");
 
-            // Make the API call.
+            // Make the API call and gets the success boolean value, result, and error message.
             var (success, result, errorMessage) = ExecuteApiCall(apiCall);
-            
-            Console.WriteLine($"[{apiName}] Received RabbitMQ message: {result}");
 
             if (success)
             {
@@ -268,7 +264,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
                     if (_tcs.Task.IsCompleted)
                     {
-                        Console.WriteLine($"[{apiName}] Completed RabbitMQ message");
+                        Console.WriteLine($"[{apiName}] Completed task RabbitMQ message");
                     }
                     else 
                     {
