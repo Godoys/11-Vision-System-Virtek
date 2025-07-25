@@ -78,9 +78,23 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task DisconnectAsync()
         {
-            var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // Attempts to disconnect from the projector.
+                await CallApiWaitForMessage(
+                    () => _systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to disconnect from projector failed due to ${e.Message}.");
+            }
             
-            await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
+            
+            
         }
 
         public async Task PauseProjectionAsync()
