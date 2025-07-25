@@ -39,6 +39,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public VirtekProjectorAdapter(string projectorSerialNumber)
         {
+            ClientId =  GetConnectedClientIdAsync().Result;
             ProjectorSerialNumber = projectorSerialNumber;
         }
 
