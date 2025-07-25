@@ -99,9 +99,20 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task PauseProjectionAsync()
         {
-            var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
-            
-            await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // Attempts to pause current projection.
+                await CallApiWaitForMessage(
+                    () => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to pause current projection failed due to ${e.Message}.");
+            }
         }
 
         /// <summary>
