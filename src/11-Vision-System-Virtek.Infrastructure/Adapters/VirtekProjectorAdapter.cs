@@ -42,9 +42,38 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task ConnectAsync()
         {
-            var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
-            
-            await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // First attempt to connect to projector through API.
+                await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Connection to the projector failed due to ${e.Message}.");
+                Console.WriteLine("[!] Attempting connection in 30s.");
+
+                try
+                {
+                    // Waits 30s after first connection attempt.
+                    await Task.Delay(TimeSpan.FromSeconds(30));
+                    
+                    // Creates DTO with values for connection to the client.
+                    var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+                    
+                    // Second attempt to connect to projector.
+                    await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
+                        "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+                }
+                catch (Exception e2)
+                {
+                    Console.WriteLine($"[!] Second attempt to establish a connection failed due to ${e2.Message}.");
+                    throw;
+                }
+            }
         }
 
         public async Task DisconnectAsync()
