@@ -1,12 +1,15 @@
 using System.Text;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using VisionAndProjectionService.Swagger.Api;
+using VisionAndProjectionService.Swagger.Model;
 using WorkorderTrackerService.Swagger.Api;
 using WorkorderTrackerService.Swagger.Model;
 using WorkorderService.Swagger.Api;
 using WorkorderService.Swagger.Model;
+using ClientIdDto = WorkorderService.Swagger.Model.ClientIdDto;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 using LoadWorkOrderDto = WorkorderService.Swagger.Model.LoadWorkOrderDto;
+using ResultDtoListString = WorkorderService.Swagger.Model.ResultDtoListString;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
@@ -60,11 +63,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
         }
-
-        /// <summary>
-        /// Gets the current active projection entity.
-        /// </summary>
-        /// <returns>The string with the active projection entity</returns>
+        
         public async Task<string> GetCurrentProjectionEntityAsync()
         {
             // Gets the name of the current open Work Order and stores it.
@@ -94,11 +93,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
             return currentProjectionEntity;
         }
-
-        /// <summary>
-        /// Gets the name of the current open Work Order.
-        /// </summary>
-        /// <returns>The name of the current open Work Order.</returns>
+        
         public async Task<string> GetCurrentWorkOrderNameAsync()
         {
             // DTO that stores the value of the client ID.
@@ -116,11 +111,32 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             return workOrderName;
         }
 
-        /// <summary>
-        /// Checks if the received message is equals to the expected message.
-        /// </summary>
-        /// <param name="msg">Received message</param>
-        /// <returns>Returns true if the received message is equal to the expected; False, otherwise.</returns>
+        public async Task<string> GetConnectedClientIdAsync()
+        {
+            try
+            {
+                // DTO that holds the client ids available in the network.
+                VisionAndProjectionService.Swagger.Model.ResultDtoListString connectedClientDataDto = new();
+
+                // Calls the API command that collects the DTO that holds the list of available clients in the network.
+                await CallApiWaitForMessage(
+                    () => connectedClientDataDto = _systemApiInstance.CoreLaserServiceGetConnectedClientIDs(),
+                    "NO USEFUL MESSAGE EXPECTED", "GetCurrentClients", false);
+
+                // Variable to store client id.
+                string clientId = connectedClientDataDto.Payload.First();
+
+                return clientId;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to get connected client id due to ${e.Message}.");
+                
+                // Returns empty string since method failed.
+                return "";
+            }
+        }
+        
         public bool IsExpectedMessage(byte[] msg)
         {
             string message = Encoding.UTF8.GetString(msg);
