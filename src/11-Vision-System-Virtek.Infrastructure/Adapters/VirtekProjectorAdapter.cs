@@ -168,19 +168,32 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>The name of the current open Work Order.</returns>
         public async Task<string> GetCurrentWorkOrderNameAsync()
         {
-            // DTO that stores the value of the client ID.
-            ClientIdDto clientIdDto = new ClientIdDto(clientId: ClientId);
-            
-            // DTO that holds the result of the API call.
-            ResultDtoWorkOrderNameDto workOrderNameDto = new ResultDtoWorkOrderNameDto();
-            
-            // Calls the API command that collects the DTO that holds the Work Order name.
-            await CallApiWaitForMessage(() => workOrderNameDto = _workOrderOperationsApiInstance.WorkOrderServiceGetCurrentWorkOrderName(clientIdDto), "NO  USEFUL MESSAGE EXPECTED", "GetCurrentWorkOrderName", false);
-            
-            // Current open Work Order name.
-            string workOrderName = workOrderNameDto.Payload.WorkOrderName;
-            
-            return workOrderName;
+            try
+            {
+                // DTO that stores the value of the client ID.
+                ClientIdDto clientIdDto = new ClientIdDto(clientId: ClientId);
+
+                // DTO that holds the result of the API call.
+                ResultDtoWorkOrderNameDto workOrderNameDto = new ResultDtoWorkOrderNameDto();
+
+                // Calls the API command that collects the DTO that holds the Work Order name.
+                await CallApiWaitForMessage(
+                    () => workOrderNameDto =
+                        _workOrderOperationsApiInstance.WorkOrderServiceGetCurrentWorkOrderName(clientIdDto),
+                    "NO  USEFUL MESSAGE EXPECTED", "GetCurrentWorkOrderName", false);
+
+                // Current open Work Order name.
+                string workOrderName = workOrderNameDto.Payload.WorkOrderName;
+
+                return workOrderName;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to get current work order name failed due to ${e.Message}.");
+                
+                // Returns an empty string since the method failed to get the current work order name.
+                return "";
+            }
         }
 
         /// <summary>
