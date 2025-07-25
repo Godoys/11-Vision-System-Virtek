@@ -47,6 +47,12 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public Task<string> GetCurrentWorkOrderNameAsync();
         
         /// <summary>
+        /// Gets the id of the current connected client.
+        /// </summary>
+        /// <returns>The id of the connected client</returns>
+        public Task<string> GetConnectedClientIdAsync();
+        
+        /// <summary>
         /// Process an incoming projector message.
         /// </summary>
         /// <param name="msg">The raw bytes received from the projector.</param>
