@@ -71,7 +71,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 catch (Exception e2)
                 {
                     Console.WriteLine($"[!] Second attempt to establish a connection failed due to ${e2.Message}.");
-                    throw;
                 }
             }
         }
