@@ -42,23 +42,76 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task ConnectAsync()
         {
-            var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
-            
-            await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // First attempt to connect to projector through API.
+                await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Connection to the projector failed due to ${e.Message}.");
+                Console.WriteLine("[!] Attempting connection in 30s.");
+
+                try
+                {
+                    // Waits 30s after first connection attempt.
+                    await Task.Delay(TimeSpan.FromSeconds(30));
+                    
+                    // Creates DTO with values for connection to the client.
+                    var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+                    
+                    // Second attempt to connect to projector.
+                    await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
+                        "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+                }
+                catch (Exception e2)
+                {
+                    Console.WriteLine($"[!] Second attempt to establish a connection failed due to ${e2.Message}.");
+                }
+            }
         }
 
         public async Task DisconnectAsync()
         {
-            var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // Attempts to disconnect from the projector.
+                await CallApiWaitForMessage(
+                    () => _systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to disconnect from projector failed due to ${e.Message}.");
+            }
             
-            await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceDisconnectClient(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "DisconnectClient", false);
+            
+            
         }
 
         public async Task PauseProjectionAsync()
         {
-            var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
-            
-            await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo), "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // Attempts to pause current projection.
+                await CallApiWaitForMessage(
+                    () => _projectionApiInstance.CoreLaserServicePauseAllProjection(connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "PauseProjectionForProjector", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to pause current projection failed due to ${e.Message}.");
+            }
         }
 
         /// <summary>
@@ -67,32 +120,46 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>The string with the active projection entity</returns>
         public async Task<string> GetCurrentProjectionEntityAsync()
         {
-            // Gets the name of the current open Work Order and stores it.
-            string workorderName = await GetCurrentWorkOrderNameAsync();
-            
-            // DTO for storing data for Work Order access.
-            LoadWorkOrderDto loadWorkOrderDto = new  LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
-
-            // DTO for storing the result of the API call.
-            ResultDtoListString projectionEntityCollectionJson = new ResultDtoListString();
-            
-            // Calls the API command that collects the DTO that holds list of projection entities.
-            await CallApiWaitForMessage(() => projectionEntityCollectionJson = _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
-
-            string currentProjectionEntity = "";
-            
             try
             {
-                // Gets the name of the current projection entity.
-                currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+                // Gets the name of the current open Work Order and stores it.
+                string workorderName = await GetCurrentWorkOrderNameAsync();
+
+                // DTO for storing data for Work Order access.
+                LoadWorkOrderDto loadWorkOrderDto =
+                    new LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
+
+                // DTO for storing the result of the API call.
+                ResultDtoListString projectionEntityCollectionJson = new ResultDtoListString();
+
+                // Calls the API command that collects the DTO that holds list of projection entities.
+                await CallApiWaitForMessage(
+                    () => projectionEntityCollectionJson =
+                        _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(
+                            loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
+
+                string currentProjectionEntity = "";
+
+                try
+                {
+                    // Gets the name of the current projection entity.
+                    currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+                }
+                catch (Exception e)
+                {
+                    await Task.Delay(TimeSpan.FromMilliseconds(500));
+                    currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+                }
+
+                return currentProjectionEntity;
             }
             catch (Exception e)
             {
-                await Task.Delay(TimeSpan.FromMilliseconds(500));
-                currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
-            }
+                Console.WriteLine($"[!] Attempt to get current projection name failed due to ${e.Message}.");
 
-            return currentProjectionEntity;
+                // Returns an empty string since the method failed to get the current projection name.
+                return "";
+            }
         }
 
         /// <summary>
@@ -101,19 +168,32 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>The name of the current open Work Order.</returns>
         public async Task<string> GetCurrentWorkOrderNameAsync()
         {
-            // DTO that stores the value of the client ID.
-            ClientIdDto clientIdDto = new ClientIdDto(clientId: ClientId);
-            
-            // DTO that holds the result of the API call.
-            ResultDtoWorkOrderNameDto workOrderNameDto = new ResultDtoWorkOrderNameDto();
-            
-            // Calls the API command that collects the DTO that holds the Work Order name.
-            await CallApiWaitForMessage(() => workOrderNameDto = _workOrderOperationsApiInstance.WorkOrderServiceGetCurrentWorkOrderName(clientIdDto), "NO  USEFUL MESSAGE EXPECTED", "GetCurrentWorkOrderName", false);
-            
-            // Current open Work Order name.
-            string workOrderName = workOrderNameDto.Payload.WorkOrderName;
-            
-            return workOrderName;
+            try
+            {
+                // DTO that stores the value of the client ID.
+                ClientIdDto clientIdDto = new ClientIdDto(clientId: ClientId);
+
+                // DTO that holds the result of the API call.
+                ResultDtoWorkOrderNameDto workOrderNameDto = new ResultDtoWorkOrderNameDto();
+
+                // Calls the API command that collects the DTO that holds the Work Order name.
+                await CallApiWaitForMessage(
+                    () => workOrderNameDto =
+                        _workOrderOperationsApiInstance.WorkOrderServiceGetCurrentWorkOrderName(clientIdDto),
+                    "NO  USEFUL MESSAGE EXPECTED", "GetCurrentWorkOrderName", false);
+
+                // Current open Work Order name.
+                string workOrderName = workOrderNameDto.Payload.WorkOrderName;
+
+                return workOrderName;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to get current work order name failed due to ${e.Message}.");
+                
+                // Returns an empty string since the method failed to get the current work order name.
+                return "";
+            }
         }
 
         /// <summary>
@@ -123,22 +203,35 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>Returns true if the received message is equal to the expected; False, otherwise.</returns>
         public bool IsExpectedMessage(byte[] msg)
         {
-            string message = Encoding.UTF8.GetString(msg);
-            
-            var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
-
-            if (messageObject != null && messageObject.RequestName != null)
+            try
             {
-                string requestedName = messageObject.RequestName.ToString();
+                // Gets binary message and converts to UTF8.
+                string message = Encoding.UTF8.GetString(msg);
 
-                if (requestedName == _currentRequestName)
+                // Deserialize a JSON object and gets the message received from RMQ.
+                var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
+
+                // Comparares if received message is the same as current request message.
+                if (messageObject != null && messageObject.RequestName != null)
                 {
-                    _tcs.TrySetResult(true);
-                    return true;
+                    string requestedName = messageObject.RequestName.ToString();
+
+                    if (requestedName == _currentRequestName)
+                    {
+                        _tcs.TrySetResult(true);
+                        return true;
+                    }
                 }
+
+                return false;
             }
-            
-            return false;
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Message verification failed due to ${e.Message}.");
+                
+                // Returns false since the operations failed.
+                return false;
+            }
         }
         
         // --------------------------------
@@ -158,13 +251,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             _tcs = new TaskCompletionSource<bool>();
             
             UpdateExpectedRequest(expectedRequest);
-            
-            Console.WriteLine($"[{apiName}] Expected RabbitMQ message request: {expectedRequest}");
 
-            // Make the API call.
+            // Make the API call and gets the success boolean value, result, and error message.
             var (success, result, errorMessage) = ExecuteApiCall(apiCall);
-            
-            Console.WriteLine($"[{apiName}] Received RabbitMQ message: {result}");
 
             if (success)
             {
@@ -175,7 +264,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
                     if (_tcs.Task.IsCompleted)
                     {
-                        Console.WriteLine($"[{apiName}] Completed RabbitMQ message");
+                        Console.WriteLine($"[{apiName}] Completed task RabbitMQ message");
                     }
                     else 
                     {
