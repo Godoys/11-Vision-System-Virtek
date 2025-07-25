@@ -203,22 +203,35 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>Returns true if the received message is equal to the expected; False, otherwise.</returns>
         public bool IsExpectedMessage(byte[] msg)
         {
-            string message = Encoding.UTF8.GetString(msg);
-            
-            var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
-
-            if (messageObject != null && messageObject.RequestName != null)
+            try
             {
-                string requestedName = messageObject.RequestName.ToString();
+                // Gets binary message and converts to UTF8.
+                string message = Encoding.UTF8.GetString(msg);
 
-                if (requestedName == _currentRequestName)
+                // Deserialize a JSON object and gets the message received from RMQ.
+                var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
+
+                // Comparares if received message is the same as current request message.
+                if (messageObject != null && messageObject.RequestName != null)
                 {
-                    _tcs.TrySetResult(true);
-                    return true;
+                    string requestedName = messageObject.RequestName.ToString();
+
+                    if (requestedName == _currentRequestName)
+                    {
+                        _tcs.TrySetResult(true);
+                        return true;
+                    }
                 }
+
+                return false;
             }
-            
-            return false;
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Message verification failed due to ${e.Message}.");
+                
+                // Returns false since the operations failed.
+                return false;
+            }
         }
         
         // --------------------------------
