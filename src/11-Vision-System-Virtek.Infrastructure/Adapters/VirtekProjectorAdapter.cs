@@ -120,32 +120,46 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <returns>The string with the active projection entity</returns>
         public async Task<string> GetCurrentProjectionEntityAsync()
         {
-            // Gets the name of the current open Work Order and stores it.
-            string workorderName = await GetCurrentWorkOrderNameAsync();
-            
-            // DTO for storing data for Work Order access.
-            LoadWorkOrderDto loadWorkOrderDto = new  LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
-
-            // DTO for storing the result of the API call.
-            ResultDtoListString projectionEntityCollectionJson = new ResultDtoListString();
-            
-            // Calls the API command that collects the DTO that holds list of projection entities.
-            await CallApiWaitForMessage(() => projectionEntityCollectionJson = _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
-
-            string currentProjectionEntity = "";
-            
             try
             {
-                // Gets the name of the current projection entity.
-                currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+                // Gets the name of the current open Work Order and stores it.
+                string workorderName = await GetCurrentWorkOrderNameAsync();
+
+                // DTO for storing data for Work Order access.
+                LoadWorkOrderDto loadWorkOrderDto =
+                    new LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
+
+                // DTO for storing the result of the API call.
+                ResultDtoListString projectionEntityCollectionJson = new ResultDtoListString();
+
+                // Calls the API command that collects the DTO that holds list of projection entities.
+                await CallApiWaitForMessage(
+                    () => projectionEntityCollectionJson =
+                        _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(
+                            loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
+
+                string currentProjectionEntity = "";
+
+                try
+                {
+                    // Gets the name of the current projection entity.
+                    currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+                }
+                catch (Exception e)
+                {
+                    await Task.Delay(TimeSpan.FromMilliseconds(500));
+                    currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
+                }
+
+                return currentProjectionEntity;
             }
             catch (Exception e)
             {
-                await Task.Delay(TimeSpan.FromMilliseconds(500));
-                currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
-            }
+                Console.WriteLine($"[!] Attempt to get current projection name failed due to ${e.Message}.");
 
-            return currentProjectionEntity;
+                // Returns an empty string since the method failed to get the current projection name.
+                return "";
+            }
         }
 
         /// <summary>
