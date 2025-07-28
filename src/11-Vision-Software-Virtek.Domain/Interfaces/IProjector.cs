@@ -10,11 +10,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// Unique client identifier used when connecting.
         /// </summary>
         string ClientId { get; }
-        
-        /// <summary>
-        /// Serial number of the projector device.
-        /// </summary>
-        string ProjectorSerialNumber { get; }
 
         /// <summary>
         /// Establishes a session with the projector.
