@@ -1,7 +1,7 @@
 
 namespace _11_Vision_System_Virtek.Domain.Enums
 {
-    public enum ResultStatus
+    public enum SensorResultStatus
     {
         None,
         Pass, // Unconditional Pass.

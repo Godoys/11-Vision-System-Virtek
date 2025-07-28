@@ -129,13 +129,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     switch (resultStatus)
                     {
                         case CvsStatusLevel.Pass:
-                            Config.UpdateResult(ResultStatus.Pass);
+                            Config.UpdateResult(SensorResultStatus.Pass);
                             break;
                         case CvsStatusLevel.Warn:
-                            Config.UpdateResult(ResultStatus.Warn);
+                            Config.UpdateResult(SensorResultStatus.Warn);
                             break;
                         case CvsStatusLevel.Fail:
-                            Config.UpdateResult(ResultStatus.Fail);
+                            Config.UpdateResult(SensorResultStatus.Fail);
                             break;
                     }
                     

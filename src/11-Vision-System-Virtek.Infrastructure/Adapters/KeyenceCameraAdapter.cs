@@ -126,11 +126,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                         {
                             if (args.TotalStatusResult)
                             {
-                                Config.UpdateResult(ResultStatus.Pass);
+                                Config.UpdateResult(SensorResultStatus.Pass);
                             }
                             else
                             {
-                                Config.UpdateResult(ResultStatus.Fail);
+                                Config.UpdateResult(SensorResultStatus.Fail);
                             }
                         };
                     });

@@ -31,22 +31,22 @@ namespace _11_Vision_System_Virtek.Application.UseCases
         private async Task Execute(object sender, EventArgs e)
         {
             // Image analysis result;
-            ResultStatus result = await _getImageResult.Execute();
+            SensorResultStatus sensorResult = await _getImageResult.Execute();
             
             // Decides if projection continues or stops.
-            switch (result)
+            switch (sensorResult)
             {
-                case ResultStatus.Fail:
+                case SensorResultStatus.Fail:
                     Console.WriteLine("[!] Failed image analysis with a FAIL.");
                     await _projectorService.PauseProjectionAsync();
                     break;
-                case ResultStatus.Pass:
+                case SensorResultStatus.Pass:
                     Console.WriteLine("[!] Passed image analysis with a unconditional PASS.");
                     break;
-                case ResultStatus.Warn:
+                case SensorResultStatus.Warn:
                     Console.WriteLine("[!] Passed image analysis with a WARNING,");
                     break;
-                case ResultStatus.None:
+                case SensorResultStatus.None:
                     break;
             }
         }

@@ -22,7 +22,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
 
         public SensorService(ISensor sensor) => _sensor = sensor;
         
-        public async Task<ResultStatus> GetLastAnalysisResultAsync()
+        public async Task<SensorResultStatus> GetLastAnalysisResultAsync()
         {
             // Triggers an image capture.
             await _sensor.TriggerImageCaptureAsync();
@@ -31,7 +31,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             await _sensor.GetAnalysisResultAsync();
             
             // Gets the result status from the camera and return it.
-            return _sensor.Config.LastResult;
+            return _sensor.Config.LastSensorResult;
         }
     }
 }

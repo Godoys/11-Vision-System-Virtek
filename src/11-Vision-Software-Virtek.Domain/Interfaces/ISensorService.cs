@@ -14,6 +14,6 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// Triggers the camera to capture an image and performs analysis of the image.
         /// </summary>
         /// <returns>The result status of the most recent image analysis.</returns>
-        public Task<ResultStatus> GetLastAnalysisResultAsync();
+        public Task<SensorResultStatus> GetLastAnalysisResultAsync();
     }
 }

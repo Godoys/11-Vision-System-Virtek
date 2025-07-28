@@ -13,7 +13,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public ushort       PortNumber { get; private set; }
         public IPAddress       Address { get; private set; }
         public SensorConnectionState       ConnectionState { get; private set; }
-        public ResultStatus LastResult { get; private set; }
+        public SensorResultStatus LastSensorResult { get; private set; }
 
         public SensorConfig(string username, string password, IPAddress address, ushort portNumber = 0)
         {
@@ -22,7 +22,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
             PortNumber = portNumber;
             Address = address;
             ConnectionState = SensorConnectionState.Offline;
-            LastResult = ResultStatus.None;
+            LastSensorResult = SensorResultStatus.None;
         }
 
         /// <summary>
@@ -68,11 +68,11 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         /// <summary>
         /// Changes the sensor's last image analysis result.
         /// </summary>
-        /// <param name="newResult">The new image analysis result.</param>
+        /// <param name="newSensorResult">The new image analysis result.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateResult(ResultStatus newResult)
+        public void UpdateResult(SensorResultStatus newSensorResult)
         {
-            LastResult = newResult;
+            LastSensorResult = newSensorResult;
         }
     }
 }
