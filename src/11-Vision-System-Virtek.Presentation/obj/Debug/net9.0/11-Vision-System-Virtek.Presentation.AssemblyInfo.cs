@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("11-Vision-System-Virtek.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+688a42ef108bce362686171e8b307238013bafc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66901033de3c91b7889b6ef42635fb4519e3fc89")]
 [assembly: System.Reflection.AssemblyProductAttribute("11-Vision-System-Virtek.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("11-Vision-System-Virtek.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

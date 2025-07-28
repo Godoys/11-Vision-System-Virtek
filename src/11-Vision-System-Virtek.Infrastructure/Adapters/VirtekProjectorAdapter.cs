@@ -30,7 +30,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private readonly WorkOrderOperationsApi _workOrderOperationsApiInstance = new WorkOrderOperationsApi();
         private readonly ProjectionOperationsApi _projectionOperationsApiInstance = new ProjectionOperationsApi();
         
-        public string ClientId { get; }
+        public string ClientId { get; private set; }
         public string ProjectorSerialNumber { get; }
 
         // --------------------------------
@@ -39,7 +39,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public VirtekProjectorAdapter(string projectorSerialNumber)
         {
-            ClientId =  GetConnectedClientIdAsync().Result;
             ProjectorSerialNumber = projectorSerialNumber;
         }
 
@@ -53,6 +52,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 // First attempt to connect to projector through API.
                 await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
                     "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+                
+                // Gets the id of the client available.
+                ClientId = GetConnectedClientIdAsync().Result;
             }
             catch (Exception e)
             {
@@ -70,6 +72,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     // Second attempt to connect to projector.
                     await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
                         "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+                    
+                    // Gets the id of the client available.
+                    ClientId = GetConnectedClientIdAsync().Result;
                 }
                 catch (Exception e2)
                 {
