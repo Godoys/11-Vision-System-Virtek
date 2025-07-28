@@ -115,6 +115,24 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 Console.WriteLine($"[!] Attempt to pause current projection failed due to ${e.Message}.");
             }
         }
+
+        public async Task ResumeProjectionAsync()
+        {
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // Attempts to resume to previous projection.
+                await CallApiWaitForMessage(
+                    () => _projectionApiInstance.CoreLaserServiceResumeAllProjection(clientInfo: connectClientInfo),
+                    "NO USEFUL MESSAGE EXPECTED", "ResumeProjection", false);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[!] Attempt to resume projection failed due to ${e.Message}.");
+            }
+        }
         
         public async Task<string> GetCurrentProjectionEntityAsync()
         {
