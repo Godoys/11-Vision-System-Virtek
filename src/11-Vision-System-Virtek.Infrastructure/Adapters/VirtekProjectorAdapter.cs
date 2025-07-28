@@ -31,16 +31,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private readonly ProjectionOperationsApi _projectionOperationsApiInstance = new ProjectionOperationsApi();
         
         public string ClientId { get; private set; }
-        public string ProjectorSerialNumber { get; }
 
         // -------------------------------
         //  Public Methods Implementation
         // -------------------------------
-
-        public VirtekProjectorAdapter(string projectorSerialNumber)
-        {
-            ProjectorSerialNumber = projectorSerialNumber;
-        }
 
         public async Task ConnectAsync()
         {
