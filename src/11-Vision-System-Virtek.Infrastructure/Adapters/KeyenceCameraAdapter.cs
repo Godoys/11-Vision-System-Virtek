@@ -13,9 +13,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         
         public SensorConfig Config { get; }
         
-        // --------------------------------
-        //    Public Methods Declaration
-        // --------------------------------
+        // -------------------------------
+        //  Public Methods Implementation
+        // -------------------------------
 
         public KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber)
         {
@@ -153,7 +153,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         }
         
         // --------------------------------
-        //   Private Methods Declaration
+        //  Private Methods Implementation
         // --------------------------------
 
         /// <summary>

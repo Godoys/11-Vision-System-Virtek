@@ -31,6 +31,10 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <returns>A task that completes when Cancellation Token is activated.</returns>
         public Task CheckCurrentProjectionEntityAsync(CancellationToken token);
         
+        // ---------------------------
+        //  Public Events Declaration
+        // ---------------------------
+        
         /// <summary>
         /// NextStep event declaration.
         /// </summary>

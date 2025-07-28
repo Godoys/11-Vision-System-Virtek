@@ -20,6 +20,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public string Password { get; }
         public string ExchangeName { get; }
         public string QueueName { get; }
+        
+        // -------------------------------
+        //  Public Methods Implementation
+        // -------------------------------
 
         public MessageBrokerService(string exchangeName, string queueName)
         {

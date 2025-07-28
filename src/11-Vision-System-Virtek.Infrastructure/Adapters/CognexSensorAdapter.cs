@@ -19,9 +19,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         
         public SensorConfig Config { get; }
         
-        // --------------------------------
-        //    Public Methods Declaration
-        // --------------------------------
+        // -------------------------------
+        //  Public Methods Implementation
+        // -------------------------------
 
         public CognexSensorAdapter(string username, string password, IPAddress address)
         {
@@ -157,7 +157,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         }
 
         // --------------------------------
-        //   Private Methods Declaration
+        //  Private Methods Implementation
         // --------------------------------
     }
 }

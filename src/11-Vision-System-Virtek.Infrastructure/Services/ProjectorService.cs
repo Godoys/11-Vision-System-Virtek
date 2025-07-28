@@ -16,6 +16,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         // Current and previous active projection entities in Work Order.
         private string _currentProjectionEntity = "";
         private string _previousProjectionEntity = "";
+        
+        // -------------------------------
+        //  Public Methods Implementation
+        // -------------------------------
 
         public ProjectorService(IMessageBrokerService brokerService, IProjector projector)
         {
@@ -75,6 +79,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             
 
         }
+        
+        // ------------------------------
+        //  Public Events Implementation
+        // ------------------------------
         
         public event IProjectorService.NextStepEventHandler NextStep;
 

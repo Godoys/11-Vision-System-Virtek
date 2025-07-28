@@ -15,12 +15,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
     public class SensorService : ISensorService
     {
         private readonly ISensor _sensor;
+        
+        // -------------------------------
+        //  Public Methods Implementation
+        // -------------------------------
 
         public SensorService(ISensor sensor) => _sensor = sensor;
-        
-        // --------------------------------
-        //    Public Methods Declaration
-        // --------------------------------
         
         public async Task<ResultStatus> GetLastAnalysisResultAsync()
         {
@@ -33,9 +33,5 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             // Gets the result status from the camera and return it.
             return _sensor.Config.LastResult;
         }
-        
-        // --------------------------------
-        //   Private Methods Declaration
-        // --------------------------------
     }
 }

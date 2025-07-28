@@ -33,9 +33,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         public string ClientId { get; private set; }
         public string ProjectorSerialNumber { get; }
 
-        // --------------------------------
-        //    Public Methods Declaration
-        // --------------------------------
+        // -------------------------------
+        //  Public Methods Implementation
+        // -------------------------------
 
         public VirtekProjectorAdapter(string projectorSerialNumber)
         {
@@ -256,7 +256,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         }
         
         // --------------------------------
-        //   Private Methods Declaration
+        //  Private Methods Implementation
         // --------------------------------
 
         /// <summary>

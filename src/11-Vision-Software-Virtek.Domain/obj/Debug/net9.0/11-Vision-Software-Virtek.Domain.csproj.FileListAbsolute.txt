@@ -34,3 +34,15 @@ C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-
 C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Domain.dll
 C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
 C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Domain.dll
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.deps.json
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-Software-Virtek.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-Software-Virtek.Domain.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-Software-Virtek.Domain.AssemblyInfo.cs
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-Software-Virtek.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-Software-Virtek.Domain.sourcelink.json
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Domain.dll
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
+C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-Software-Virtek.Domain\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Domain.dll
