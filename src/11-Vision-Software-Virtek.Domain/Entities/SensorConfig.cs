@@ -12,7 +12,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         public string         Password { get; private set; }
         public ushort       PortNumber { get; private set; }
         public IPAddress       Address { get; private set; }
-        public SensorState       State { get; private set; }
+        public SensorConnectionState       ConnectionState { get; private set; }
         public ResultStatus LastResult { get; private set; }
 
         public SensorConfig(string username, string password, IPAddress address, ushort portNumber = 0)
@@ -21,7 +21,7 @@ namespace _11_Vision_System_Virtek.Domain.Entities
             Password = password;
             PortNumber = portNumber;
             Address = address;
-            State = SensorState.Offline;
+            ConnectionState = SensorConnectionState.Offline;
             LastResult = ResultStatus.None;
         }
 
@@ -58,11 +58,11 @@ namespace _11_Vision_System_Virtek.Domain.Entities
         /// <summary>
         /// Changes the sensor's state.
         /// </summary>
-        /// <param name="newState">The new sensor state.</param>
+        /// <param name="newConnectionState">The new sensor state.</param>
         /// <returns>A Task representing the asynchronous operation.</returns>
-        public void UpdateState(SensorState newState)
+        public void UpdateState(SensorConnectionState newConnectionState)
         {
-            State = newState;
+            ConnectionState = newConnectionState;
         }
 
         /// <summary>

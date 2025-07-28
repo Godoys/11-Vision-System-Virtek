@@ -26,7 +26,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             try
             {
-                if (Config.State == SensorState.Connected)
+                if (Config.ConnectionState == SensorConnectionState.Connected)
                 {
                     Console.WriteLine($"[!] Sensor {Config.Address} is already connected");
                 }
@@ -44,7 +44,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     SyncData();
                 
                     // Updates the CameraState in configuration object.
-                    Config.UpdateState(SensorState.Connected);   
+                    Config.UpdateState(SensorConnectionState.Connected);   
                     
                     Console.WriteLine($"[*] Connected to sensor {Config.Address}.");
                 }
@@ -60,7 +60,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             try
             {
-                if (Config.State == SensorState.Disconnected || Config.State == SensorState.Offline)
+                if (Config.ConnectionState == SensorConnectionState.Disconnected || Config.ConnectionState == SensorConnectionState.Offline)
                 {
                     Console.WriteLine($"[!] Sensor {Config.Address} is already disconnected");
                 }
@@ -72,7 +72,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     await Task.Run(() => _sensor.Dispose());
                 
                     // Updates the CameraState in configuration object.
-                    Config.UpdateState(SensorState.Disconnected);   
+                    Config.UpdateState(SensorConnectionState.Disconnected);   
                     
                     Console.WriteLine($"[*] Disconnected to sensor {Config.Address}.");
                 }
@@ -88,7 +88,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             try
             {
-                if (Config.State == SensorState.Connected)
+                if (Config.ConnectionState == SensorConnectionState.Connected)
                 {
                     Console.WriteLine($"[*] Triggering image capture in sensor {Config.Address}.");
 
@@ -116,7 +116,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             try
             {
-                if (Config.State == SensorState.Connected)
+                if (Config.ConnectionState == SensorConnectionState.Connected)
                 {
                     Console.WriteLine($"[*] Retrieving image analysis result in sensor {Config.Address}.");
                     
