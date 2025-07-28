@@ -46,15 +46,15 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             try
             {
+                // Gets the id of the client available.
+                ClientId = GetConnectedClientIdAsync().Result;
+                
                 // Creates DTO with values for connection to the client.
                 var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
 
                 // First attempt to connect to projector through API.
                 await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
                     "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
-                
-                // Gets the id of the client available.
-                ClientId = GetConnectedClientIdAsync().Result;
             }
             catch (Exception e)
             {
@@ -66,15 +66,15 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     // Waits 30s after first connection attempt.
                     await Task.Delay(TimeSpan.FromSeconds(30));
                     
+                    // Gets the id of the client available.
+                    ClientId = GetConnectedClientIdAsync().Result;
+                    
                     // Creates DTO with values for connection to the client.
                     var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
                     
                     // Second attempt to connect to projector.
                     await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
                         "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
-                    
-                    // Gets the id of the client available.
-                    ClientId = GetConnectedClientIdAsync().Result;
                 }
                 catch (Exception e2)
                 {
