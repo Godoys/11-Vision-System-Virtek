@@ -159,11 +159,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <summary>
         /// Syncs the data collected by the camera with the data in the class.
         /// </summary>
-        private async void SyncData()
+        private void SyncData()
         {
             while (true)
             {
-                await Task.Delay(500);
+                Task.Delay(500);
                 
                 // Runs method that syncs the data with the camera.
                 _sensor.TickTack();
