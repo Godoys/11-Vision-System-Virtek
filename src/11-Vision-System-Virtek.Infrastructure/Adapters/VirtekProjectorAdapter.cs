@@ -123,7 +123,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 // Creates DTO with values for connection to the client.
                 var connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
 
-                // Attempts to resume to previous projection.
+                // Attempts to resume to previous projection in given client.
                 await CallApiWaitForMessage(
                     () => _projectionApiInstance.CoreLaserServiceResumeAllProjection(clientInfo: connectClientInfo),
                     "NO USEFUL MESSAGE EXPECTED", "ResumeProjection", false);
