@@ -195,17 +195,33 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             try
             {
                 // DTO that holds the client ids available in the network.
-                VisionAndProjectionService.Swagger.Model.ResultDtoListString connectedClientDataDto = new();
+                ResultDtoListClientDataDto connectedClientDataDto = new();
 
                 // Calls the API command that collects the DTO that holds the list of available clients in the network.
                 await CallApiWaitForMessage(
-                    () => connectedClientDataDto = _systemApiInstance.CoreLaserServiceGetConnectedClientIDs(),
+                    () => connectedClientDataDto = _systemApiInstance.CoreLaserServiceGetCurrentClients(),
                     "NO USEFUL MESSAGE EXPECTED", "GetCurrentClients", false);
+                
+                // Loops through all activated client ids and gets the one who has an open work order.
+                for (int i = 0; i < connectedClientDataDto.Payload.Count; i++)
+                {
+                    // Variable to store the client ids available in the list.
+                    string clientId = connectedClientDataDto.Payload[i].ClientInfo.ClientId;
+                    
+                    // Variable to store the client id open work order name.
+                    string workOrderName = connectedClientDataDto.Payload[i].CurrentWorkOrder;
 
-                // Variable to store client id.
-                string clientId = connectedClientDataDto.Payload.First();
+                    // Checks if the workOrderName variable is an empty string or not. If yes, then not correct client id;
+                    // if false, then correct client id.
+                    if (!string.IsNullOrEmpty(workOrderName))
+                    {
+                        // Returns the client id with an open work order.
+                        return clientId;
+                    }
+                }
 
-                return clientId;
+                // Returns an empty string since not client id with an open work order was found.
+                return "";
             }
             catch (Exception e)
             {
