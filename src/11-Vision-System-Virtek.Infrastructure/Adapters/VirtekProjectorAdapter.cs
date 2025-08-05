@@ -212,7 +212,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     string workOrderName = connectedClientDataDto.Payload[i].CurrentWorkOrder;
 
                     // Checks if the workOrderName variable is an empty string or not. If yes, then not correct client id;
-                    // if false, then correct client id.
+                    // if false, then it is the correct client id.
                     if (!string.IsNullOrEmpty(workOrderName))
                     {
                         // Returns the client id with an open work order.

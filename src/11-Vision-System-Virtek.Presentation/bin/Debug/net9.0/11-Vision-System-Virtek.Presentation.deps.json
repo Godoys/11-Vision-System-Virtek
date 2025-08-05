@@ -135,6 +135,14 @@
           }
         }
       },
+      "Keyence.IV2.Sdk/1.0.3.0": {
+        "runtime": {
+          "Keyence.IV2.Sdk.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
       "VisionAndProjectionService.Swagger/1.0.0.0": {
         "runtime": {
           "VisionAndProjectionService.Swagger.dll": {
@@ -143,11 +151,19 @@
           }
         }
       },
-      "WorkorderTrackerService.Swagger/1.0.0.0": {
+      "WorkorderService.Swagger/1.0.0.0": {
         "runtime": {
-          "WorkorderTrackerService.Swagger.dll": {
+          "WorkorderService.Swagger.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Keyence.IV2.Sdk.Lib/1.0.3.0": {
+        "runtime": {
+          "Keyence.IV2.Sdk.Lib.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -248,12 +264,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Keyence.IV2.Sdk/1.0.3.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "VisionAndProjectionService.Swagger/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "WorkorderTrackerService.Swagger/1.0.0.0": {
+    "WorkorderService.Swagger/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Keyence.IV2.Sdk.Lib/1.0.3.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
