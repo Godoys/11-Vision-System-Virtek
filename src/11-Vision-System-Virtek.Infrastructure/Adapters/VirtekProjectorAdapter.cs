@@ -252,7 +252,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task AddProjectPolygonAsync(string name, int id, string unit)
         {
-            GeneratetStepList("/home/godoy/Downloads/testply.ply");
+            GenerateStepList("/home/godoy/Downloads/testply.ply");
         }
 
         public bool IsExpectedMessage(byte[] msg)
@@ -372,7 +372,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// </summary>
         /// <param name="filePath">The absolute path to a file.</param>
         /// <returns>A string list of all the content of the steps inside a .PLY file</returns>
-        private List<string> GeneratetStepList(string filePath)
+        private List<string> GenerateStepList(string filePath)
         {
             // List of the steps contained in the .PLY file.
             List<string> stepList = new();
