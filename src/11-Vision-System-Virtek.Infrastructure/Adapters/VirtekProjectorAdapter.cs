@@ -370,8 +370,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <summary>
         /// Generates a list of the steps containing in the .PLY file
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
+        /// <param name="filePath">The absolute path to a file.</param>
+        /// <returns>A string list of all the content of the steps inside a .PLY file</returns>
         private List<string> GeneratetStepList(string filePath)
         {
             // List of the steps contained in the .PLY file.
@@ -417,6 +417,32 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
             
             return stepList;
+        }
+
+        /// <summary>
+        /// Counts the number of lines in a given file.
+        /// </summary>
+        /// <param name="filePath">The absolute path to a file.</param>
+        /// <returns>A integer that represents the number of lines in a file</returns>
+        private int CountFileLines(string filePath)
+        {
+            // Variable to store the number of lines in the given file.
+            int nOfLines = 0;
+            
+            // StreamReader to parse through the file.
+            using (StreamReader reader = new(filePath))
+            {
+                // Variable to store the content of a line.
+                string line;
+                
+                // Loop that counts the number of lines in the file
+                while ((line = reader.ReadLine()) != null)
+                {
+                    nOfLines++;
+                }
+            }
+            
+            return nOfLines;
         }
     }
 }
