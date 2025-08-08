@@ -52,6 +52,16 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <returns>The id of the connected client</returns>
         public Task<string> GetConnectedClientIdAsync();
+
+        /// <summary>
+        /// Adds a .PLY file projection to the current open work order. 
+        /// </summary>
+        /// <param name="name">Name of the projection to be added to the work order step list.</param>
+        /// <param name="id">Unique id manually or automatically added to the new projection.</param>
+        /// <param name="unit">Unit of the projection file.</param>
+        /// <param name="filepath">Absolute file path to the .PLY file to be used.</param>
+        /// <returns></returns>
+        public Task AddProjectPolygonAsync(string name, string id, string unit, string filepath);
         
         /// <summary>
         /// Process an incoming projector message.
