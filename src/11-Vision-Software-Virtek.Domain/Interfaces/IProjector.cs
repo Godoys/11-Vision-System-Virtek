@@ -61,7 +61,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <param name="unit">Unit of the projection file.</param>
         /// <param name="filepath">Absolute file path to the .PLY file to be used.</param>
         /// <returns></returns>
-        public Task AddProjectPolygonAsync(string name, string id, string unit, string filepath);
+        public Task AddProjectPolygonAsync(string name, int id, string unit);
         
         /// <summary>
         /// Process an incoming projector message.
