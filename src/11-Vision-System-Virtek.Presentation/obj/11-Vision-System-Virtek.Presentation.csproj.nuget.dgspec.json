@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Presentation\\11-Vision-System-Virtek.Presentation.csproj": {}
+    "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/11-Vision-System-Virtek.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj": {
+    "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj",
+        "projectUniqueName": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj",
         "projectName": "11-Vision-System-Virtek.Domain",
-        "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj",
-        "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\obj\\",
+        "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj",
+        "packagesPath": "/home/godoy/.nuget/packages/",
+        "outputPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/godoy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj": {
+    "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj",
+        "projectUniqueName": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj",
         "projectName": "11-Vision-System-Virtek.Application",
-        "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj",
-        "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\obj\\",
+        "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj",
+        "packagesPath": "/home/godoy/.nuget/packages/",
+        "outputPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/godoy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -85,8 +85,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj": {
-                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj"
+              "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj": {
+                "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
               }
             }
           }
@@ -101,7 +101,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -128,21 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj": {
+    "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj",
+        "projectUniqueName": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj",
         "projectName": "11-Vision-System-Virtek.Infrastructure",
-        "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Infrastructure\\obj\\",
+        "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj",
+        "packagesPath": "/home/godoy/.nuget/packages/",
+        "outputPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/godoy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -154,11 +154,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj": {
-                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj"
+              "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj": {
+                "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
               },
-              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj": {
-                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj"
+              "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj": {
+                "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj"
               }
             }
           }
@@ -173,7 +173,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -204,21 +204,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Presentation\\11-Vision-System-Virtek.Presentation.csproj": {
+    "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/11-Vision-System-Virtek.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Presentation\\11-Vision-System-Virtek.Presentation.csproj",
+        "projectUniqueName": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/11-Vision-System-Virtek.Presentation.csproj",
         "projectName": "11-Vision-System-Virtek.Presentation",
-        "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Presentation\\11-Vision-System-Virtek.Presentation.csproj",
-        "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Presentation\\obj\\",
+        "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/11-Vision-System-Virtek.Presentation.csproj",
+        "packagesPath": "/home/godoy/.nuget/packages/",
+        "outputPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/godoy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -230,14 +230,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj": {
-                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-Software-Virtek.Domain\\11-Vision-Software-Virtek.Domain.csproj"
+              "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj": {
+                "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-Software-Virtek.Domain/11-Vision-Software-Virtek.Domain.csproj"
               },
-              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj": {
-                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Application\\11-Vision-System-Virtek.Application.csproj"
+              "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj": {
+                "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/11-Vision-System-Virtek.Application.csproj"
               },
-              "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Guilherme\\Documents\\[01] Github\\11-Virtek-Vision-System\\src\\11-Vision-System-Virtek.Infrastructure\\11-Vision-System-Virtek.Infrastructure.csproj"
+              "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj": {
+                "projectPath": "/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Infrastructure/11-Vision-System-Virtek.Infrastructure.csproj"
               }
             }
           }
@@ -252,7 +252,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -279,7 +279,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

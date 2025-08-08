@@ -249,7 +249,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 return "";
             }
         }
-        
+
+        public async Task AddProjectPolygonAsync(string name, int id, string unit)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsExpectedMessage(byte[] msg)
         {
             try
