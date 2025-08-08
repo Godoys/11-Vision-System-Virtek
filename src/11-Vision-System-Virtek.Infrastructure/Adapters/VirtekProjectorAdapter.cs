@@ -381,7 +381,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             string buffer = "";
             
             // Number of lines in the file.
-            int nOfLines = 76; // TODO: Add CountFilesLines(filePath)
+            int nOfLines = CountFileLines(filePath);
             
             // StreamReader to parse through the .PLY file.
             using StreamReader reader = new(filePath);
