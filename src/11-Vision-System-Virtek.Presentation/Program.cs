@@ -24,9 +24,7 @@ ISensorService cameraService = new SensorService(camera);
 
 PauseOrContinueProjection pauseOrContinueProjection = new PauseOrContinueProjection(cameraService,  projectorService);
 
-await camera.ConnectAsync();
-await projectorService.ConnectAsync();
-pauseOrContinueProjection.Subscribe();
+await projector.AddProjectPolygonAsync("", 0, "");
 
 while (true)
 {

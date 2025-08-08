@@ -23,35 +23,51 @@ C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-S
 /home/godoy/Documents/[01] Computer Science/[01] Projects/Sandbox-11/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.dll
 /home/godoy/Documents/[01] Computer Science/[01] Projects/Sandbox-11/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Application.dll
 /home/godoy/Documents/[01] Computer Science/[01] Projects/Sandbox-11/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Application.deps.json
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.csproj.AssemblyReference.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.AssemblyInfoInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.AssemblyInfo.cs
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.csproj.CoreCompileInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.sourcelink.json
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Visio.3B5D79CC.Up2Date
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Application.deps.json
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.csproj.AssemblyReference.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.AssemblyInfoInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.AssemblyInfo.cs
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.csproj.CoreCompileInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.sourcelink.json
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Visio.3B5D79CC.Up2Date
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Application\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.deps.json
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.csproj.AssemblyReference.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.AssemblyInfoInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.AssemblyInfo.cs
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.csproj.CoreCompileInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.sourcelink.json
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Visio.3B5D79CC.Up2Date
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.deps.json
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.csproj.AssemblyReference.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.AssemblyInfoInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.AssemblyInfo.cs
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.csproj.CoreCompileInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.sourcelink.json
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Visio.3B5D79CC.Up2Date
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Application.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.deps.json
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.csproj.AssemblyReference.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.AssemblyInfoInputs.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.AssemblyInfo.cs
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.csproj.CoreCompileInputs.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.sourcelink.json
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Visio.3B5D79CC.Up2Date
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Application.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Application/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Application.dll

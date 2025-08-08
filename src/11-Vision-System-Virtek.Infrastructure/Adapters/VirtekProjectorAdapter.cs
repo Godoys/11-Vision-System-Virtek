@@ -252,7 +252,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task AddProjectPolygonAsync(string name, int id, string unit)
         {
-            throw new NotImplementedException();
+            GeneratetStepList("/home/godoy/Downloads/testply.ply");
         }
 
         public bool IsExpectedMessage(byte[] msg)
@@ -365,6 +365,58 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private void UpdateExpectedRequest(string newRequestName)
         {
             _currentRequestName = newRequestName;
+        }
+
+        /// <summary>
+        /// Generates a list of the steps containing in the .PLY file
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        private List<string> GeneratetStepList(string filePath)
+        {
+            // List of the steps contained in the .PLY file.
+            List<string> stepList = new();
+            
+            // Buffer to store the content of each step.
+            string buffer = "";
+            
+            // Number of lines in the file.
+            int nOfLines = 76; // TODO: Add CountFilesLines(filePath)
+            
+            // StreamReader to parse through the .PLY file.
+            using StreamReader reader = new(filePath);
+
+            for (int i = 0; i < nOfLines; i++)
+            {
+                // Variable to store the content of a line.
+                string line = reader.ReadLine();
+
+                if (line != null)
+                {
+                    if (line.StartsWith("START"))
+                    {
+                        // Add all the content between the START and END to the buffer.
+                        while (!line.Contains("END"))
+                        {
+                            line = reader.ReadLine();
+                            
+                            // Adds line to the buffer only if the line do not contain END.
+                            if (!line.Contains("END"))
+                            {
+                                buffer += line;
+                            }
+                        }
+                        
+                        // Adds the buffer to stepList.
+                        stepList.Add(buffer);
+                        
+                        // Resets the buffer.
+                        buffer = "";
+                    }
+                }
+            }
+            
+            return stepList;
         }
     }
 }

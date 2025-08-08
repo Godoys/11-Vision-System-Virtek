@@ -1,108 +1,148 @@
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.exe
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.deps.json
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.runtimeconfig.json
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\MediatR.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\MediatR.Contracts.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\RabbitMQ.Client.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\System.Threading.RateLimiting.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Infrastructure.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Cognex.InSight.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Infrastructure.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Cognex.InSight.xml
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.sourcelink.json
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Visio.33D6FC0F.Up2Date
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.exe
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.deps.json
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.runtimeconfig.json
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\MediatR.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\MediatR.Contracts.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Newtonsoft.Json.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\RabbitMQ.Client.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\System.Threading.RateLimiting.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Infrastructure.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Cognex.InSight.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\VisionAndProjectionService.Swagger.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\WorkorderTrackerService.Swagger.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\RestSharp.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Infrastructure.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Cognex.InSight.xml
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\VisionAndProjectionService.Swagger.xml
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\WorkorderTrackerService.Swagger.xml
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.sourcelink.json
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Visio.33D6FC0F.Up2Date
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
-C:\Users\Guilherme\Documents\[01] Github\11-SandBox-Vision-System-Virtek\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.exe
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.deps.json
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.runtimeconfig.json
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Presentation.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\MediatR.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\MediatR.Contracts.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Newtonsoft.Json.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\RabbitMQ.Client.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\System.Threading.RateLimiting.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Application.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Infrastructure.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Cognex.InSight.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Keyence.IV2.Sdk.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\VisionAndProjectionService.Swagger.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\WorkorderService.Swagger.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Keyence.IV2.Sdk.Lib.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\RestSharp.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Domain.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Application.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\11-Vision-System-Virtek.Infrastructure.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Cognex.InSight.xml
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\Keyence.IV2.Sdk.xml
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\VisionAndProjectionService.Swagger.xml
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\bin\Debug\net9.0\WorkorderService.Swagger.xml
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.sourcelink.json
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Visio.33D6FC0F.Up2Date
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\refint\11-Vision-System-Virtek.Presentation.dll
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.pdb
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
-C:\Users\Guilherme\Documents\[01] Github\11-Virtek-Vision-System\src\11-Vision-System-Virtek.Presentation\obj\Debug\net9.0\ref\11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.exe
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.deps.json
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.runtimeconfig.json
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.Contracts.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RabbitMQ.Client.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/System.Threading.RateLimiting.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.xml
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.sourcelink.json
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Visio.33D6FC0F.Up2Date
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.exe
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.deps.json
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.runtimeconfig.json
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.Contracts.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Newtonsoft.Json.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RabbitMQ.Client.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/System.Threading.RateLimiting.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/VisionAndProjectionService.Swagger.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/WorkorderTrackerService.Swagger.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RestSharp.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.xml
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/VisionAndProjectionService.Swagger.xml
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/WorkorderTrackerService.Swagger.xml
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.sourcelink.json
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Visio.33D6FC0F.Up2Date
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
+C:/Users/Guilherme/Documents/[01] Github/11-SandBox-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.exe
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.deps.json
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.runtimeconfig.json
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.Contracts.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Newtonsoft.Json.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RabbitMQ.Client.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/System.Threading.RateLimiting.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Keyence.IV2.Sdk.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/VisionAndProjectionService.Swagger.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/WorkorderService.Swagger.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Keyence.IV2.Sdk.Lib.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RestSharp.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.xml
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Keyence.IV2.Sdk.xml
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/VisionAndProjectionService.Swagger.xml
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/WorkorderService.Swagger.xml
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.sourcelink.json
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Visio.33D6FC0F.Up2Date
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Presentation.dll
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
+C:/Users/Guilherme/Documents/[01] Github/11-Virtek-Vision-System/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Presentation.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.deps.json
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.runtimeconfig.json
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/MediatR.Contracts.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Newtonsoft.Json.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RabbitMQ.Client.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/System.Threading.RateLimiting.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Keyence.IV2.Sdk.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/VisionAndProjectionService.Swagger.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/WorkorderService.Swagger.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Keyence.IV2.Sdk.Lib.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/RestSharp.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Domain.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Application.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/11-Vision-System-Virtek.Infrastructure.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Cognex.InSight.xml
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/Keyence.IV2.Sdk.xml
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/VisionAndProjectionService.Swagger.xml
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/bin/Debug/net9.0/WorkorderService.Swagger.xml
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.AssemblyReference.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfoInputs.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.AssemblyInfo.cs
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.csproj.CoreCompileInputs.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.sourcelink.json
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Visio.33D6FC0F.Up2Date
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/refint/11-Vision-System-Virtek.Presentation.dll
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.pdb
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/11-Vision-System-Virtek.Presentation.genruntimeconfig.cache
+/home/godoy/Documents/01-Computer-Science/01-Projects/11-Vision-System-Virtek/src/11-Vision-System-Virtek.Presentation/obj/Debug/net9.0/ref/11-Vision-System-Virtek.Presentation.dll
