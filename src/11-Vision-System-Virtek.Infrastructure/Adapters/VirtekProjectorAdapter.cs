@@ -9,7 +9,9 @@ using WorkorderService.Swagger.Model;
 using ClientIdDto = WorkorderService.Swagger.Model.ClientIdDto;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 using LoadWorkOrderDto = WorkorderService.Swagger.Model.LoadWorkOrderDto;
+using NormalPoint3DDto = VisionAndProjectionService.Swagger.Model.NormalPoint3DDto;
 using ResultDtoListString = WorkorderService.Swagger.Model.ResultDtoListString;
+using VertexDto = VisionAndProjectionService.Swagger.Model.VertexDto;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
@@ -443,6 +445,70 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
             
             return nOfLines;
+        }
+
+        private List<List<NormalPoint3DDto>> GeneratePointsList(List<string> stepList)
+        {
+            // List to store the Normal Points contained in the step list.
+            List<List<NormalPoint3DDto>> pointsList = new();
+            
+            // Buffer to store the content of the points of a polygon.
+            List<NormalPoint3DDto> buffer = new();
+
+            for (int i = 0; i < stepList.Count; i++)
+            {
+                // Splits a step into polygons.
+                string[] polygonsList = stepList[i].Split("P");
+
+                for (int j = 0; j < polygonsList.Length; j++)
+                {
+                    // Splits a polygons list into coordinates.
+                    string[] coordinatesList = polygonsList[j].Split(" ");
+                    
+                    // Variable to store the coordinates of a point.
+                    string[] coordinatesBuffer = [];
+                    
+                    // Variable to count the number of found coordinates that form a point, which is 3.
+                    int counter = 0;
+
+                    for (int k = 0; k < coordinatesList.Length; k++)
+                    {
+                        if (counter == 3)
+                        {
+                            // Creates new Normal Point.
+                            NormalPoint3DDto np = new(
+                                new VertexDto(int.Parse(coordinatesBuffer[0]), int.Parse(coordinatesBuffer[1]), int.Parse(coordinatesBuffer[2]), true),
+                                new VertexDto(0, 0, 1, true)
+                            );
+                            
+                            // Adds Normal Point to buffer.
+                            buffer.Add(np);
+                            
+                            // Resets counter.
+                            counter = 0;
+                            
+                            // Resets coordinates buffer.
+                            coordinatesBuffer = [];
+                            
+                        } else if (coordinatesList[k].Length > 2)
+                        {
+                            // Adds coordinates to buffer.
+                            coordinatesBuffer[counter] = coordinatesList[k];
+                            
+                            // Adds one to the counter.
+                            counter++;
+                        }
+                    }
+                    
+                    // Adds points buffer to points list.
+                    pointsList.Add(buffer);
+                    
+                    // Resets points buffer.
+                    buffer = new();
+                }
+            }
+            
+            return pointsList;
         }
     }
 }
