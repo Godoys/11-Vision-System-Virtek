@@ -458,7 +458,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             for (int i = 0; i < stepList.Count; i++)
             {
                 // Splits a step into polygons.
-                string[] polygonsList = stepList[i].Split("P");
+                string[] polygonsList = stepList[i].Split("P").Skip(1).ToArray();
 
                 for (int j = 0; j < polygonsList.Length; j++)
                 {
