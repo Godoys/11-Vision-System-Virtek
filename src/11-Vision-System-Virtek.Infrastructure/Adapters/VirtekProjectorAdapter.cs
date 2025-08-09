@@ -470,7 +470,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             for (int i = 0; i < stepList.Count; i++)
             {
                 // Splits a step into polygons.
-                string[] polygonsList = stepList[i].Split("P").Skip(1).ToArray();
+                string[] polygonsList = stepList[i].Split('P').Skip(1).ToArray();
 
                 for (int j = 0; j < polygonsList.Length; j++)
                 {
@@ -486,7 +486,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     // Variable to count the number of found coordinates that form a point, which is 3.
                     int counter = 0;
 
-                    for (int k = 0; k < coordinatesList.Length; k++)
+                    for (int k = 0; k < coordinatesList.Length + 1; k++)
                     {
                         if (counter == 3)
                         {
@@ -504,8 +504,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                             
                             // Resets coordinates buffer.
                             coordinatesBuffer = new string[3];
-                            
-                        } else if (coordinatesList[k].Length > 2)
+                        } 
+                        
+                        if (k < coordinatesList.Length && coordinatesList[k].Contains('.'))
                         {
                             // Adds coordinates to buffer.
                             coordinatesBuffer[counter] = coordinatesList[k];
