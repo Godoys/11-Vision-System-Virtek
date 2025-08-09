@@ -258,12 +258,14 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
             List<List<NormalPoint3DDto>> pointList = GeneratePointsList(test);
 
+            /*
             for (int i = 0; i < pointList.Count; i++)
             {
                 List<NormalPoint3DDto> point = pointList[i];
-                
-                Console.WriteLine(point);
+
+                Console.WriteLine($"[{i}] Point list size: {point.Count}");
             }
+            */
         }
 
         public bool IsExpectedMessage(byte[] msg)
@@ -472,7 +474,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 for (int j = 0; j < polygonsList.Length; j++)
                 {
                     // Splits a polygons list into coordinates.
-                    string[] coordinatesList = polygonsList[j].Split(" ");
+                    string[] coordinatesList = polygonsList[j].Split("   ");
                     
                     // Variable to store the coordinates of a point.
                     string[] coordinatesBuffer = new string[3];
