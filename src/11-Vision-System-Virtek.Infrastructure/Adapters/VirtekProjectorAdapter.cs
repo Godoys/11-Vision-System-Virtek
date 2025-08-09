@@ -497,7 +497,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                             counter = 0;
                             
                             // Resets coordinates buffer.
-                            coordinatesBuffer = [];
+                            coordinatesBuffer = new string[3];
                             
                         } else if (coordinatesList[k].Length > 2)
                         {
