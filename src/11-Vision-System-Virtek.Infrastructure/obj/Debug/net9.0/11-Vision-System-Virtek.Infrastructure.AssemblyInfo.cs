@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("11-Vision-System-Virtek.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2447fa5688c10e693f91c9a49742052255f17211")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0587f512c4e93318b1957644ded061ab3b835424")]
 [assembly: System.Reflection.AssemblyProductAttribute("11-Vision-System-Virtek.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("11-Vision-System-Virtek.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

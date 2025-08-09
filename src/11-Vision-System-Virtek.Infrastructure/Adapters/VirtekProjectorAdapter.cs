@@ -474,7 +474,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 for (int j = 0; j < polygonsList.Length; j++)
                 {
                     // Splits a polygons list into coordinates.
-                    string[] coordinatesList = polygonsList[j].Split("   ");
+                    string[] coordinatesList = polygonsList[j].Split(" ");
                     
                     // Variable to store the coordinates of a point.
                     string[] coordinatesBuffer = new string[3];
