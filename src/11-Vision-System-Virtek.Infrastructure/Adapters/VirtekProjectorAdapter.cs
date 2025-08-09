@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.RegularExpressions;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using VisionAndProjectionService.Swagger.Api;
 using VisionAndProjectionService.Swagger.Model;
@@ -473,8 +474,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
                 for (int j = 0; j < polygonsList.Length; j++)
                 {
+                    // Regex pattern to be used in split to separate based on any number of whitespaces.
+                    string pattern = "[\\s*]+";
+                    
                     // Splits a polygons list into coordinates.
-                    string[] coordinatesList = polygonsList[j].Split(" ");
+                    string[] coordinatesList = Regex.Split(polygonsList[j], pattern);
                     
                     // Variable to store the coordinates of a point.
                     string[] coordinatesBuffer = new string[3];
