@@ -254,7 +254,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task AddProjectPolygonAsync(string name, int id, string unit)
         {
-            GenerateStepList("/home/godoy/Downloads/testply.ply");
+            List<string> test = GenerateStepList("C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
         }
 
         public bool IsExpectedMessage(byte[] msg)
@@ -425,7 +425,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// Counts the number of lines in a given file.
         /// </summary>
         /// <param name="filePath">The absolute path to a file.</param>
-        /// <returns>A integer that represents the number of lines in a file</returns>
+        /// <returns>An integer that represents the number of lines in a file</returns>
         private int CountFileLines(string filePath)
         {
             // Variable to store the number of lines in the given file.

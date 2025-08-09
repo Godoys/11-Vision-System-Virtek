@@ -113,7 +113,7 @@
         "runtime": {
           "Cognex.InSight.Controls.Display.dll": {
             "assemblyVersion": "6.5.21.1",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "6.5.21.1"
           }
         }
       },
@@ -121,7 +121,7 @@
         "runtime": {
           "Cognex.InSight.dll": {
             "assemblyVersion": "6.5.21.1",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "6.5.21.1"
           }
         }
       },
@@ -129,7 +129,7 @@
         "runtime": {
           "Keyence.IV2.Sdk.dll": {
             "assemblyVersion": "1.0.3.0",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "1.0.3.0"
           }
         }
       },
