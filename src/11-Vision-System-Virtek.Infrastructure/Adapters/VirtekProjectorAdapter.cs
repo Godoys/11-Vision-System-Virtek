@@ -255,6 +255,15 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         public async Task AddProjectPolygonAsync(string name, int id, string unit)
         {
             List<string> test = GenerateStepList("C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
+
+            List<List<NormalPoint3DDto>> pointList = GeneratePointsList(test);
+
+            for (int i = 0; i < pointList.Count; i++)
+            {
+                List<NormalPoint3DDto> point = pointList[i];
+                
+                Console.WriteLine(point);
+            }
         }
 
         public bool IsExpectedMessage(byte[] msg)
@@ -477,7 +486,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                         {
                             // Creates new Normal Point.
                             NormalPoint3DDto np = new(
-                                new VertexDto(int.Parse(coordinatesBuffer[0]), int.Parse(coordinatesBuffer[1]), int.Parse(coordinatesBuffer[2]), true),
+                                new VertexDto(double.Parse(coordinatesBuffer[0]), double.Parse(coordinatesBuffer[1]), double.Parse(coordinatesBuffer[2]), true),
                                 new VertexDto(0, 0, 1, true)
                             );
                             
