@@ -466,7 +466,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     string[] coordinatesList = polygonsList[j].Split(" ");
                     
                     // Variable to store the coordinates of a point.
-                    string[] coordinatesBuffer = [];
+                    string[] coordinatesBuffer = new string[3];
                     
                     // Variable to count the number of found coordinates that form a point, which is 3.
                     int counter = 0;
