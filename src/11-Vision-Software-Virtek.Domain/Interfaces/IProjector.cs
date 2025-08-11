@@ -36,6 +36,13 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public Task ResumeProjectionAsync();
 
         /// <summary>
+        /// Removes a projection by its id.
+        /// </summary>
+        /// <param name="id">Projection id.</param>
+        /// <returns>A task that completes when a projection is removed.</returns>
+        public Task RemoveProjectionAsync(int id);
+
+        /// <summary>
         /// Gets the current projection entity.
         /// </summary>
         /// <returns>A task that completed when current projection entity name is returned.</returns>
