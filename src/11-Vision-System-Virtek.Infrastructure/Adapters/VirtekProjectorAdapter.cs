@@ -255,7 +255,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
         }
 
-        public async Task AddProjectPolygonAsync(string name, int id, string unit)
+        public async Task AddProjectPolygonAsync(string name, int id, string filePath)
         {
             try
             {
@@ -263,7 +263,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 ClientInfoDto connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
                 // List of the steps inside the .PLY file.
-                List<string> stepList = GenerateStepList("C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
+                List<string> stepList = GenerateStepList(filePath);
 
                 // List of the points inside each step.
                 List<List<NormalPoint3DDto>> pointList = GeneratePointsList(stepList);
