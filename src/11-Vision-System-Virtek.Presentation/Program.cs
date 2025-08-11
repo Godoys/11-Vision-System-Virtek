@@ -24,7 +24,9 @@ ISensorService cameraService = new SensorService(camera);
 
 PauseOrContinueProjection pauseOrContinueProjection = new PauseOrContinueProjection(cameraService,  projectorService);
 
-await projector.AddProjectPolygonAsync("", 0, "");
+await projector.ConnectAsync();
+Console.WriteLine($"Client Id: {projector.ClientId}");
+await projector.AddProjectPolygonAsync("Wrong Orientation", 11111, "C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
 
 while (true)
 {
