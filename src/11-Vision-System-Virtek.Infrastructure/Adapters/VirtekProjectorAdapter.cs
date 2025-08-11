@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using _11_Vision_System_Virtek.Domain.Interfaces;
@@ -254,7 +255,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 return "";
             }
         }
-
+        
         public async Task AddProjectPolygonAsync(string name, int id, string filePath)
         {
             try
@@ -294,7 +295,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     operation: ProjectEntitiesDto.OperationEnum.ProjectSkipInspectingCurrent,
                     appendProjection: false
                 );
-            
+                
                 await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServiceProjectEntities(projectionText),
                     "NO USEFUL MESSAGE EXPECTED",
                     "AddProjectPolygonAsync",
@@ -530,7 +531,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                         {
                             // Creates new Normal Point.
                             NormalPoint3DDto np = new(
-                                new VertexDto(double.Parse(coordinatesBuffer[0]), double.Parse(coordinatesBuffer[1]), double.Parse(coordinatesBuffer[2]), true),
+                                new VertexDto(
+                                    double.Parse(coordinatesBuffer[0], CultureInfo.InvariantCulture),
+                                    double.Parse(coordinatesBuffer[1], CultureInfo.InvariantCulture),
+                                    double.Parse(coordinatesBuffer[2], CultureInfo.InvariantCulture), true),
                                 new VertexDto(0, 0, 1, true)
                             );
                             
