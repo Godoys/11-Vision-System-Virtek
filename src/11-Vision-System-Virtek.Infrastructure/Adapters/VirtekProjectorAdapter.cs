@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.IO.Compression;
 using System.Text;
 using System.Text.RegularExpressions;
 using _11_Vision_System_Virtek.Domain.Interfaces;
@@ -137,6 +138,38 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             catch (Exception e)
             {
                 Console.WriteLine($"[!] Attempt to resume projection failed due to ${e.Message}.");
+            }
+        }
+
+        public async Task RemoveProjectionAsync(int id)
+        {
+            try
+            {
+                // Creates DTO with values for connection to the client.
+                ClientInfoDto connectClientInfo =
+                    new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+
+                // List to hold the id value.
+                List<int?> idList = new List<int?>();
+                
+                idList.Add(id);
+                
+                // Creates a DTO to hold the id of the entity to be removed.
+                RemoveEntitiesWithIdDto removeEntity = new(
+                    clientInfo: connectClientInfo,
+                    entityUniqueIds:  idList
+                    );
+
+                // Removes projection entity by its id.
+                await CallApiWaitForMessage(
+                    () => _projectionApiInstance.CoreLaserServiceRemoveEntitiesWithId(removeEntity),
+                    "NO USEFUL MESSAGE EXPECTED",
+                    "RemoveEntitiesWithId",
+                    false);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[!] An error occured while adding a project polygon: {ex.Message}");
             }
         }
         
