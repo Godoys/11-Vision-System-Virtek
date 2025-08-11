@@ -11,6 +11,8 @@ using ClientIdDto = WorkorderService.Swagger.Model.ClientIdDto;
 using ClientInfoDto = VisionAndProjectionService.Swagger.Model.ClientInfoDto;
 using LoadWorkOrderDto = WorkorderService.Swagger.Model.LoadWorkOrderDto;
 using NormalPoint3DDto = VisionAndProjectionService.Swagger.Model.NormalPoint3DDto;
+using PolygonDto = VisionAndProjectionService.Swagger.Model.PolygonDto;
+using ProjectionEntityDataDto = VisionAndProjectionService.Swagger.Model.ProjectionEntityDataDto;
 using ResultDtoListString = WorkorderService.Swagger.Model.ResultDtoListString;
 using VertexDto = VisionAndProjectionService.Swagger.Model.VertexDto;
 
@@ -255,18 +257,54 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 
         public async Task AddProjectPolygonAsync(string name, int id, string unit)
         {
-            List<string> test = GenerateStepList("C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
-
-            List<List<NormalPoint3DDto>> pointList = GeneratePointsList(test);
-
-            /*
-            for (int i = 0; i < pointList.Count; i++)
+            try
             {
-                List<NormalPoint3DDto> point = pointList[i];
+                // Creates DTO with values for connection to the client.
+                ClientInfoDto connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
+            
+                // List of the steps inside the .PLY file.
+                List<string> stepList = GenerateStepList("C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
 
-                Console.WriteLine($"[{i}] Point list size: {point.Count}");
+                // List of the points inside each step.
+                List<List<NormalPoint3DDto>> pointList = GeneratePointsList(stepList);
+
+                // List of PolygonDto that holds the Normal Point values.
+                List<PolygonDto> polygonList = new List<PolygonDto>();
+            
+                // Loop to add all Normal Points to the polygon list.
+                for (int i = 0; i < pointList.Count; i++)
+                {
+                    // Polygon DTO with point list values to be added to polygon list.
+                    PolygonDto polygonDto = new PolygonDto(false,  pointList[i]);
+                
+                    // Adds polygon to polygon list.
+                    polygonList.Add(polygonDto);
+                }
+            
+                // Projection entity DTO.
+                List<ProjectionEntityDataDto> projectionEntity = new List<ProjectionEntityDataDto>
+                {
+                    new (id, name, polygonList, isLayer: false, plyUnit: ProjectionEntityDataDto.PlyUnitEnum.Millimetres)
+                };
+            
+                // Projection text entity.
+                ProjectEntitiesDto projectionText = new(
+                    clientInfo: connectClientInfo,
+                    entities: projectionEntity,
+                    operation: ProjectEntitiesDto.OperationEnum.ProjectSkipInspectingCurrent,
+                    appendProjection: false
+                );
+            
+                await CallApiWaitForMessage(() => _projectionApiInstance.CoreLaserServiceProjectEntities(projectionText),
+                    "NO USEFUL MESSAGE EXPECTED",
+                    "AddProjectPolygonAsync",
+                    false
+                );
             }
-            */
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[!] An error occured while adding a project polygon: {ex.Message}");
+            }
         }
 
         public bool IsExpectedMessage(byte[] msg)
