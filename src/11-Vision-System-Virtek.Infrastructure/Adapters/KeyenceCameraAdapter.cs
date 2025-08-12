@@ -41,8 +41,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     // Connects to a Keyence sensor using the Keyence SDK Connect method.
                     await Task.Run(() => _sensor = sensorStore.Create(Config.Address, Config.PortNumber));
                     
-                    // Starts the function that syncs data between the software and the real camera.
-                    SyncData();
+                    // Starts the timer that raises the event that calls teh SyncData method.
+                    SetTimer();
                 
                     // Updates the CameraState in configuration object.
                     Config.UpdateState(SensorConnectionState.Connected);   
