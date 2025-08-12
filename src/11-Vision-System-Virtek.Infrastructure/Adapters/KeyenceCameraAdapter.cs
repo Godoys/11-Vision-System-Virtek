@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Timers;
 using _11_Vision_System_Virtek.Domain.Entities;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using _11_Vision_System_Virtek.Domain.Enums;
@@ -173,7 +174,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <summary>
         /// Sets a timer to run continuously throughout the program.
         /// </summary>
-        private static void SetTimer()
+        private void SetTimer()
         {
             // Creates a timer with 500 milliseconds delay.
             System.Timers.Timer timer = new (500);
@@ -183,6 +184,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             timer.AutoReset = true;
             timer.Enabled = true;
+        }
+
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            SyncData();
         }
         
     }
