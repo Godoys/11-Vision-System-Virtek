@@ -169,6 +169,21 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 _sensor.TickTack();
             }
         }
+
+        /// <summary>
+        /// Sets a timer to run continuously throughout the program.
+        /// </summary>
+        private static void SetTimer()
+        {
+            // Creates a timer with 500 milliseconds delay.
+            System.Timers.Timer timer = new (500);
+            
+            // Hook up the Elapsed event for the timer.
+            timer.Elapsed += OnTimedEvent;
+            
+            timer.AutoReset = true;
+            timer.Enabled = true;
+        }
         
     }
 }
