@@ -7,12 +7,14 @@ namespace _11_Vision_System_Virtek.Application.UseCases
     {
         private readonly ISensorService _sensorService;
         private readonly IProjectorService _projectorService;
+        private readonly IProjector _projector;
         private readonly GetImageAnalysisResultUseCase _getImageResult;
 
-        public PauseOrContinueProjection(ISensorService sensorService, IProjectorService projectorService)
+        public PauseOrContinueProjection(ISensorService sensorService, IProjectorService projectorService, IProjector projector)
         {
             _sensorService = sensorService;
             _projectorService = projectorService;
+            _projector = projector;
             _getImageResult = new GetImageAnalysisResultUseCase(_sensorService);
         }
 
@@ -38,13 +40,14 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             {
                 case SensorResultStatus.Fail:
                     Console.WriteLine("[!] Failed image analysis with a FAIL.");
-                    await _projectorService.PauseProjectionAsync();
+                    await _projector.AddProjectPolygonAsync("Wrong Orientation", 11111,
+                        "C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
                     break;
                 case SensorResultStatus.Pass:
                     Console.WriteLine("[!] Passed image analysis with a unconditional PASS.");
                     break;
                 case SensorResultStatus.Warn:
-                    Console.WriteLine("[!] Passed image analysis with a WARNING,");
+                    Console.WriteLine("[!] Passed image analysis with a WARNING.");
                     break;
                 case SensorResultStatus.None:
                     break;
