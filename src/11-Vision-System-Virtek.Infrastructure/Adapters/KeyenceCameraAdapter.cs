@@ -115,46 +115,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 throw;
             }
         }
-
-        public async Task GetAnalysisResultAsync()
-        {
-            try
-            {
-                if (Config.ConnectionState == SensorConnectionState.Connected)
-                {
-                    Console.WriteLine($"[*] Retrieving image analysis result in sensor {Config.Address}.");
-                    
-                    await Task.Run(() =>
-                    {
-                        _sensor.ResultUpdated += (sender, args) =>
-                        {
-                            if (args.TotalStatusResult)
-                            {
-                                Config.UpdateResult(SensorResultStatus.Pass);
-                            }
-                            else
-                            {
-                                Config.UpdateResult(SensorResultStatus.Fail);
-                            }
-                        };
-                    });
-                    
-                    Console.WriteLine($"[*] Result status updated in sensor {Config.Address}.");
-                }
-                else
-                {
-                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to estabilish a connection with sensor {Config.Address}.");
-
-                    // Trying to reconnect with sensor.
-                    await ConnectAsync();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
         
         
         // --------------------------------
