@@ -43,6 +43,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     
                     // Starts the timer that raises the event that calls teh SyncData method.
                     SetTimer();
+                    
+                    // Subscribe ResultUpdate event handler to event.
+                    _sensor.ResultUpdated += ResultUpdatedEventHandler;
                 
                     // Updates the CameraState in configuration object.
                     Config.UpdateState(SensorConnectionState.Connected);   
