@@ -24,13 +24,16 @@ ISensorService cameraService = new SensorService(camera);
 
 PauseOrContinueProjection pauseOrContinueProjection = new PauseOrContinueProjection(cameraService,  projectorService, projector);
 
-await projector.ConnectAsync();
+//await projector.ConnectAsync();
 await camera.ConnectAsync();
-pauseOrContinueProjection.Subscribe();
+//pauseOrContinueProjection.Subscribe();
 
 while (true)
 {
-    
+    await camera.TriggerImageCaptureAsync();
+    await Task.Delay(500); // It is necessary before accessing the result.
+    Console.WriteLine($"[!] Image analysis result: {camera.Config.LastSensorResult}");
+    await Task.Delay(5000);
 }
 
 
