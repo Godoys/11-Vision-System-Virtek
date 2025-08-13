@@ -28,11 +28,5 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <returns>A Task representing the asynchronous operation.</returns>
         public Task TriggerImageCaptureAsync();
-
-        /// <summary>
-        /// Retrieves the result of the last image analysis.
-        /// </summary>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-        public Task GetAnalysisResultAsync();
     }
 }
