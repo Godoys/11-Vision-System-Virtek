@@ -153,7 +153,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
         }
 
-        public void ToolResultUpdatedEventHandler(object sender, ToolResultUpdatedEventArgs  args)
+        public void ResultUpdatedEventHandler(object sender, ToolResultUpdatedEventArgs  args)
         {
             if (args.TotalStatusResult)
             {
