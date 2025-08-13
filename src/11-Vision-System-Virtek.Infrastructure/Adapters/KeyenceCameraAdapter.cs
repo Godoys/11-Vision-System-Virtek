@@ -152,6 +152,18 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 throw;
             }
         }
+
+        public void ToolResultUpdatedEventHandler(object sender, ToolResultUpdatedEventArgs  args)
+        {
+            if (args.TotalStatusResult)
+            {
+                Config.UpdateResult(SensorResultStatus.Pass);
+            }
+            else
+            {
+                Config.UpdateResult(SensorResultStatus.Fail);
+            }
+        }
         
         // --------------------------------
         //  Private Methods Implementation
