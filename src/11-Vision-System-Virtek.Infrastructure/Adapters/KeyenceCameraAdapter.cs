@@ -155,18 +155,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 throw;
             }
         }
-
-        public void ResultUpdatedEventHandler(object sender, ToolResultUpdatedEventArgs  args)
-        {
-            if (args.TotalStatusResult)
-            {
-                Config.UpdateResult(SensorResultStatus.Pass);
-            }
-            else
-            {
-                Config.UpdateResult(SensorResultStatus.Fail);
-            }
-        }
+        
         
         // --------------------------------
         //  Private Methods Implementation
@@ -199,6 +188,23 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
             SyncData();
+        }
+        
+        /// <summary>
+        /// Handles the ResultUpdate event, updating the result status of the image analysis. 
+        /// </summary>
+        /// <param name="sender">Object raising the event</param>
+        /// <param name="args">Arguments sent with the event</param>
+        private void ResultUpdatedEventHandler(object sender, ToolResultUpdatedEventArgs  args)
+        {
+            if (args.TotalStatusResult)
+            {
+                Config.UpdateResult(SensorResultStatus.Pass);
+            }
+            else
+            {
+                Config.UpdateResult(SensorResultStatus.Fail);
+            }
         }
         
     }
