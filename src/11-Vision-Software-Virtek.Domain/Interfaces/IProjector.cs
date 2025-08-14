@@ -65,8 +65,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="name">Name of the projection to be added to the work order step list.</param>
         /// <param name="id">Unique id manually or automatically added to the new projection.</param>
-        /// <param name="unit">Unit of the projection file.</param>
-        /// <param name="filepath">Absolute file path to the .PLY file to be used.</param>
+        /// <param name="filePath">Absolute file path to the .PLY file to be used.</param>
         /// <returns></returns>
         public Task AddProjectPolygonAsync(string name, int id, string filePath);
         
