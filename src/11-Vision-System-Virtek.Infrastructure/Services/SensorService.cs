@@ -27,6 +27,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             // Triggers an image capture.
             await _sensor.TriggerImageCaptureAsync();
             
+            // 500 milliseconds delay to wait for Config.LastAnalysisResult to be updated.
+            await Task.Delay(500);
+            
             // Gets the result status from the camera and return it.
             return _sensor.Config.LastSensorResult;
         }
