@@ -5,20 +5,19 @@ namespace _11_Vision_System_Virtek.Application.UseCases
 {
     public class PauseOrContinueProjection
     {
-        private readonly ISensorService _sensorService;
         private readonly IProjectorService _projectorService;
         private readonly IProjector _projector;
         private readonly GetImageAnalysisResultUseCase _getImageResult;
 
-        public PauseOrContinueProjection(ISensorService sensorService, IProjectorService projectorService, IProjector projector)
+        public PauseOrContinueProjection(ISensorService sService, IProjectorService projectorService, IProjector projector)
         {
-            _sensorService = sensorService;
+            ISensorService sensorService = sService;
             _projectorService = projectorService;
             _projector = projector;
-            _getImageResult = new GetImageAnalysisResultUseCase(_sensorService);
+            _getImageResult = new GetImageAnalysisResultUseCase(sensorService);
         }
 
-        public async void Subscribe()
+        public void Subscribe()
         {
             // Subscribe to the event.
             _projectorService.NextStep += Execute;
@@ -27,7 +26,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             CancellationTokenSource cts = new();
             
             // Checks if the current projection entity changed.
-            await _projectorService.CheckCurrentProjectionEntityAsync(cts.Token);
+            _projectorService.CheckCurrentProjectionEntityAsync(cts.Token);
         }
 
         private async Task Execute(object sender, EventArgs e)
