@@ -1,11 +1,8 @@
 using System.Net;
-using System.Text.RegularExpressions;
 using _11_Vision_System_Virtek.Domain.Entities;
 using _11_Vision_System_Virtek.Domain.Enums;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using Cognex.InSight;
-using Cognex.InSight.Ftp;
-using Cognex.InSight.NativeMode;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {

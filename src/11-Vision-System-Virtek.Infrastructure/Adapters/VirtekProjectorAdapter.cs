@@ -1,12 +1,9 @@
 using System.Globalization;
-using System.IO.Compression;
 using System.Text;
 using System.Text.RegularExpressions;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using VisionAndProjectionService.Swagger.Api;
 using VisionAndProjectionService.Swagger.Model;
-using WorkorderTrackerService.Swagger.Api;
-using WorkorderTrackerService.Swagger.Model;
 using WorkorderService.Swagger.Api;
 using WorkorderService.Swagger.Model;
 using ClientIdDto = WorkorderService.Swagger.Model.ClientIdDto;

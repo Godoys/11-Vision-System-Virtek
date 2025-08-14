@@ -1,6 +1,5 @@
 ﻿using System.Net;
 using _11_Vision_System_Virtek.Application.UseCases;
-using _11_Vision_System_Virtek.Domain.Enums;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using _11_Vision_System_Virtek.Infrastructure.Adapters;
 using _11_Vision_System_Virtek.Infrastructure.Services;
