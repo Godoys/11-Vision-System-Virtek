@@ -1,5 +1,3 @@
-using System.Net;
-using _11_Vision_System_Virtek.Domain.Entities;
 using _11_Vision_System_Virtek.Domain.Enums;
 
 namespace _11_Vision_System_Virtek.Domain.Interfaces
