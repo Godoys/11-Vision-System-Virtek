@@ -6,24 +6,15 @@ namespace _11_Vision_System_Virtek.Domain.Entities
     /// <summary>
     /// Holds connection and image analysis information about the sensor.
     /// </summary>
-    public class SensorConfig
+    public class SensorConfig(string username, string password, IPAddress ipAddress, ushort portNumber = 0)
     {
-        public string         Username { get; private set; }
-        public string         Password { get; private set; }
-        public ushort       PortNumber { get; private set; }
-        public IPAddress       Address { get; private set; }
-        public SensorConnectionState       ConnectionState { get; private set; }
-        public SensorResultStatus LastSensorResult { get; private set; }
+        public string Username { get; private set; } = username;
+        public string Password { get; private set; } =  password;
+        public ushort PortNumber { get; private set; } = portNumber;
+        public IPAddress Address { get; private set; } = ipAddress;
+        public SensorConnectionState ConnectionState { get; private set; } = SensorConnectionState.Offline;
+        public SensorResultStatus LastSensorResult { get; private set; } = SensorResultStatus.None;
 
-        public SensorConfig(string username, string password, IPAddress address, ushort portNumber = 0)
-        {
-            Username = username;
-            Password = password;
-            PortNumber = portNumber;
-            Address = address;
-            ConnectionState = SensorConnectionState.Offline;
-            LastSensorResult = SensorResultStatus.None;
-        }
 
         /// <summary>
         /// Changes the sensor's username.
