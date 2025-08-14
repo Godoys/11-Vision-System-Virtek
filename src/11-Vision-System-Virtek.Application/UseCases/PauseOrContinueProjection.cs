@@ -35,9 +35,6 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             // Image analysis result;
             SensorResultStatus sensorResult = await _getImageResult.Execute();
             
-            // 500 milliseconds delay to wait for Config.LastAnalysisResult to be updated.
-            await Task.Delay(500);
-            
             // Decides if projection continues or stops.
             switch (sensorResult)
             {
