@@ -9,23 +9,16 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     /// <summary>
     /// Adapts Cognex InSight SDK to the ICamera interface.
     /// </summary>
-    public class CognexSensorAdapter : ISensor
+    public class CognexSensorAdapter(string username, string password, IPAddress address) : ISensor
     {
         // Cognex SDK sensor object that is used for interaction with real sensor.
-        private readonly CvsInSight _sensor;
+        private readonly CvsInSight _sensor = new  CvsInSight();
         
-        public SensorConfig Config { get; }
+        public SensorConfig Config { get; } = new SensorConfig(username, password, address);
         
         // -------------------------------
         //  Public Methods Implementation
         // -------------------------------
-
-        public CognexSensorAdapter(string username, string password, IPAddress address)
-        {
-            Config = new SensorConfig(username,  password,  address);
-            _sensor = new CvsInSight();
-        }
-        
         
         public async Task ConnectAsync()
         {
@@ -98,7 +91,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 }
                 else
                 {
-                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to estabilish a connection with sensor {Config.Address}.");
+                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to establish a connection with sensor {Config.Address}.");
 
                     // Trying to reconnect with sensor.
                     await ConnectAsync();
@@ -140,7 +133,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 }
                 else
                 {
-                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to estabilish a connection with sensor {Config.Address}.");
+                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to establish a connection with sensor {Config.Address}.");
 
                     // Trying to reconnect with sensor.
                     await ConnectAsync();
