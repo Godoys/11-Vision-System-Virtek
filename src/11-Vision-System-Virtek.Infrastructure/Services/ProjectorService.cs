@@ -45,6 +45,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         public async Task DisconnectAsync()
         {
             await _messageBrokerService.DisconnectAsync();
+            await _projector.DisconnectAsync();
         }
 
         public async Task PauseProjectionAsync()
