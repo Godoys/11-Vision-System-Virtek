@@ -54,6 +54,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             await _projector.PauseProjectionAsync();
         }
 
+        public async Task ResumeProjectionAsync()
+        {
+            await _projector.ResumeProjectionAsync();
+        }
+
         public async Task CheckCurrentProjectionEntityAsync(CancellationToken token)
         {
             // Loops while the cancellation token is not activated
