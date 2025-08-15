@@ -6,15 +6,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
     /// <summary>
     /// Handles end-to-end flow: upload a job, trigger image capture, fetch result and wrap into domain outcomes.
     /// </summary>
-    public class SensorService : ISensorService
+    public class SensorService(ISensor sensor) : ISensorService
     {
-        private readonly ISensor _sensor;
+        private readonly ISensor _sensor = sensor;
         
         // -------------------------------
         //  Public Methods Implementation
         // -------------------------------
-
-        public SensorService(ISensor sensor) => _sensor = sensor;
         
         public async Task<SensorResultStatus> GetLastAnalysisResultAsync()
         {
