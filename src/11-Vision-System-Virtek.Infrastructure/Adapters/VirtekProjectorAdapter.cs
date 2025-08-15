@@ -138,7 +138,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
         }
 
-        public async Task RemoveProjectionAsync(int id)
+        public async Task RemoveProjectionByIdAsync(int id)
         {
             try
             {
