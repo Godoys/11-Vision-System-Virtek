@@ -7,21 +7,16 @@ using Keyence.IV2.Sdk;
 
 namespace _11_Vision_System_Virtek.Infrastructure.Adapters
 {
-    public class KeyenceCameraAdapter : ISensor
+    public class KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber) : ISensor
     {
         // Keyence camera object.
-        private IVisionSensor _sensor;
+        private IVisionSensor _sensor; 
         
-        public SensorConfig Config { get; }
+        public SensorConfig Config { get; } = new SensorConfig(username, password, address, portNumber);
         
         // -------------------------------
         //  Public Methods Implementation
         // -------------------------------
-
-        public KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber)
-        {
-            Config = new SensorConfig(username, password, address, portNumber);
-        }
 
         public async Task ConnectAsync()
         {
@@ -103,7 +98,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 }
                 else
                 {
-                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to estabilish a connection with sensor {Config.Address}.");
+                    Console.WriteLine($"[*] Sensor {Config.Address} is either disconnected or offline. Trying to establish a connection with sensor {Config.Address}.");
 
                     // Trying to reconnect with sensor.
                     await ConnectAsync();
