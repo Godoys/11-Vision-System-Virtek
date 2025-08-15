@@ -147,9 +147,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
 
                 // List to hold the id value.
-                List<int?> idList = new List<int?>();
-                
-                idList.Add(id);
+                List<int?> idList = [id];
                 
                 // Creates a DTO to hold the id of the entity to be removed.
                 RemoveEntitiesWithIdDto removeEntity = new(
@@ -175,11 +173,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             try
             {
                 // Gets the name of the current open Work Order and stores it.
-                string workorderName = await GetCurrentWorkOrderNameAsync();
+                string workOrderName = await GetCurrentWorkOrderNameAsync();
 
                 // DTO for storing data for Work Order access.
                 LoadWorkOrderDto loadWorkOrderDto =
-                    new LoadWorkOrderDto(clientId: ClientId, workOrderName: workorderName);
+                    new LoadWorkOrderDto(clientId: ClientId, workOrderName: workOrderName);
 
                 // DTO for storing the result of the API call.
                 ResultDtoListString projectionEntityCollectionJson = new ResultDtoListString();
@@ -257,14 +255,14 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     "NO USEFUL MESSAGE EXPECTED", "GetCurrentClients", false);
                 
                 // Loops through all activated client ids and gets the one who has an open work order.
-                for (int i = 0; i < connectedClientDataDto.Payload.Count; i++)
+                foreach (var client in connectedClientDataDto.Payload)
                 {
                     // Variable to store the client ids available in the list.
-                    string clientId = connectedClientDataDto.Payload[i].ClientInfo.ClientId;
+                    string clientId = client.ClientInfo.ClientId;
                     
                     // Variable to store the client id open work order name.
-                    string workOrderName = connectedClientDataDto.Payload[i].CurrentWorkOrder;
-
+                    string workOrderName =  client.CurrentWorkOrder;
+                    
                     // Checks if the workOrderName variable is an empty string or not. If yes, then not correct client id;
                     // if false, then it is the correct client id.
                     if (!string.IsNullOrEmpty(workOrderName))
@@ -313,10 +311,10 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 }
             
                 // Projection entity DTO.
-                List<ProjectionEntityDataDto> projectionEntity = new List<ProjectionEntityDataDto>
-                {
-                    new (id, name, polygonList, isLayer: false, plyUnit: ProjectionEntityDataDto.PlyUnitEnum.Millimetres)
-                };
+                List<ProjectionEntityDataDto> projectionEntity =
+                [
+                    new(id, name, polygonList, isLayer: false, plyUnit: ProjectionEntityDataDto.PlyUnitEnum.Millimetres)
+                ];
             
                 // Projection text entity.
                 ProjectEntitiesDto projectionText = new(
@@ -348,7 +346,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 // Deserialize a JSON object and gets the message received from RMQ.
                 var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
 
-                // Comparares if received message is the same as current request message.
+                // Compares if received message is the same as current request message.
                 if (messageObject != null && messageObject.RequestName != null)
                 {
                     string requestedName = messageObject.RequestName.ToString();
