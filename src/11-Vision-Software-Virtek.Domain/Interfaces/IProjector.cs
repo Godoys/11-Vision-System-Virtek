@@ -40,7 +40,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// </summary>
         /// <param name="id">Projection id.</param>
         /// <returns>A task that completes when a projection is removed.</returns>
-        public Task RemoveProjectionAsync(int id);
+        public Task RemoveProjectionByIdAsync(int id);
 
         /// <summary>
         /// Gets the current projection entity.
