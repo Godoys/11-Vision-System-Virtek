@@ -49,9 +49,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
 
         public async Task PauseProjectionAsync()
         {
-            // Gets projector clientId.
-            string clientId = _projector.ClientId; 
-            
             // Pause current projection.
             await _projector.PauseProjectionAsync();
         }
