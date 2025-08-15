@@ -29,6 +29,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         
         public async Task ConnectAsync()
         {
+            // Connects to the Projector Client.
+            await _projector.ConnectAsync();
+            
             // Gets projector clientId.
             string clientId = _projector.ClientId; 
             
@@ -37,9 +40,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             
             // Subscribe to projector RabbitMQ channel.
             await _messageBrokerService.SubscribeAsync(clientId, _projector.IsExpectedMessage);
-            
-            // Connects to the Projector Client.
-            await _projector.ConnectAsync();
         }
         
         public async Task DisconnectAsync()
