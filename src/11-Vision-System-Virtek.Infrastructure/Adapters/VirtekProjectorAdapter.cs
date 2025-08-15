@@ -301,11 +301,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 List<PolygonDto> polygonList = new List<PolygonDto>();
             
                 // Loop to add all Normal Points to the polygon list.
-                for (int i = 0; i < pointList.Count; i++)
+                foreach (var point in pointList)
                 {
                     // Polygon DTO with point list values to be added to polygon list.
-                    PolygonDto polygonDto = new PolygonDto(false,  pointList[i]);
-                
+                    PolygonDto polygonDto = new PolygonDto(false, point);
+                    
                     // Adds polygon to polygon list.
                     polygonList.Add(polygonDto);
                 }
