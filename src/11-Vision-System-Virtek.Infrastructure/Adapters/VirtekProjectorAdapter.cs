@@ -511,16 +511,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             int nOfLines = 0;
             
             // StreamReader to parse through the file.
-            using (StreamReader reader = new(filePath))
+            using StreamReader reader = new(filePath);
+
+            // Loop that counts the number of lines in the file
+            while (reader.ReadLine() != null)
             {
-                // Variable to store the content of a line.
-                string line;
-                
-                // Loop that counts the number of lines in the file
-                while ((line = reader.ReadLine()) != null)
-                {
-                    nOfLines++;
-                }
+                nOfLines++;
             }
             
             return nOfLines;
