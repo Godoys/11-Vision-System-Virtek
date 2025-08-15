@@ -90,7 +90,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
         /// <param name="e">Event arguments passed to delegate.</param>
         protected virtual async Task OnNextStepEvent(object sender, EventArgs e)
         {
-            NextStep?.Invoke(sender, e);
+            await Task.Run(() => NextStep?.Invoke(this, e));
         }
     }
 }
