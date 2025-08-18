@@ -63,7 +63,7 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         /// <summary>
         /// Adds a .PLY file projection to the current open work order. 
         /// </summary>
-        /// <param name="name">Name of the projection to be added to the work order step list.</param>
+        /// <param name="fileName">Name of the file to be converted and projected.</param>
         /// <param name="id">Unique id manually or automatically added to the new projection.</param>
 
         /// <returns></returns>
