@@ -57,6 +57,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 // First attempt to connect to projector through API.
                 await CallApiWaitForMessage(() => _systemApiInstance.CoreLaserServiceConnectClient(connectClientInfo),
                     "NO USEFUL MESSAGE EXPECTED", "ConnectClient", false);
+                
+                // Gets the path to the application-specific folder.
+                GetAppFolderPath();
             }
             catch (Exception e)
             {
@@ -604,9 +607,6 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <param name="polygonsList">The list of points to be stored</param>
         private void SaveXmlPolygonData(string fileName, List<List<NormalPoint3DDto>> polygonsList)
         {
-            // Gets the path to the application-specific folder.
-            GetAppFolderPath();
-            
             // Creates new xml document.
             XmlDocument xmlDoc = new XmlDocument();
         
