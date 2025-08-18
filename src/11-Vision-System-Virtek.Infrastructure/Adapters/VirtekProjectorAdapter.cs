@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml;
 using _11_Vision_System_Virtek.Domain.Interfaces;
 using VisionAndProjectionService.Swagger.Api;
 using VisionAndProjectionService.Swagger.Model;
@@ -591,6 +592,83 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
             
             return pointsList;
+        }
+        
+        /// <summary>
+        /// Stores the value of a list of polygons into an XML file.
+        /// </summary>
+        /// <param name="fileName">The name of the file to be created.</param>
+        /// <param name="polygonsList">The list of points to be stored</param>
+        private void StoreProjectionPolygons(string fileName, List<List<NormalPoint3DDto>> polygonsList)
+        {
+            // Creates new xml document.
+            XmlDocument xmlDoc = new XmlDocument();
+        
+            // Creates a new node to store all the polygons.
+            XmlNode polygonsNode = xmlDoc.CreateElement("polygons");
+            
+            // Appends the polygons node to the xml document.
+            xmlDoc.AppendChild(polygonsNode);
+            
+            // For-each loop that goes through the pointsList and creates a polygon element for each list of points
+            // and point elements inside the polygon element.
+            foreach (var polygon in polygonsList)
+            {
+                // Creates a new polygon element to store the NormalPoint values.
+                XmlNode polygonNode = xmlDoc.CreateElement("polygon");
+
+                foreach (var point in polygon)
+                {
+                    // Creates a new point element to store the coordinates values
+                    XmlNode pointNode = xmlDoc.CreateElement("point");
+                    
+                    // Adds the x-coordinate, y-coordinate, and x-coordinate attribute to the pointNode.
+                    XmlAttribute xCoordinate = xmlDoc.CreateAttribute("x-coordinate");
+                    XmlAttribute yCoordinate = xmlDoc.CreateAttribute("y-coordinate");
+                    XmlAttribute zCoordinate = xmlDoc.CreateAttribute("z-coordinate");
+                    
+                    // Adds the value to the coordinates attributes.
+                    xCoordinate.Value = point.Location.X.ToString();
+                    yCoordinate.Value = point.Location.Y.ToString();
+                    zCoordinate.Value = point.Location.Z.ToString();
+                    
+                    // Appends the coordinates attributes to the pointNode.
+                    pointNode.Attributes?.Append(xCoordinate);
+                    pointNode.Attributes?.Append(yCoordinate);
+                    pointNode.Attributes?.Append(zCoordinate);
+                    
+                    // Adds the normalNode to the pointNode
+                    XmlNode normalNode = xmlDoc.CreateElement("normal");
+                    
+                    // Adds the x-coordinate, y-coordinate, and z-coordinate to the normal node.
+                    XmlAttribute normalXCoordinate = xmlDoc.CreateAttribute("x-coordinate");
+                    XmlAttribute normalYCoordinate = xmlDoc.CreateAttribute("y-coordinate");
+                    XmlAttribute normalZCoordinate = xmlDoc.CreateAttribute("z-coordinate");
+                    
+                    // Adds the value to the coordinates attributes.
+                    normalXCoordinate.Value = point.Normal.X.ToString();
+                    normalYCoordinate.Value = point.Normal.Y.ToString();
+                    normalZCoordinate.Value = point.Normal.Z.ToString();
+                    
+                    // Appends the coordinates attributes to the normalNode.
+                    normalNode.Attributes?.Append(normalXCoordinate);
+                    normalNode.Attributes?.Append(normalYCoordinate);
+                    normalNode.Attributes?.Append(normalZCoordinate);
+                    
+                    // Appends the normalNode to the pointNode.
+                    pointNode.AppendChild(normalNode);
+                    
+                    // Appends the pointNode to the polygonNode.
+                    polygonNode.AppendChild(pointNode);
+                }
+                
+                // Appends the polygon element to the polygons' node.
+                polygonsNode.AppendChild(polygonNode);
+            }
+            
+            
+            // Saves xml document.
+            xmlDoc.Save($"C:\\Users\\Guilherme\\Downloads\\{fileName}.xml");
         }
     }
 }
