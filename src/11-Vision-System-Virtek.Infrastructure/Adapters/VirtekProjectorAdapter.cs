@@ -35,6 +35,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         private readonly WorkOrderOperationsApi _workOrderOperationsApiInstance = new WorkOrderOperationsApi();
         private readonly ProjectionOperationsApi _projectionOperationsApiInstance = new ProjectionOperationsApi();
         
+        // AppData folder path.
+        private string _appDataFolder = "";
+        
         public string ClientId { get; private set; }
 
         // -------------------------------
@@ -669,6 +672,18 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             // Saves xml document.
             xmlDoc.Save($"C:\\Program Files\\Virtek\\Virtek Server\\ProjectionTexts\\{fileName}.xml");
+        }
+
+        private void GetAppFolderPath()
+        {
+            // Get or create application-specific folder.
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            
+            // Saves the application-specific folder path.
+            _appDataFolder = Path.Combine(appDataPath, "11-Vision-System-Virtek");
+            
+            // Ensures the directory exists.
+            Directory.CreateDirectory(_appDataFolder);
         }
     }
 }
