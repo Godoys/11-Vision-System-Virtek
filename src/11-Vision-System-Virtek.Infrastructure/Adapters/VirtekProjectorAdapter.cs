@@ -284,7 +284,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             }
         }
         
-        public async Task AddProjectPolygonAsync(string name, int id, string filePath)
+        public async Task AddProjectPolygonAsync(string fileName, int id)
         {
             try
             {
@@ -292,7 +292,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 ClientInfoDto connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
             
                 // List of the steps inside the .PLY file.
-                List<string> stepList = GenerateStepList(filePath);
+                List<string> stepList = GenerateStepList($"C:\\Program Files\\Virtek\\Virtek Server\\ProjectionTexts\\{fileName}");
 
                 // List of the points inside each step.
                 List<List<NormalPoint3DDto>> pointList = GeneratePointsList(stepList);
@@ -313,7 +313,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 // Projection entity DTO.
                 List<ProjectionEntityDataDto> projectionEntity =
                 [
-                    new(id, name, polygonList, isLayer: false, plyUnit: ProjectionEntityDataDto.PlyUnitEnum.Millimetres)
+                    new(id, fileName, polygonList, isLayer: false, plyUnit: ProjectionEntityDataDto.PlyUnitEnum.Millimetres)
                 ];
             
                 // Projection text entity.
