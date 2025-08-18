@@ -63,6 +63,11 @@ namespace _11_Vision_System_Virtek.Infrastructure.Services
             await _projector.RemoveProjectionByIdAsync(projectionId);
         }
 
+        public async Task AddProjectPolygonAsync(string fileName, int id)
+        {
+            await _projector.AddProjectPolygonAsync(fileName, id);
+        }
+
         public async Task CheckCurrentProjectionEntityAsync(CancellationToken token)
         {
             // Loops while the cancellation token is not activated
