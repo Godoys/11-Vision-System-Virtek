@@ -604,6 +604,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <param name="polygonsList">The list of points to be stored</param>
         private void SaveXmlPolygonData(string fileName, List<List<NormalPoint3DDto>> polygonsList)
         {
+            // Gets the path to the application-specific folder.
+            GetAppFolderPath();
+            
             // Creates new xml document.
             XmlDocument xmlDoc = new XmlDocument();
         
@@ -671,7 +674,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             
             // Saves xml document.
-            xmlDoc.Save($"C:\\Program Files\\Virtek\\Virtek Server\\ProjectionTexts\\{fileName}.xml");
+            xmlDoc.Save($"{_appDataFolder}\\{fileName}.xml");
         }
 
         private void GetAppFolderPath()
