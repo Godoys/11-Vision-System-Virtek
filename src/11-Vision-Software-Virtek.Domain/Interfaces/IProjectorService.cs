@@ -25,6 +25,15 @@ namespace _11_Vision_System_Virtek.Domain.Interfaces
         public Task PauseProjectionAsync();
         
         /// <summary>
+        /// Adds a .PLY file projection to the current open work order. 
+        /// </summary>
+        /// <param name="fileName">Name of the file to be converted and projected.</param>
+        /// <param name="id">Unique id manually or automatically added to the new projection.</param>
+
+        /// <returns></returns>
+        public Task AddProjectPolygonAsync(string fileName, int id);
+        
+        /// <summary>
         /// Checks if the current projection entity changed.
         /// </summary>
         /// <param name="token">A cancellation token that when activated completes the task.</param>
