@@ -39,8 +39,7 @@ namespace _11_Vision_System_Virtek.Application.UseCases
             {
                 case SensorResultStatus.Fail:
                     Console.WriteLine("[!] Failed image analysis with a FAIL.");
-                    await _projector.AddProjectPolygonAsync("Wrong Orientation", 11111,
-                        "C:\\Program Files\\Virtek\\Virtek Server\\Workorders\\wo1\\testply.ply");
+                    await _projector.AddProjectPolygonAsync("Wrong-Orientation", 11111);
                     break;
                 case SensorResultStatus.Pass:
                     Console.WriteLine("[!] Passed image analysis with a unconditional PASS.");
