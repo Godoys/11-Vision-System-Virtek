@@ -599,7 +599,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// </summary>
         /// <param name="fileName">The name of the file to be created.</param>
         /// <param name="polygonsList">The list of points to be stored</param>
-        private void StoreProjectionPolygons(string fileName, List<List<NormalPoint3DDto>> polygonsList)
+        private void SaveXmlPolygonData(string fileName, List<List<NormalPoint3DDto>> polygonsList)
         {
             // Creates new xml document.
             XmlDocument xmlDoc = new XmlDocument();
@@ -668,7 +668,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
             
             // Saves xml document.
-            xmlDoc.Save($"C:\\Users\\Guilherme\\Downloads\\{fileName}.xml");
+            xmlDoc.Save($"C:\\Program Files\\Virtek\\Virtek Server\\ProjectionTexts\\{fileName}.xml");
         }
     }
 }
