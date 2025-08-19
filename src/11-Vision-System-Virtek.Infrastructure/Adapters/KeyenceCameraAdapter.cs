@@ -10,7 +10,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     public class KeyenceCameraAdapter(string username, string password, IPAddress address, ushort portNumber) : ISensor
     {
         // Keyence camera object.
-        private IVisionSensor _sensor; 
+        private IVisionSensor? _sensor; 
         
         public SensorConfig Config { get; } = new SensorConfig(username, password, address, portNumber);
         
