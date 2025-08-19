@@ -134,7 +134,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             System.Timers.Timer timer = new (500);
             
             // Hook up the Elapsed event for the timer.
-            timer.Elapsed += OnTimedEvent;
+            timer.Elapsed += OnTimedEvent!;
             
             timer.AutoReset = true;
             timer.Enabled = true;
