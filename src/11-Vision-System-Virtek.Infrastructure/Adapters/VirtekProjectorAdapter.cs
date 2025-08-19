@@ -204,6 +204,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine($"[!] Getting the name of the current projection entity failed due to: {e.Message}");
+                    Console.WriteLine($"[!] Trying to get current projection entity in 500 milliseconds");
+                    
                     await Task.Delay(TimeSpan.FromMilliseconds(500));
                     currentProjectionEntity = projectionEntityCollectionJson.Payload.First();
                 }
