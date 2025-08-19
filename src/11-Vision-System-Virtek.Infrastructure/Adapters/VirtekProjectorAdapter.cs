@@ -24,7 +24,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
     public class VirtekProjectorAdapter : IProjector
     {
         // Variable used for telling CallApiAndWaitForMessage that message was received.
-        private TaskCompletionSource<bool> _tcs = null;
+        private TaskCompletionSource<bool>? _tcs;
         
         // Variable used for checking RMQ message values.
         private string _currentRequestName = "";
