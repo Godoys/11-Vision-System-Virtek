@@ -524,12 +524,12 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     if (line.StartsWith("START"))
                     {
                         // Add all the content between the START and END to the buffer.
-                        while (!line.Contains("END"))
+                        while (line != null && !line.Contains("END"))
                         {
                             line = reader.ReadLine();
                             
                             // Adds line to the buffer only if the line do not contain END.
-                            if (!line.Contains("END"))
+                            if (line != null && !line.Contains("END"))
                             {
                                 buffer += line;
                             }
