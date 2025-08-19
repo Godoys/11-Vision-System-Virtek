@@ -435,7 +435,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             UpdateExpectedRequest(expectedRequest);
 
             // Make the API call and gets the success boolean value, result, and error message.
-            var (success, result, errorMessage) = ExecuteApiCall(apiCall);
+            var (success, _, errorMessage) = ExecuteApiCall(apiCall);
 
             if (success)
             {
