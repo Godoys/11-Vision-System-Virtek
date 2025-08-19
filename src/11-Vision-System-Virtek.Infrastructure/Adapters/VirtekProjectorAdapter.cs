@@ -394,13 +394,13 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                 var messageObject = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(message);
 
                 // Compares if received message is the same as current request message.
-                if (messageObject != null && messageObject.RequestName != null)
+                if (messageObject != null && messageObject?.RequestName != null)
                 {
-                    string requestedName = messageObject.RequestName.ToString();
+                    string requestedName = messageObject?.RequestName.ToString()!;
 
                     if (requestedName == _currentRequestName)
                     {
-                        _tcs.TrySetResult(true);
+                        _tcs?.TrySetResult(true);
                         return true;
                     }
                 }
