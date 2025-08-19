@@ -152,14 +152,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         /// <param name="args">Arguments sent with the event</param>
         private void ResultUpdatedEventHandler(object sender, ToolResultUpdatedEventArgs  args)
         {
-            if (args.TotalStatusResult)
-            {
-                Config.UpdateResult(SensorResultStatus.Pass);
-            }
-            else
-            {
-                Config.UpdateResult(SensorResultStatus.Fail);
-            }
+            Config.UpdateResult(args.TotalStatusResult ? SensorResultStatus.Pass : SensorResultStatus.Fail);
         }
         
     }
