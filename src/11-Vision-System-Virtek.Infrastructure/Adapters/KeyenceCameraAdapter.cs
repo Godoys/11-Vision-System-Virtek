@@ -68,7 +68,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     Console.WriteLine($"[*] Disconnecting from sensor {Config.Address}.");
                     
                     // Disconnects to a Keyence sensor using the Keyence SDK Dispose method.
-                    await Task.Run(() => _sensor.Dispose());
+                    await Task.Run(() => _sensor?.Dispose());
                 
                     // Updates the CameraState in configuration object.
                     Config.UpdateState(SensorConnectionState.Disconnected);   
