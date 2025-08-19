@@ -295,28 +295,65 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         {
             try
             {
+                // Path to the xml file.
+                string xmlPath = $"C:\\Users\\Guilherme\\AppData\\Roaming\\11-Vision-System-Virtek\\{fileName}.xml";
+                
                 // Creates DTO with values for connection to the client.
                 ClientInfoDto connectClientInfo = new ClientInfoDto(clientId: ClientId, type: ClientInfoDto.TypeEnum.Passive);
-            
-                // List of the steps inside the .PLY file.
-                List<string> stepList = GenerateStepList($"C:\\Program Files\\Virtek\\Virtek Server\\ProjectionTexts\\{fileName}");
+                
+                // Checks if the xml file exists for the given projection.
+                if (!File.Exists(xmlPath))
+                {
+                    // List of the steps inside the .PLY file.
+                    List<string> stepList = GenerateStepList($"C:\\Program Files\\Virtek\\Virtek Server\\ProjectionTexts\\{fileName}.ply");
 
-                // List of the points inside each step.
-                List<List<NormalPoint3DDto>> pointList = GeneratePointsList(stepList);
+                    // List of the points inside each step.
+                    List<List<NormalPoint3DDto>> polygonsList = GeneratePointsList(stepList);
+                    
+                    // Saves the polygons list into a xml document.
+                    SaveXmlPolygonData(fileName,  polygonsList);
+                }
+                
+                // Creates a xml document.
+                XmlReader xmlReader = XmlReader.Create(xmlPath);
 
                 // List of PolygonDto that holds the Normal Point values.
                 List<PolygonDto> polygonList = new List<PolygonDto>();
-            
-                // Loop to add all Normal Points to the polygon list.
-                foreach (var point in pointList)
-                {
-                    // Polygon DTO with point list values to be added to polygon list.
-                    PolygonDto polygonDto = new PolygonDto(false, point);
+                
+                // Buffer of Normal Points.
+                List<NormalPoint3DDto> bufferNormalPoint = new();
                     
-                    // Adds polygon to polygon list.
-                    polygonList.Add(polygonDto);
+                // Reads the xml document and creates a projection entity to be projected.
+                while (xmlReader.Read())
+                {
+                    if (xmlReader.Name.Equals("point") &&  xmlReader.HasAttributes)
+                    {
+                        // Creates new Normal Point to be added to the buffer.
+                        NormalPoint3DDto normalPoint = new(
+                            location: new VertexDto(
+                                double.Parse(xmlReader.GetAttribute("x-coordinate") ?? string.Empty),
+                                double.Parse(xmlReader.GetAttribute("y-coordinate") ?? string.Empty),
+                                double.Parse(xmlReader.GetAttribute("z-coordinate") ?? string.Empty)),
+                            normal: new VertexDto(0, 0, 1, false)
+                            );
+                        
+                        // Adds Normal Point to buffer.
+                        bufferNormalPoint.Add(normalPoint);
+                    } 
+                    else if (xmlReader.Name.Equals("polygon") && !(xmlReader.IsStartElement()))
+                    {
+                        // Creates a polygon DTO to be added to the polygon list.
+                        PolygonDto polygon = new(false ,bufferNormalPoint);
+                        
+                        // Adds new polygon to the polygon list.
+                        polygonList.Add(polygon);
+                        
+                        // Resets normal points buffer.
+                        bufferNormalPoint = new List<NormalPoint3DDto>();
+                    }
+                    
                 }
-            
+                    
                 // Projection entity DTO.
                 List<ProjectionEntityDataDto> projectionEntity =
                 [
@@ -325,7 +362,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
                 // Projection text entity.
                 ProjectEntitiesDto projectionText = new(
-                    clientInfo: connectClientInfo,
+                    //clientInfo: connectClientInfo,
                     entities: projectionEntity,
                     operation: ProjectEntitiesDto.OperationEnum.ProjectSkipInspectingCurrent,
                     appendProjection: false
