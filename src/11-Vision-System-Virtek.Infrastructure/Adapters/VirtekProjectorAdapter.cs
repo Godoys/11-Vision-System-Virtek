@@ -195,7 +195,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                         _projectionOperationsApiInstance.WorkOrderServiceGetLastAccessedProjectionEntities(
                             loadWorkOrderDto), "NO USEFUL MESSAGE EXPECTED", "GetCurrentProjectionEntity", false);
 
-                string currentProjectionEntity = "";
+                string currentProjectionEntity;
 
                 try
                 {
