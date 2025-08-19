@@ -517,7 +517,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             for (int i = 0; i < nOfLines; i++)
             {
                 // Variable to store the content of a line.
-                string line = reader.ReadLine();
+                string? line = reader.ReadLine();
 
                 if (line != null)
                 {
