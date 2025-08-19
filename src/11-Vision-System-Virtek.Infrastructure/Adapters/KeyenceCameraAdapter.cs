@@ -92,7 +92,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     Console.WriteLine($"[*] Triggering image capture in sensor {Config.Address}.");
 
                     // Triggers image capture to a Keyence sensor using the Keyence SDK Trigger method.
-                    await Task.Run(() => _sensor.Trigger());
+                    await Task.Run(() => _sensor?.Trigger());
                     
                     Console.WriteLine($"[*] Image captured by sensor {Config.Address}.");
                 }
