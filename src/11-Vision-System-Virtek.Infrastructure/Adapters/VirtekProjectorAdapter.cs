@@ -38,7 +38,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
         // AppData folder path.
         private string _appDataFolder = "";
         
-        public string ClientId { get; private set; }
+        public string ClientId { get; private set; } = null!;
 
         // -------------------------------
         //  Public Methods Implementation
