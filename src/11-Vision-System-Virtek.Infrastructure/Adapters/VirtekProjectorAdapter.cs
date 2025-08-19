@@ -444,14 +444,9 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     // Wait up to 30 seconds for the message
                     await Task.WhenAny(_tcs.Task, Task.Delay(TimeSpan.FromSeconds(30)));
 
-                    if (_tcs.Task.IsCompleted)
-                    {
-                        Console.WriteLine($"[{apiName}] Completed task RabbitMQ message");
-                    }
-                    else 
-                    {
-                        Console.WriteLine($"[{apiName}] Timeout waiting for expected message");
-                    }
+                    Console.WriteLine(_tcs.Task.IsCompleted
+                        ? $"[{apiName}] Completed task RabbitMQ message"
+                        : $"[{apiName}] Timeout waiting for expected message");
                 }
                 else
                 {
