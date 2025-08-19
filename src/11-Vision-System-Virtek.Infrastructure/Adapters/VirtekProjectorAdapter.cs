@@ -365,7 +365,7 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
             
                 // Projection text entity.
                 ProjectEntitiesDto projectionText = new(
-                    //clientInfo: connectClientInfo,
+                    clientInfo: connectClientInfo,
                     entities: projectionEntity,
                     operation: ProjectEntitiesDto.OperationEnum.ProjectSkipInspectingCurrent,
                     appendProjection: false
