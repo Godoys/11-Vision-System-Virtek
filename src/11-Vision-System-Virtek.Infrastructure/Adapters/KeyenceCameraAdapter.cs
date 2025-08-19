@@ -40,8 +40,8 @@ namespace _11_Vision_System_Virtek.Infrastructure.Adapters
                     SetTimer();
                     
                     // Subscribe ResultUpdate event handler to event.
-                    _sensor.ResultUpdated += ResultUpdatedEventHandler;
-                
+                    if (_sensor != null) _sensor.ResultUpdated += ResultUpdatedEventHandler;
+
                     // Updates the CameraState in configuration object.
                     Config.UpdateState(SensorConnectionState.Connected);   
                     
